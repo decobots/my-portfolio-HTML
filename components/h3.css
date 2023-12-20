@@ -1,0 +1,36 @@
+.h3-property1h3 {
+  gap: var(--dl-space-space-unit);
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.h3-text {
+  color: var(--dl-color-palette-accent);
+  height: auto;
+  align-self: stretch;
+  line-height: 100%;
+}
+.h3-text1 {
+  height: auto;
+  align-self: stretch;
+  line-height: 150%;
+}
+
+
+
+
+
+.h3-root-class-name7 {
+  align-self: center;
+}
+.h3-root-class-name8 {
+  align-self: center;
+}
+
+
+
+

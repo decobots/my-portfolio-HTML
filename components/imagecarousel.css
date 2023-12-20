@@ -1,0 +1,22 @@
+.imagecarousel-imagecarousel {
+  display: flex;
+  padding: var(--dl-space-space-twounits);
+  position: relative;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--dl-radius-radius-corner);
+  justify-content: center;
+  background-color: var(--dl-color-palette-light);
+}
+.imagecarousel-text {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  text-align: left;
+  line-height: 100%;
+}
+
+
+
+
+

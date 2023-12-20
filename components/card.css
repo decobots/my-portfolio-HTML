@@ -1,0 +1,50 @@
+.card-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  text-align: center;
+  align-items: center;
+  padding-top: var(--dl-space-space-oneandhalfunits);
+  padding-left: var(--dl-space-space-twounits);
+  border-radius: var(--dl-radius-radius-corner);
+  padding-right: var(--dl-space-space-twounits);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-twounits);
+  justify-content: center;
+  background-color: var(--dl-color-palette-light);
+}
+.card-root-class-name {
+  flex: 4;
+  width: 100%;
+}
+.card-root-class-name1 {
+  flex: 4;
+  width: 100%;
+}
+
+
+
+.card-root-class-name9 {
+  flex: 4;
+  width: auto;
+}
+.card-root-class-name10 {
+  flex: 4;
+  width: 100%;
+}
+@media(max-width: 767px) {
+  .card-root-class-name {
+    flex: 0 0 auto;
+  }
+  .card-root-class-name1 {
+    flex: 0 0 auto;
+  }
+  .card-root-class-name9 {
+    flex: 0 0 auto;
+  }
+  .card-root-class-name10 {
+    flex: 0 0 auto;
+  }
+}

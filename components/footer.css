@@ -1,0 +1,20 @@
+.footer-footer {
+  gap: var(--dl-space-space-fourunits);
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  padding-top: var(--dl-space-space-oneandhalfunits);
+  padding-left: var(--dl-space-space-unit);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-oneandhalfunits);
+  justify-content: flex-end;
+}
+.footer-root-class-name {
+  left: 0px;
+  bottom: 0px;
+  position: static;
+}

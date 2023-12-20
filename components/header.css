@@ -1,0 +1,34 @@
+.header-header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-shrink: 0;
+  padding-top: var(--dl-space-space-twounits);
+  padding-left: var(--dl-space-space-unit);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-twounits);
+  justify-content: space-between;
+}
+.header-text {
+  height: auto;
+  line-height: 150%;
+}
+.header-frame6 {
+  gap: var(--dl-space-space-threeunits);
+  display: flex;
+}
+.header-text2 {
+  height: auto;
+  line-height: 150%;
+}
+.header-text4 {
+  height: auto;
+  line-height: 150%;
+}
+.header-text6 {
+  height: auto;
+  line-height: 150%;
+}
+

@@ -1,0 +1,112 @@
+:root {
+  --dl-size-size-large: 144px;
+  --dl-size-size-small: 48px;
+  --dl-size-size-medium: 96px;
+  --dl-size-size-xlarge: 192px;
+  --dl-size-size-xsmall: 16px;
+  --dl-space-space-unit: 1rem;
+  --dl-size-size-xxlarge: 288px;
+  --dl-color-palette-dark: #173b2fff;
+  --dl-size-size-maxwidth: 1400px;
+  --dl-color-palette-light: #f7efebff;
+  --dl-color-palette-accent: #eca755ff;
+  --dl-radius-radius-corner: 16px;
+  --dl-space-space-halfunit: 0.5rem;
+  --dl-space-space-sixunits: 6rem;
+  --dl-space-space-tenunits: 10rem;
+  --dl-space-space-twounits: 2rem;
+  --dl-color-palette-darkest: #333333ff;
+  --dl-space-space-fiveunits: 5rem;
+  --dl-space-space-fourunits: 4rem;
+  --dl-color-palette-lightest: #FFFFFF;
+  --dl-space-space-threeunits: 3rem;
+  --dl-space-space-oneandhalfunits: 1.5rem;
+}
+.button {
+  color: var(--dl-color-palette-darkest);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-color: var(--dl-color-palette-darkest);
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: var(--dl-color-palette-lightest);
+}
+.input {
+  color: var(--dl-color-palette-darkest);
+  cursor: auto;
+  padding: 0.5rem 1rem;
+  border-color: var(--dl-color-palette-darkest);
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: var(--dl-color-palette-lightest);
+}
+.textarea {
+  color: var(--dl-color-palette-darkest);
+  cursor: auto;
+  padding: 0.5rem;
+  border-color: var(--dl-color-palette-darkest);
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: var(--dl-color-palette-lightest);
+}
+.list {
+  width: 100%;
+  display: block;
+  list-style-type: none;
+  list-style-position: outside;
+}
+.list-item {
+  display: list-item;
+  padding: var(--dl-space-space-halfunit);
+  list-style-type: "◽️";
+}
+.teleport-show {
+  display: flex !important;
+  transform: none !important;
+}
+.dark {
+  border: 5px solid;
+  border-color: dark (palette);
+}
+.paragraphp1 {
+  font-size: 1.3rem;
+  font-style: normal;
+  font-family: Lato;
+  font-weight: 300px;
+  line-height: 140%;
+}
+.headerH3 {
+  font-size: 1.5rem;
+  font-family: Kalnia;
+  font-weight: 400;
+  line-height: 100%;
+}
+.paragraphp2 {
+  font-size: 1.1rem;
+  font-style: normal;
+  font-family: Lato;
+  font-weight: 400px;
+  line-height: 150%;
+}
+.headerH1 {
+  font-size: 3rem;
+  font-family: Kalnia;
+  font-weight: 700;
+  line-height: 100%;
+}
+.headerH2 {
+  font-size: 2rem;
+  font-family: Kalnia;
+  font-weight: 400;
+  line-height: 100%;
+}
+.paragraphp3 {
+  font-size: 1rem;
+  font-style: normal;
+  font-family: Lato;
+  font-weight: 400px;
+  line-height: 150%;
+}
+
+
+

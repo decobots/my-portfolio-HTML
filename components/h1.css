@@ -1,0 +1,15 @@
+.h1-property1h1 {
+  gap: var(--dl-space-space-oneandhalfunits);
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.h1-text {
+  color: var(--dl-color-palette-accent);
+}
+
+
