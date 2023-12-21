@@ -250,7 +250,10 @@
 .imagecarousel-js-container2 {
   display: contents;
 }
-
+.imagecarousel-js-root-class-name {
+  width: auto;
+  height: auto;
+}
 
 @media(max-width: 767px) {
   .imagecarousel-js-container {
