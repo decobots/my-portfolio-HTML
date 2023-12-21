@@ -19,18 +19,16 @@
 
 
 
-
-
 .quote-quote {
   display: flex;
   position: relative;
   align-self: stretch;
   align-items: center;
-  padding-top: var(--dl-space-space-threeunits);
+  padding-top: 0px;
   padding-left: var(--dl-space-space-twounits);
   padding-right: var(--dl-space-space-twounits);
   flex-direction: column;
-  padding-bottom: var(--dl-space-space-threeunits);
+  padding-bottom: 0px;
   justify-content: flex-start;
 }
 .quote-text {
@@ -38,6 +36,7 @@
   align-self: center;
   text-align: center;
   line-height: 100%;
+  padding-top: var(--dl-space-space-threeunits);
 }
 .quote-text1 {
   top: 0px;
@@ -98,50 +97,78 @@
   line-height: 150%;
 }
 .header-frame6 {
-  gap: var(--dl-space-space-threeunits);
+  gap: var(--dl-space-space-fiveunits);
   display: flex;
 }
 .header-text2 {
   height: auto;
   line-height: 150%;
 }
-.header-text4 {
+.header-text3 {
   height: auto;
   line-height: 150%;
 }
-.header-text6 {
+.header-text5 {
   height: auto;
   line-height: 150%;
 }
 
+@media(max-width: 991px) {
+  .header-frame6 {
+    gap: var(--dl-space-space-fourunits);
+  }
+}
+@media(max-width: 767px) {
+  .header-header {
+    gap: var(--dl-space-space-oneandhalfunits);
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .header-frame6 {
+    gap: var(--dl-space-space-twounits);
+  }
+}
+@media(max-width: 479px) {
+  .header-header {
+    gap: var(--dl-space-space-oneandhalfunits);
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
 
-.flowchartblock-flowchartblock {
-  width: 153px;
+.chart-card-flowchartblock {
   display: flex;
-  padding: 16px;
-  overflow: hidden;
-  position: relative;
+  padding: var(--dl-space-space-unit);
   align-items: center;
   flex-shrink: 0;
-  border-radius: 16px;
+  border-radius: var(--dl-radius-radius-corner);
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(247, 239, 235, 1);
+  background-color: var(--dl-color-palette-light);
 }
-.flowchartblock-section {
-  gap: 16px;
-  display: flex;
-  align-self: stretch;
-  align-items: flex-start;
-  flex-direction: column;
+
+
+
+
+
+
+
+.chart-card-root-class-name7 {
+  width: auto;
 }
-.flowchartblock-text {
-  color: rgba(51, 51, 51, 1);
-  height: auto;
-  align-self: stretch;
-  text-align: center;
-  line-height: 150%;
+
+.chart-card-root-class-name9 {
+  width: auto;
 }
+
+
+
+
+
+
+
+
 
 .h1-property1h1 {
   gap: var(--dl-space-space-oneandhalfunits);
@@ -208,6 +235,11 @@
 
 
 
+
+
+
+
+
 @media(max-width: 479px) {
   .h2-root-class-name1 {
     flex: 0 0 auto;
@@ -238,6 +270,8 @@
   align-self: stretch;
   line-height: 150%;
 }
+
+
 
 
 

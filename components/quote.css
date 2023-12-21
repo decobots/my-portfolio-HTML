@@ -3,11 +3,11 @@
   position: relative;
   align-self: stretch;
   align-items: center;
-  padding-top: var(--dl-space-space-threeunits);
+  padding-top: 0px;
   padding-left: var(--dl-space-space-twounits);
   padding-right: var(--dl-space-space-twounits);
   flex-direction: column;
-  padding-bottom: var(--dl-space-space-threeunits);
+  padding-bottom: 0px;
   justify-content: flex-start;
 }
 .quote-text {
@@ -15,6 +15,7 @@
   align-self: center;
   text-align: center;
   line-height: 100%;
+  padding-top: var(--dl-space-space-threeunits);
 }
 .quote-text1 {
   top: 0px;

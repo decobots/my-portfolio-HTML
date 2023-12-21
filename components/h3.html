@@ -85,7 +85,29 @@
       background-color: var(--dl-color-palette-dark);
       border: 0px;
       }
+      .dark .card-section p{
+      color: var(--dl-color-palette-darkest);
+      }
+      .dark .chart-card-flowchartblock p{
+      color: var(--dl-color-palette-darkest);
+      }
+
+      p:empty {
+        display: none;
+      }
+
+      p{
+        max-width: 60ch;
+        word-wrap: break-word;
+      }
     </style>
+
+    <script src="https://storage.googleapis.com/playground-bucket-v2.teleporthq.io/e369f455-d0b8-49dc-ad54-6c08e7690397/283f2d7d-60c8-4d4e-a7a2-4d3b67e84c33"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <link rel="stylesheet" href="../style.css" />
@@ -93,7 +115,7 @@
       <link href="./h3.css" rel="stylesheet" />
       <div class="h3-property1h3">
         <h3 class="h3-text headerH3"><span>Header in H</span></h3>
-        <p class="h3-text1 paragraphp2"><span>body in p</span></p>
+        <p class="h3-text1 paragraphp2"><span></span></p>
       </div>
     </div>
   </body>

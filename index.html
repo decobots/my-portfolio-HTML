@@ -85,29 +85,51 @@
       background-color: var(--dl-color-palette-dark);
       border: 0px;
       }
+      .dark .card-section p{
+      color: var(--dl-color-palette-darkest);
+      }
+      .dark .chart-card-flowchartblock p{
+      color: var(--dl-color-palette-darkest);
+      }
+
+      p:empty {
+        display: none;
+      }
+
+      p{
+        max-width: 60ch;
+        word-wrap: break-word;
+      }
     </style>
+
+    <script src="https://storage.googleapis.com/playground-bucket-v2.teleporthq.io/e369f455-d0b8-49dc-ad54-6c08e7690397/283f2d7d-60c8-4d4e-a7a2-4d3b67e84c33"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <link rel="stylesheet" href="./style.css" />
     <div>
       <link href="./index.css" rel="stylesheet" />
 
-      <div class="mac-book-air1-container">
-        <div class="header-header header-root-class-name">
+      <div class="vvcase-container">
+        <header class="header-header header-root-class-name">
           <span class="header-text paragraphp2">
             <span>MIA PRITCHINA UX/UI DESIGNER</span>
           </span>
           <div class="header-frame6">
-            <span class="header-text2 paragraphp2"><span>LINKEDIN</span></span>
-            <span class="header-text4 paragraphp2"><span>BEHANCE</span></span>
-            <span class="header-text6 paragraphp2"><span>EMAIL</span></span>
+            <span class="header-text2 paragraphp2">LINKEDIN</span>
+            <span class="header-text3 paragraphp2"><span>BEHANCE</span></span>
+            <span class="header-text5 paragraphp2"><span>EMAIL</span></span>
           </div>
-        </div>
-        <div class="dark mac-book-air1-container1">
-          <div class="section-container section-root-class-name11">
+        </header>
+        <div class="dark vvcase-hero">
+          <section class="section-container section-root-class-name11">
             <slot class="section-custom-slot">
               <div class="h1-property1h1 h1-root-class-name">
-                <h1 class="h1-text headerH1"><span>About</span></h1>
+                <h1 class="h1-text headerH1"><span>About VV</span></h1>
                 <p class="paragraphp1">
                   <span>
                     VV is a well-known chain of eco-friendly goods in the
@@ -119,517 +141,901 @@
                 </p>
               </div>
             </slot>
-          </div>
+          </section>
         </div>
-        <div class="section-container section-root-class-name12">
-          <slot class="section-custom-slot">
-            <div class="h2-property1h2 h2-root-class-name">
-              <h2 class="h2-text headerH2"><span>Problem</span></h2>
-              <p class="h2-text1 paragraphp2">
-                <span>
-                  Unfortunately, this approach doesn’t allow VV to grow their
-                  catalogue faster, which makes them lose potential customers.
-                </span>
-              </p>
-              <p class="h2-text2 paragraphp2"><span></span></p>
-            </div>
-            <div class="section-container2">
-              <div class="h2-property1h2 h2-root-class-name1">
-                <h2 class="h2-text headerH2"><span>My task</span></h2>
+        <div>
+          <section class="section-container section-root-class-name12">
+            <slot class="section-custom-slot">
+              <div class="h2-property1h2 h2-root-class-name">
+                <h2 class="h2-text headerH2"><span>Problem</span></h2>
                 <p class="h2-text1 paragraphp2">
                   <span>
-                    VV already has a minimal working prototype of new
-                    functionality and wants to move to the minimum lovable
-                    product stage.
+                    Unfortunately, it takes a lot of time and research to launch
+                    each new product, which limits VV’s catalog. And with
+                    limited catalog VV looses their online customers to other
+                    stores.
                   </span>
                 </p>
                 <p class="h2-text2 paragraphp2"><span></span></p>
               </div>
-              <div class="h2-property1h2 h2-root-class-name2">
-                <h2 class="h2-text headerH2"><span>My role</span></h2>
+              <div class="h2-property1h2 h2-root-class-name18">
+                <h2 class="h2-text headerH2"><span>Solution</span></h2>
                 <p class="h2-text1 paragraphp2">
-                  <span>UX and UI design, with reviews from my mentor.</span>
+                  <span>
+                    VV wants to add products from third-party brands in their
+                    online catalog. Having bigger variety to choose from might
+                    help to attract online customers.
+                  </span>
                 </p>
                 <p class="h2-text2 paragraphp2"><span></span></p>
               </div>
-            </div>
-          </slot>
-        </div>
-        <div class="section-container section-root-class-name">
-          <slot class="section-custom-slot">
-            <div class="h2-property1h2 h2-root-class-name6">
-              <h2 class="h2-text headerH2"><span>Approach</span></h2>
-              <p class="h2-text1 paragraphp2">
-                <span>
-                  As an active customer of VV myself, I already had an idea of
-                  current user experience so I focused on understanding why VV
-                  has problems with their existing selling model and how we can
-                  improve user experience.
-                </span>
-              </p>
-              <p class="h2-text2 paragraphp2"><span></span></p>
-            </div>
-            <div class="h3-property1h3 h3-root-class-name">
-              <h3 class="h3-text headerH3">
-                <span>Understand business goals</span>
-              </h3>
-              <p class="h3-text1 paragraphp2">
-                <span>
-                  I know what VV tries to do, but I’m not sure why they do it
-                  this exact way. So I start from series of interviews with
-                  stackholders to understand goals and concerns.  To summarise
-                  all my findings I like to formulate Jobs to be done statements
-                  which easy to remember and quote:
-                </span>
-              </p>
-            </div>
-            <div class="section-container3">
-              <div class="card-section card-root-class-name1">
-                <slot class="card-custom-slot">
-                  <div class="h3-property1h3 h3-root-class-name1">
-                    <h3 class="h3-text headerH3">
-                      <span>
-                        I want to find out which products are popular, so that I
-                        can release similar products under my own brand, because
-                        it brings in more profit.
-                      </span>
-                    </h3>
-                    <p class="h3-text1 paragraphp2">
-                      <span>
-                        Having sales data about outside products VV can make
-                        better decisions on launching their own brand’s items.
-                      </span>
-                    </p>
-                  </div>
-                </slot>
-              </div>
-              <div class="card-section card-root-class-name">
-                <slot class="card-custom-slot">
-                  <div class="h3-property1h3 h3-root-class-name2">
-                    <h3 class="h3-text headerH3">
-                      <span>
-                        I want to sell third-party products, so that customers
-                        can order everything in one place because then they will
-                        choose VkusVill more often.
-                      </span>
-                    </h3>
-                    <p class="h3-text1 paragraphp2">
-                      <span>
-                        With a bigger variety of items there is a better chance
-                        that customers will be able to order all they need in
-                        VV.
-                      </span>
-                    </p>
-                  </div>
-                </slot>
-              </div>
-            </div>
-            <div class="section-container4">
-              <div class="card-section card-root-class-name9">
-                <slot class="card-custom-slot">
-                  <div class="h3-property1h3 h3-root-class-name13">
-                    <h3 class="h3-text headerH3">
-                      <span>
-                        I want to sell third-party products, because it is
-                        difficult to negotiate the production of goods under our
-                        own brand, so we will be able to save resources on
-                        products that might not be successful.
-                      </span>
-                    </h3>
-                    <p class="h3-text1 paragraphp2">
-                      <span>
-                        With well known items in catalog VV might attract new
-                        categories of customers who weren’t interested in VV
-                        before.
-                      </span>
-                    </p>
-                  </div>
-                </slot>
-              </div>
-              <div class="card-section card-root-class-name10">
-                <slot class="card-custom-slot">
-                  <div class="h3-property1h3 h3-root-class-name14">
-                    <h3 class="h3-text headerH3">
-                      <span>
-                        A bigger catalog leads to a bigger average check which
-                        allows free delivery to more customers.
-                      </span>
-                    </h3>
-                    <p class="h3-text1 paragraphp2">
-                      <span>
-                        A bigger catalog leads to a bigger average check which
-                        allows free delivery to more customers.
-                      </span>
-                    </p>
-                  </div>
-                </slot>
-              </div>
-            </div>
-          </slot>
-        </div>
-        <div class="section-container section-root-class-name5">
-          <slot class="section-custom-slot">
-            <div class="h2-property1h2 h2-root-class-name7">
-              <h2 class="h2-text headerH2"><span>Empathize with user</span></h2>
-              <p class="h2-text1 paragraphp2">
-                <span>
-                  I conduct a series of 15-minute interviews with users to
-                  understand what they treasure and what needs to be improved.
-                </span>
-              </p>
-              <p class="h2-text2 paragraphp2"><span></span></p>
-            </div>
-            <div class="card-section card-root-class-name8">
-              <slot class="card-custom-slot">
-                <span class="card-text">
-                  Customers trust VV and expect VV to be used to buy from VV
-                  without reading the composition of the product and checking
-                  best-before dates. This saves time and lowers the mental load.
-                </span>
-              </slot>
-            </div>
-            <div class="card-section card-root-class-name5">
-              <slot class="card-custom-slot">
-                <span>
-                  With growing delivery costs it becomes too expensive to place
-                  many small orders in different stores. It’s much more
-                  cost-effective to place a single order in one store to be
-                  eligible for free delivery. So people choose bigger chains
-                  even if the quality of goods is not the same.
-                </span>
-              </slot>
-            </div>
-            <div class="card-section card-root-class-name6">
-              <slot class="card-custom-slot">
-                <span>
-                  Ordering in multiple places leads to an additional mental load
-                  – you need to remember what and where to order, adapt to
-                  different navigation and product cards in apps, and wait for
-                  multiple deliveries*.
-                </span>
-              </slot>
-            </div>
-            <div class="quote-quote quote-root-class-name">
-              <h2 class="quote-text headerH2">
-                <span>
-                  I don't need to read the ingredients list because I trust VV
-                  reputation
-                </span>
-              </h2>
-              <span class="quote-text1">“</span>
-            </div>
-            <div class="quote-quote quote-root-class-name1">
-              <h2 class="quote-text headerH2">
-                <span>
-                  I want to order everything in one place to avoid overpaying
-                  for delivery and save time
-                </span>
-              </h2>
-              <span class="quote-text1">“</span>
-            </div>
-          </slot>
-        </div>
-        <div class="section-container section-root-class-name6">
-          <slot class="section-custom-slot">
-            <div class="h2-property1h2 h2-root-class-name9">
-              <h2 class="h2-text headerH2">
-                <span>How do others do it?</span>
-              </h2>
-              <p class="h2-text1 paragraphp2">
-                <span>
-                  I am analyzing the strategies of businesses that sell products
-                  from various brands as well as products under their own brand.
-                  I found two approaches to their products: they either mix-in
-                  or they stand out from the third-party product.
-                </span>
-              </p>
-              <p class="h2-text2 paragraphp2"><span></span></p>
-            </div>
-            <div class="h3-property1h3 h3-root-class-name5">
-              <h3 class="h3-text headerH3"><span>Mix-in</span></h3>
-              <p class="h3-text1 paragraphp2">
-                <span>
-                  Stores do not place a special mark indicating that the product
-                  is of their own brand. You can only guess based on the
-                  appearance and the name.
-                </span>
-              </p>
-            </div>
-            <div
-              class="imagecarousel-imagecarousel imagecarousel-root-class-name"
-            >
-              <span class="imagecarousel-text headerH2">
-                <span>Image carousel</span>
-              </span>
-            </div>
-            <div class="h3-property1h3 h3-root-class-name6">
-              <h3 class="h3-text headerH3"><span>Stand out</span></h3>
-              <p class="h3-text1 paragraphp2">
-                <span>
-                  Stores actively label products as their own brand,
-                  distinguishing them among products from other brands.
-                </span>
-              </p>
-            </div>
-            <div
-              class="imagecarousel-imagecarousel imagecarousel-root-class-name1"
-            >
-              <span class="imagecarousel-text headerH2">
-                <span>Image carousel</span>
-              </span>
-            </div>
-          </slot>
-        </div>
-        <div class="section-container section-root-class-name4">
-          <slot class="section-custom-slot">
-            <div class="h2-property1h2 h2-root-class-name8">
-              <h2 class="h2-text headerH2"><span>Visualize</span></h2>
-              <p class="h2-text1 paragraphp2">
-                <span>
-                  To keep on track our goal I create a customer journey map. I
-                  refer to it when we go too far away from our course
-                </span>
-              </p>
-              <p class="h2-text2 paragraphp2"><span></span></p>
-            </div>
-            <img alt="image" src="public/cjm-1500w.png" class="section-image" />
-          </slot>
-        </div>
-        <div class="section-container section-root-class-name3">
-          <slot class="section-custom-slot">
-            <div class="h2-property1h2 h2-root-class-name10">
-              <h2 class="h2-text headerH2"><span>Conclusion</span></h2>
-              <p class="h2-text1 paragraphp2">
-                <span>
-                  Companies that actively develop their brand image highlight
-                  their own products more frequently.
-                </span>
-              </p>
-              <p class="h2-text2 paragraphp2">
-                <span>
-                  VV was initially focused on selling brand products, so it
-                  makes sense to give them more prominence.
-                </span>
-              </p>
-            </div>
-          </slot>
-        </div>
-        <div class="section-container section-root-class-name2">
-          <slot class="section-custom-slot">
-            <div class="h2-property1h2 h2-root-class-name11">
-              <h2 class="h2-text headerH2"><span>1st iteration</span></h2>
-              <p class="h2-text1 paragraphp2">
-                <span>
-                  I’m starting from designing new elements for testing.
-                </span>
-              </p>
-              <p class="h2-text2 paragraphp2">
-                <span>
-                  The task is complicated by the fact that the brand's colour is
-                  green, and any attempt to mark VkusVill's cards with the green
-                  colour will make them look like they are correct/good-to-go
-                  💚, while the other products might appear as if they are bad
-                  ❤️‍🩹
-                </span>
-              </p>
-            </div>
-            <div
-              class="imagecarousel-imagecarousel imagecarousel-root-class-name2"
-            >
-              <span class="imagecarousel-text headerH2">
-                <span>Image carousel</span>
-              </span>
-            </div>
-            <div class="list-container list-root-class-name">
-              <h3 class="headerH3"><span>Testing findings</span></h3>
-              <ul class="list">
-                <li class="list-item">
+              <div class="h2-property1h2 h2-root-class-name19">
+                <h2 class="h2-text headerH2">
+                  <span>State of UX and UI</span>
+                </h2>
+                <p class="h2-text1 paragraphp2">
                   <span>
+                    VV already decided to present third-party items in new
+                    section of online catalog as a “Supermarket” based on
+                    marketing research.
+                  </span>
+                </p>
+                <p class="h2-text2 paragraphp2">
+                  <span>
+                    They would like to have minimum additions to the existing
+                    Design System.
+                  </span>
+                </p>
+              </div>
+              <div class="section-container01">
+                <div class="h2-property1h2 h2-root-class-name1">
+                  <h2 class="h2-text headerH2"><span>My task</span></h2>
+                  <p class="h2-text1 paragraphp2">
                     <span>
-                      Users don't understand what “supermarket” is. Even if they
-                      know that VV is started to sell products from other
-                      brands.
+                      To find a way to present new category and product cards in
+                      an easy to understand way.
                     </span>
-                    <span></span>
-                  </span>
-                </li>
-                <li class="list-item">
-                  <span>
-                    <span>
-                      After explaining the concept of a supermarket again, the
-                      difficulties disappear.
-                    </span>
-                    <span></span>
-                  </span>
-                </li>
-                <li class="list-item">
-                  <span>
-                    <span>Respondents don't care who produced the item.</span>
-                    <span></span>
-                  </span>
-                </li>
-                <li class="list-item">
-                  <span>
-                    <span>The banner seems too busy.</span>
-                    <span></span>
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </slot>
+                  </p>
+                  <p class="h2-text2 paragraphp2"><span></span></p>
+                </div>
+                <div class="h2-property1h2 h2-root-class-name2">
+                  <h2 class="h2-text headerH2"><span>My role</span></h2>
+                  <p class="h2-text1 paragraphp2">
+                    <span>UX and UI design, with reviews from my mentor.</span>
+                  </p>
+                  <p class="h2-text2 paragraphp2"><span></span></p>
+                </div>
+              </div>
+            </slot>
+          </section>
         </div>
-        <div class="section-container section-root-class-name1">
-          <slot class="section-custom-slot">
-            <h2 class="headerH2">Fix it</h2>
-            <div class="section-container5">
-              <div class="section-container6">
-                <div class="h3-property1h3 h3-root-class-name7">
+        <div class="dark">
+          <section class="section-container section-root-class-name">
+            <slot class="section-custom-slot">
+              <div class="h2-property1h2 h2-root-class-name6">
+                <h2 class="h2-text headerH2"><span>Approach</span></h2>
+                <p class="h2-text1 paragraphp2">
+                  <span>
+                    As an active customer of VV myself, I already had an idea of
+                    current user experience, so I focused on understanding why
+                    VV has problems with their existing catalog and how we can
+                    improve user experience.
+                  </span>
+                </p>
+                <p class="h2-text2 paragraphp2"><span></span></p>
+              </div>
+              <div class="h3-property1h3 h3-root-class-name">
+                <h3 class="h3-text headerH3">
+                  <span>Understand business goals</span>
+                </h3>
+                <p class="h3-text1 paragraphp2">
+                  <span>
+                    I know what VV tries to do, but I’m not sure why they do it
+                    this exact way. So I start from series of interviews with
+                    stackholders to understand goals and concerns.  To summarise
+                    all my findings I like to formulate Jobs to be done
+                    statements which easy to remember and quote:
+                  </span>
+                </p>
+              </div>
+              <div class="section-container02">
+                <div class="card-section card-root-class-name1">
+                  <slot class="card-custom-slot">
+                    <div class="h3-property1h3 h3-root-class-name1">
+                      <h3 class="h3-text headerH3">
+                        <span>
+                          I want to sell third-party products, so that customers
+                          can order everything in one place, because then they
+                          will choose VV more often
+                        </span>
+                      </h3>
+                      <p class="h3-text1 paragraphp2">
+                        <span>
+                          With a bigger variety of items there is a better
+                          chance that customers will be able to order all they
+                          need in VV
+                        </span>
+                      </p>
+                    </div>
+                  </slot>
+                </div>
+                <div class="card-section card-root-class-name">
+                  <slot class="card-custom-slot">
+                    <div class="h3-property1h3 h3-root-class-name2">
+                      <h3 class="h3-text headerH3">
+                        <span>
+                          I want to sell more in each order, so customers will
+                          be eligible for free delivery and will choose VV more
+                          often
+                        </span>
+                      </h3>
+                      <p class="h3-text1 paragraphp2">
+                        <span>
+                          A bigger catalog leads to a bigger average check which
+                          allows free delivery to more customers
+                        </span>
+                      </p>
+                    </div>
+                  </slot>
+                </div>
+              </div>
+              <div class="section-container03">
+                <div class="card-section card-root-class-name9">
+                  <slot class="card-custom-slot">
+                    <div class="h3-property1h3 h3-root-class-name13">
+                      <h3 class="h3-text headerH3">
+                        <span>
+                          I want to sell third-party products, to attract new
+                          customers, so my revenue is bigger
+                        </span>
+                      </h3>
+                      <p class="h3-text1 paragraphp2">
+                        <span>
+                          With well known items in catalog VV might attract new
+                          categories of customers who weren’t interested in VV
+                          before
+                        </span>
+                      </p>
+                    </div>
+                  </slot>
+                </div>
+                <div class="card-section card-root-class-name10">
+                  <slot class="card-custom-slot">
+                    <div class="h3-property1h3 h3-root-class-name14">
+                      <h3 class="h3-text headerH3">
+                        <span>
+                          I want to find out which products are popular, so that
+                          I can release similar products under my own brand,
+                          because it brings-in more profit
+                        </span>
+                      </h3>
+                      <p class="h3-text1 paragraphp2">
+                        <span>
+                          Having sales data about outside products VV can make
+                          better decisions on launching their own brand’s items
+                        </span>
+                      </p>
+                    </div>
+                  </slot>
+                </div>
+              </div>
+            </slot>
+          </section>
+        </div>
+        <div>
+          <section class="section-container section-root-class-name5">
+            <slot class="section-custom-slot">
+              <div class="h2-property1h2 h2-root-class-name7">
+                <h2 class="h2-text headerH2">
+                  <span>Empathize with user</span>
+                </h2>
+                <p class="h2-text1 paragraphp2">
+                  <span>
+                    I conduct a series of 15-minute interviews with users to
+                    understand what they treasure about VV and what needs to be
+                    improved.
+                  </span>
+                </p>
+                <p class="h2-text2 paragraphp2"><span></span></p>
+              </div>
+              <div class="card-section card-root-class-name8">
+                <slot class="card-custom-slot">
+                  <span class="card-text">
+                    Customers trust VV and used to buy from VV without checking
+                    the contents of the product and best-before dates. This
+                    saves time and lowers the mental load.
+                  </span>
+                </slot>
+              </div>
+              <div class="quote-quote quote-root-class-name">
+                <h2 class="quote-text headerH2">
+                  <span>
+                    I don't need to read the ingredients list because I trust VV
+                    reputation
+                  </span>
+                </h2>
+                <span class="quote-text1">“</span>
+              </div>
+              <div class="card-section card-root-class-name5">
+                <slot class="card-custom-slot">
+                  <span>
+                    Ordering in multiple places leads to an additional mental
+                    load – you need to remember what and where to order, adapt
+                    to different navigation and product cards in apps, and wait
+                    for multiple deliveries*.
+                  </span>
+                  <p class="card-text02">
+                    *There is no “leave it somewhere” delivery option in Moscow.
+                    All items are handled personally to the buyer; if the buyer
+                    is not home, the order will be returned to the store. How
+                    many Saturdays I spent at home waiting for deliveries…
+                  </p>
+                </slot>
+              </div>
+              <div class="card-section card-root-class-name6">
+                <slot class="card-custom-slot">
+                  <span>
+                    Ordering in multiple places leads to an additional mental
+                    load – you need to remember what and where to order, adapt
+                    to different navigation and product cards in apps, and wait
+                    for multiple deliveries*.
+                  </span>
+                </slot>
+              </div>
+              <div class="quote-quote quote-root-class-name1">
+                <h2 class="quote-text headerH2">
+                  <span>
+                    I want to order everything in one place to avoid overpaying
+                    for delivery and save time
+                  </span>
+                </h2>
+                <span class="quote-text1">“</span>
+              </div>
+            </slot>
+          </section>
+        </div>
+        <div class="dark">
+          <section class="section-container section-root-class-name4">
+            <slot class="section-custom-slot">
+              <div class="h2-property1h2 h2-root-class-name8">
+                <h2 class="h2-text headerH2"><span>Visualize</span></h2>
+                <p class="h2-text1 paragraphp2">
+                  <span>
+                    To keep on track our goal I create a customer journey map. I
+                    refer to it when we go too far away from our course
+                  </span>
+                </p>
+                <p class="h2-text2 paragraphp2"><span></span></p>
+              </div>
+              <div class="section-cjm">
+                <div>
+                  <div class="section-container05">
+                    <script>
+                      // Wait for HTML document to get ready
+                      window.addEventListener('load', function () {
+                        // NOT `DOMContentLoaded`
+                        var accent = getComputedStyle(document.documentElement).getPropertyValue(
+                          '--dl-color-palette-accent'
+                        );
+                        var dark = getComputedStyle(document.documentElement).getPropertyValue(
+                          '--dl-color-palette-dark'
+                        );
+
+                        new LeaderLine($('#em1')[0], $('#em2n')[0], {
+                          color: dark,
+                          startPlug: 'disc',
+                          endPlug: 'arrow3',
+                          middleLabel: LeaderLine.captionLabel('Before', { color: dark }),
+                        });
+
+                        new LeaderLine($('#em1')[0], $('#em2p')[0], {
+                          color: accent,
+                          startPlug: 'disc',
+                          endPlug: 'arrow3',
+                          middleLabel: LeaderLine.captionLabel('Afer', { color: accent }),
+                        });
+
+                        new LeaderLine($('#em2n')[0], $('#em3n')[0], {
+                          color: dark,
+                          endPlug: 'arrow3',
+                        });
+
+                        new LeaderLine($('#em2p')[0], $('#em3p')[0], {
+                          color: accent,
+                          endPlug: 'arrow3',
+                        });
+                      });
+                    </script>
+                  </div>
+                </div>
+                <div class="section-row1">
+                  <div class="section-container06">
+                    <span class="typographyheaderH3">Step</span>
+                  </div>
+                  <div class="section-container07">
+                    <span class="typographyheaderH3">I want soup</span>
+                  </div>
+                  <div class="section-container08">
+                    <span class="typographyheaderH3">
+                      I also wanna Ruffles, Oreo, Garlic, oh and dish soap!
+                    </span>
+                  </div>
+                  <div class="section-container09">
+                    <span class="typographyheaderH3">It’s time to shop</span>
+                  </div>
+                </div>
+                <div class="section-row2">
+                  <div class="section-container10">
+                    <span class="typographyheaderH3">Action</span>
+                  </div>
+                  <div class="section-container11">
+                    <span class="typographyparagraphp2">
+                      Goes to the ready-to-eat food section
+                    </span>
+                  </div>
+                  <div class="section-container12">
+                    <span class="typographyparagraphp2">
+                      Searches for Ruffles, Oreo, Garlic, and dish soap
+                    </span>
+                  </div>
+                  <div class="section-container13">
+                    <span class="typographyparagraphp2">Goes to Wallmart</span>
+                  </div>
+                </div>
+                <div class="section-row3">
+                  <div class="section-container14">
+                    <span class="typographyheaderH3">Expected Outcome</span>
+                  </div>
+                  <div class="section-container15">
+                    <span class="typographyparagraphp2">
+                      Soup is easy to find
+                    </span>
+                  </div>
+                  <div class="section-container16">
+                    <span class="typographyparagraphp2">Items are found</span>
+                  </div>
+                  <div class="section-container17">
+                    <span class="typographyparagraphp2">
+                      Orders everything in one place
+                    </span>
+                  </div>
+                </div>
+                <div class="section-row4">
+                  <div class="section-container18">
+                    <span class="typographyheaderH3">Stopper</span>
+                  </div>
+                  <div class="section-container19">
+                    <span class="typographyparagraphp2">—</span>
+                  </div>
+                  <div class="section-container20">
+                    <span class="typographyparagraphp2">
+                      There are no such items
+                    </span>
+                  </div>
+                  <div class="section-container21">
+                    <span class="typographyparagraphp2">
+                      Doesn’t want to make an order at all
+                    </span>
+                  </div>
+                </div>
+                <div class="section-emotions">
+                  <div class="section-container22">
+                    <span class="typographyheaderH3 section-text20">
+                      Emotions
+                    </span>
+                  </div>
+                  <div class="section-frame4227">
+                    <img
+                      id="em1"
+                      alt="ApathyI585"
+                      src="public/external/apathyi585-76n-200h.png"
+                      class="section-apathy"
+                    />
+                  </div>
+                  <div class="section-frame4232">
+                    <img
+                      id="em2n"
+                      alt="UnhappyI585"
+                      src="public/external/unhappyi585-99p-200h.png"
+                      class="section-unhappy"
+                    />
+                    <img
+                      id="em2p"
+                      alt="IrreverentI585"
+                      src="public/external/irreverenti585-nlm7-200h.png"
+                      class="section-irreverent"
+                    />
+                  </div>
+                  <div class="section-frame4233">
+                    <img
+                      id="em3n"
+                      alt="UnhappyI585"
+                      src="public/external/unhappyi585-dff-200h.png"
+                      class="section-unhappy1"
+                    />
+                    <img
+                      id="em3p"
+                      alt="IMAGE2xI585"
+                      src="public/external/image2xi585-5zwr-200h.png"
+                      class="section-image2x"
+                    />
+                  </div>
+                </div>
+                <div class="section-row5">
+                  <div class="section-container23">
+                    <span class="typographyheaderH3">Fix</span>
+                  </div>
+                  <div class="section-container24">
+                    <span class="typographyparagraphp2">
+                      There's also soup from Tim Hortons
+                    </span>
+                  </div>
+                  <div class="section-container25">
+                    <span class="typographyparagraphp2">
+                      Ruffles, Oreo, Garlic, and dish soap are found
+                    </span>
+                  </div>
+                  <div class="section-container26">
+                    <span class="typographyparagraphp2">Makes an order</span>
+                  </div>
+                </div>
+              </div>
+            </slot>
+          </section>
+        </div>
+        <div>
+          <section class="section-container section-root-class-name6">
+            <slot class="section-custom-slot">
+              <div class="h2-property1h2 h2-root-class-name9">
+                <h2 class="h2-text headerH2">
+                  <span>How do others do it?</span>
+                </h2>
+                <p class="h2-text1 paragraphp2">
+                  <span>
+                    I am analyzing the strategies of businesses that sell
+                    products from various brands as well as products under their
+                    own brand. I found two approaches to their products: they
+                    either mix-in or they stand out from the third-party
+                    product.
+                  </span>
+                </p>
+                <p class="h2-text2 paragraphp2"><span></span></p>
+              </div>
+              <div class="h3-property1h3 h3-root-class-name5">
+                <h3 class="h3-text headerH3"><span>Mix-in</span></h3>
+                <p class="h3-text1 paragraphp2">
+                  <span>
+                    Stores do not place a special mark indicating that the
+                    product is of their own brand. You can only guess based on
+                    the appearance and the name.
+                  </span>
+                </p>
+              </div>
+              <div
+                class="imagecarousel-imagecarousel imagecarousel-root-class-name"
+              >
+                <span class="imagecarousel-text headerH2">
+                  <span>Image carousel</span>
+                </span>
+              </div>
+              <div class="h3-property1h3 h3-root-class-name6">
+                <h3 class="h3-text headerH3"><span>Stand out</span></h3>
+                <p class="h3-text1 paragraphp2">
+                  <span>
+                    Stores actively label products as their own brand,
+                    distinguishing them among products from other brands.
+                  </span>
+                </p>
+              </div>
+              <div
+                class="imagecarousel-imagecarousel imagecarousel-root-class-name1"
+              >
+                <span class="imagecarousel-text headerH2">
+                  <span>Image carousel</span>
+                </span>
+              </div>
+            </slot>
+          </section>
+        </div>
+        <div class="dark">
+          <section class="section-container section-root-class-name3">
+            <slot class="section-custom-slot">
+              <div class="h2-property1h2 h2-root-class-name10">
+                <h2 class="h2-text headerH2"><span>Conclusion</span></h2>
+                <p class="h2-text1 paragraphp2">
+                  <span>
+                    Companies that actively develop their brand image highlight
+                    their own products more frequently.
+                  </span>
+                </p>
+                <p class="h2-text2 paragraphp2"><span></span></p>
+              </div>
+            </slot>
+          </section>
+        </div>
+        <div>
+          <section class="section-container section-root-class-name2">
+            <slot class="section-custom-slot">
+              <div class="h2-property1h2 h2-root-class-name11">
+                <h2 class="h2-text headerH2"><span>1st iteration</span></h2>
+                <p class="h2-text1 paragraphp2">
+                  <span>
+                    I’m starting from designing new elements for testing.
+                  </span>
+                </p>
+                <p class="h2-text2 paragraphp2"><span></span></p>
+              </div>
+              <div
+                class="imagecarousel-imagecarousel imagecarousel-root-class-name2"
+              >
+                <span class="imagecarousel-text headerH2">
+                  <span>Image carousel</span>
+                </span>
+              </div>
+              <div class="list-container list-root-class-name">
+                <div class="h3-property1h3 h3-root-class-name3">
                   <h3 class="h3-text headerH3">
-                    <span>Clarify "supermarket"</span>
+                    <span>Testing findings</span>
                   </h3>
-                  <p class="h3-text1 paragraphp2">
-                    <span>
-                      Since user's don't have problem understanding feature
-                      after explanation I add short onboarding animation and a
-                      note into supermarket category in the catalog.
-                    </span>
-                  </p>
+                  <p class="h3-text1 paragraphp2"><span></span></p>
                 </div>
-                <img
-                  alt="image"
-                  src="public/image%20193-200w.png"
-                  class="section-image1"
-                />
-              </div>
-              <div class="section-container7">
-                <div class="h3-property1h3 h3-root-class-name8">
-                  <h3 class="h3-text headerH3"><span>"Busy" graphics</span></h3>
-                  <p class="h3-text1 paragraphp2">
+                <ul class="list">
+                  <li class="list-item">
                     <span>
-                      By toning down the gradient the new category looks more
-                      consistent with the rest of the app.
+                      <span>
+                        Users don't understand what “supermarket” is. Even if
+                        they know that VV is started to sell products from other
+                        brands.
+                      </span>
+                      <span></span>
                     </span>
-                  </p>
-                </div>
-                <img
-                  alt="image"
-                  src="public/image%20223-200w.png"
-                  class="section-image2"
-                />
+                  </li>
+                  <li class="list-item">
+                    <span>
+                      <span>
+                        After explaining the concept of a supermarket again, the
+                        difficulties disappear.
+                      </span>
+                      <span></span>
+                    </span>
+                  </li>
+                  <li class="list-item">
+                    <span>
+                      <span>Respondents don't care who produced the item.</span>
+                      <span></span>
+                    </span>
+                  </li>
+                  <li class="list-item">
+                    <span>
+                      <span>The banner seems too busy.</span>
+                      <span></span>
+                    </span>
+                  </li>
+                </ul>
               </div>
-            </div>
-          </slot>
+            </slot>
+          </section>
         </div>
-        <div class="section-container section-root-class-name7">
-          <slot class="section-custom-slot">
-            <div class="h2-property1h2 h2-root-class-name12">
-              <h2 class="h2-text headerH2"><span>Is it better?</span></h2>
-              <p class="h2-text1 paragraphp2">
-                <span>
-                  Second round of testing showed great improvement in user's
-                  understanding of the "supermarket" and better impression of
-                  UI.
-                </span>
-              </p>
-              <p class="h2-text2 paragraphp2">
-                <span>But I found a new problem:</span>
-              </p>
-            </div>
-            <ul class="list">
-              <li class="list-item">
-                <span>
-                  Users open the app not only for ordering products but also for
-                  scanning their loyalty cards in-store and checking deliveries.
-                </span>
-              </li>
-            </ul>
-          </slot>
+        <div class="dark">
+          <section class="section-container section-root-class-name1">
+            <slot class="section-custom-slot">
+              <div class="h2-property1h2 h2-root-class-name13">
+                <h2 class="h2-text headerH2"><span>Fix it</span></h2>
+                <p class="h2-text1 paragraphp2"><span></span></p>
+                <p class="h2-text2 paragraphp2"><span></span></p>
+              </div>
+              <div class="section-container27">
+                <div class="section-container28">
+                  <div class="h3-property1h3 h3-root-class-name7">
+                    <h3 class="h3-text headerH3">
+                      <span>Clarify "supermarket"</span>
+                    </h3>
+                    <p class="h3-text1 paragraphp2">
+                      <span>
+                        Since user's don't have problem understanding feature
+                        after explanation I add short onboarding animation and a
+                        note into supermarket category in the catalog.
+                      </span>
+                    </p>
+                  </div>
+                  <img
+                    alt="image"
+                    src="public/image%20193-200w.png"
+                    class="section-image"
+                  />
+                </div>
+                <div class="section-container29">
+                  <div class="h3-property1h3 h3-root-class-name8">
+                    <h3 class="h3-text headerH3">
+                      <span>"Busy" graphics</span>
+                    </h3>
+                    <p class="h3-text1 paragraphp2">
+                      <span>
+                        By toning down the gradient the new category looks more
+                        consistent with the rest of the app.
+                      </span>
+                    </p>
+                  </div>
+                  <img
+                    alt="image"
+                    src="public/image%20223-200w.png"
+                    class="section-image1"
+                  />
+                </div>
+              </div>
+            </slot>
+          </section>
         </div>
-        <div class="section-container section-root-class-name13">
-          <slot class="section-custom-slot">
-            <h2 class="headerH2">Let's fix it</h2>
-            <div class="h3-property1h3 h3-root-class-name9">
-              <h3 class="h3-text headerH3"><span>Before</span></h3>
-              <p class="h3-text1 paragraphp2">
-                <span>
-                  With current flow users prefer to skip the onboarding because
-                  it's not why they came to the app at the moment. It’s not only
-                  defiese the purpose but angers users by distracting them from
-                  their original intention.
-                </span>
-              </p>
-            </div>
-            <div
-              class="imagecarousel-imagecarousel imagecarousel-root-class-name4"
-            >
-              <span class="imagecarousel-text headerH2">
-                <span>Image carousel</span>
-              </span>
-            </div>
-            <div class="h3-property1h3 h3-root-class-name10">
-              <h3 class="h3-text headerH3"><span>After</span></h3>
-              <p class="h3-text1 paragraphp2">
-                <span>
-                  I decided to move the onboarding to the moment of the first
-                  interaction with the catalogue or search.
-                </span>
-              </p>
-            </div>
-            <div
-              class="imagecarousel-imagecarousel imagecarousel-root-class-name3"
-            >
-              <span class="imagecarousel-text headerH2">
-                <span>Image carousel</span>
-              </span>
-            </div>
-          </slot>
+        <div>
+          <section class="section-container section-root-class-name7">
+            <slot class="section-custom-slot">
+              <div class="h2-property1h2 h2-root-class-name12">
+                <h2 class="h2-text headerH2"><span>Is it better?</span></h2>
+                <p class="h2-text1 paragraphp2">
+                  <span>
+                    Second round of testing showed great improvement in user's
+                    understanding of the "supermarket" and better impression of
+                    UI.
+                  </span>
+                </p>
+                <p class="h2-text2 paragraphp2">
+                  <span>But I found a new problem.</span>
+                </p>
+              </div>
+              <div class="card-section card-root-class-name2">
+                <slot class="card-custom-slot">
+                  <div class="h3-property1h3 h3-root-class-name4">
+                    <h3 class="h3-text headerH3">
+                      <span>
+                        Users open the app not only for ordering products but
+                        also for scanning their loyalty cards in-store and
+                        checking deliveries.
+                      </span>
+                    </h3>
+                    <p class="h3-text1 paragraphp2"><span></span></p>
+                  </div>
+                </slot>
+              </div>
+            </slot>
+          </section>
         </div>
-        <div class="section-container section-root-class-name10">
-          <slot class="section-custom-slot">
-            <div class="h2-property1h2 h2-root-class-name14">
-              <h2 class="h2-text headerH2"><span>The result</span></h2>
-              <p class="h2-text1 paragraphp2">
-                <span>
-                  Now, the new section has received the necessary attention from
-                  users, without hindering interaction with the rest of the app.
-                </span>
-              </p>
-              <p class="h2-text2 paragraphp2">
-                <span>
-                  The brand maintains its identity and user trust, while also
-                  gaining the opportunity to expand the catalog with third-party
-                  products.
-                </span>
-              </p>
-            </div>
-          </slot>
+        <div class="dark">
+          <section class="section-container section-root-class-name13">
+            <slot class="section-custom-slot">
+              <div class="h2-property1h2 h2-root-class-name16">
+                <h2 class="h2-text headerH2"><span>Let's fix it</span></h2>
+                <p class="h2-text1 paragraphp2"><span></span></p>
+                <p class="h2-text2 paragraphp2"><span></span></p>
+              </div>
+              <div class="h3-property1h3 h3-root-class-name9">
+                <h3 class="h3-text headerH3"><span>Before</span></h3>
+                <p class="h3-text1 paragraphp2">
+                  <span>
+                    With current flow users prefer to skip the onboarding
+                    because it's not why they came to the app at the moment.
+                    It’s not only defiese the purpose but angers users by
+                    distracting them from their original intention.
+                  </span>
+                </p>
+              </div>
+              <div class="section-before">
+                <div class="section-container30">
+                  <div class="section-container31">
+                    <script>
+                      // Wait for HTML document to get ready
+                      window.addEventListener('load', function () {
+                        // NOT `DOMContentLoaded`
+                        var accent = getComputedStyle(document.documentElement).getPropertyValue(
+                          '--dl-color-palette-accent'
+                        );
+                        var dark = getComputedStyle(document.documentElement).getPropertyValue(
+                          '--dl-color-palette-dark'
+                        );
+
+                        new LeaderLine($('#fch1')[0], $('#fch2')[0], {
+                          color: accent,
+                          startPlug: 'disc',
+                          endPlug: 'arrow3',
+                        });
+
+                        new LeaderLine($('#fch2')[0], $('#fch3')[0], {
+                          color: accent,
+                          startPlug: 'disc',
+                          endPlug: 'arrow3',
+                        });
+
+
+                      });
+                    </script>
+                  </div>
+                </div>
+                <div class="section-container32">
+                  <div id="fch1">
+                    <div
+                      class="chart-card-flowchartblock chart-card-root-class-name9"
+                    >
+                      <p class="paragraphp2"><span>Onboarding</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="section-container34">
+                  <div id="fch2">
+                    <div
+                      class="chart-card-flowchartblock chart-card-root-class-name10"
+                    >
+                      <p class="paragraphp2"><span>Main</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="section-container36">
+                  <div id="fch3">
+                    <div
+                      class="chart-card-flowchartblock chart-card-root-class-name11"
+                    >
+                      <p class="paragraphp2"><span>Catalog</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h3-property1h3 h3-root-class-name10">
+                <h3 class="h3-text headerH3"><span>After</span></h3>
+                <p class="h3-text1 paragraphp2">
+                  <span>
+                    I decided to move the onboarding to the moment of the first
+                    interaction with the catalogue or search.
+                  </span>
+                </p>
+              </div>
+              <div class="section-after">
+                <div class="section-container38">
+                  <div class="section-container39">
+                    <script>
+                      // Wait for HTML document to get ready
+                      window.addEventListener('load', function () {
+                        // NOT `DOMContentLoaded`
+                        var accent = getComputedStyle(document.documentElement).getPropertyValue(
+                          '--dl-color-palette-accent'
+                        );
+                        var dark = getComputedStyle(document.documentElement).getPropertyValue(
+                          '--dl-color-palette-dark'
+                        );
+
+                        new LeaderLine($('#f2ch1')[0], $('#f2ch4')[0], {
+                          color: accent,
+                          startPlug: 'disc',
+                          endPlug: 'arrow3',
+                        });
+
+                        new LeaderLine($('#f2ch2')[0], $('#f2ch4')[0], {
+                          color: accent,
+                          startPlug: 'disc',
+                          endPlug: 'arrow3',
+                        });
+
+                        new LeaderLine($('#f2ch3')[0], $('#f2ch4')[0], {
+                          color: accent,
+                          startPlug: 'disc',
+                          endPlug: 'arrow3',
+                        });
+
+                        new LeaderLine($('#f2ch4')[0], $('#f2ch5')[0], {
+                          color: accent,
+                          startPlug: 'disc',
+                          endPlug: 'arrow3',
+                        });
+
+                        new LeaderLine($('#f2ch4')[0], $('#f2ch6')[0], {
+                          color: accent,
+                          startPlug: 'disc',
+                          endPlug: 'arrow3',
+                        });
+                      });
+                    </script>
+                  </div>
+                </div>
+                <div class="section-container40">
+                  <div id="f2ch1">
+                    <div
+                      class="chart-card-flowchartblock chart-card-root-class-name12"
+                    >
+                      <p class="paragraphp2"><span>Main</span></p>
+                    </div>
+                  </div>
+                  <div id="f2ch2">
+                    <div
+                      class="chart-card-flowchartblock chart-card-root-class-name13"
+                    >
+                      <p class="paragraphp2"><span>Catalog</span></p>
+                    </div>
+                  </div>
+                  <div id="f2ch3">
+                    <div
+                      class="chart-card-flowchartblock chart-card-root-class-name14"
+                    >
+                      <p class="paragraphp2"><span>Search</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="section-container44">
+                  <div id="f2ch4">
+                    <div
+                      class="chart-card-flowchartblock chart-card-root-class-name15"
+                    >
+                      <p class="paragraphp2"><span>Onboarding</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="section-container46">
+                  <div id="f2ch5">
+                    <div
+                      class="chart-card-flowchartblock chart-card-root-class-name16"
+                    >
+                      <p class="paragraphp2"><span>Catalog</span></p>
+                    </div>
+                  </div>
+                  <div id="f2ch6">
+                    <div
+                      class="chart-card-flowchartblock chart-card-root-class-name17"
+                    >
+                      <p class="paragraphp2"><span>Search result</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </slot>
+          </section>
         </div>
-        <div class="section-container section-root-class-name9">
-          <slot class="section-custom-slot">
-            <div class="h2-property1h2 h2-root-class-name15">
-              <h2 class="h2-text headerH2"><span>Final thoughts</span></h2>
-              <p class="h2-text1 paragraphp2">
-                <span>write what I have learned</span>
-              </p>
-              <p class="h2-text2 paragraphp2"><span></span></p>
-            </div>
-          </slot>
+        <div>
+          <section class="section-container section-root-class-name10">
+            <slot class="section-custom-slot">
+              <div class="h2-property1h2 h2-root-class-name14">
+                <h2 class="h2-text headerH2"><span>The result</span></h2>
+                <p class="h2-text1 paragraphp2">
+                  <span>
+                    Now, the new section has received the necessary attention
+                    from users, without hindering interaction with the rest of
+                    the app.
+                  </span>
+                </p>
+                <p class="h2-text2 paragraphp2"><span></span></p>
+              </div>
+            </slot>
+          </section>
         </div>
-        <div class="section-container section-root-class-name8">
-          <slot class="section-custom-slot">
-            <h3 class="headerH3">Final mockup</h3>
-            <img
-              alt="image"
-              src="https://play.teleporthq.io/static/svg/default-img.svg"
-              class="section-image3"
-            />
-          </slot>
+        <div class="vvcase-thoughts dark">
+          <section class="section-container section-root-class-name9">
+            <slot class="section-custom-slot">
+              <div class="h2-property1h2 h2-root-class-name15">
+                <h2 class="h2-text headerH2"><span>Final thoughts</span></h2>
+                <p class="h2-text1 paragraphp2">
+                  <span>write what I have learned</span>
+                </p>
+                <p class="h2-text2 paragraphp2"><span></span></p>
+              </div>
+            </slot>
+          </section>
         </div>
-        <div class="footer-footer footer-root-class-name">
+        <div class="vvcase-mockup">
+          <section class="section-container section-root-class-name8">
+            <slot class="section-custom-slot">
+              <div class="h2-property1h2 h2-root-class-name17">
+                <h2 class="h2-text headerH2"><span>Final mockup</span></h2>
+                <p class="h2-text1 paragraphp2"><span></span></p>
+                <p class="h2-text2 paragraphp2"><span></span></p>
+              </div>
+              <img
+                alt="image"
+                src="https://play.teleporthq.io/static/svg/default-img.svg"
+                class="section-image2"
+              />
+            </slot>
+          </section>
+        </div>
+        <footer class="footer-footer footer-root-class-name">
           <span class="paragraphp2"><span>LINKEDIN</span></span>
           <span class="paragraphp2"><span>BEHANCE</span></span>
           <span class="paragraphp2"><span>EMAIL</span></span>
-        </div>
+        </footer>
       </div>
     </div>
   </body>

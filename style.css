@@ -68,11 +68,17 @@
   border: 5px solid;
   border-color: dark (palette);
 }
-.paragraphp1 {
-  font-size: 1.3rem;
+.typographyheaderH3 {
+  font-size: 24px;
   font-style: normal;
+  font-family: Kalnia;
+  font-weight: 400px;
+  font-stretch: normal;
+}
+.paragraphp1 {
+  font-size: 1.5rem;
   font-family: Lato;
-  font-weight: 300px;
+  font-weight: 300;
   line-height: 140%;
 }
 .headerH3 {
@@ -93,6 +99,20 @@
   font-family: Kalnia;
   font-weight: 700;
   line-height: 100%;
+}
+.typographyheaderH2 {
+  font-size: 32px;
+  font-style: normal;
+  font-family: Kalnia;
+  font-weight: 500px;
+  font-stretch: normal;
+}
+.typographyparagraphp2 {
+  font-size: 20px;
+  font-style: normal;
+  font-family: Lato;
+  font-weight: 400px;
+  font-stretch: normal;
 }
 .headerH2 {
   font-size: 2rem;

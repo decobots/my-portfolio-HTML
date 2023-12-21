@@ -1,0 +1,32 @@
+.chart-card-flowchartblock {
+  display: flex;
+  padding: var(--dl-space-space-unit);
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--dl-radius-radius-corner);
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dl-color-palette-light);
+}
+
+
+
+
+
+
+
+.chart-card-root-class-name7 {
+  width: auto;
+}
+
+.chart-card-root-class-name9 {
+  width: auto;
+}
+
+
+
+
+
+
+
+

@@ -26,6 +26,7 @@
 
 
 
+
 .card-root-class-name9 {
   flex: 4;
   width: auto;
@@ -43,6 +44,7 @@
   }
   .card-root-class-name9 {
     flex: 0 0 auto;
+    width: 100%;
   }
   .card-root-class-name10 {
     flex: 0 0 auto;
