@@ -621,26 +621,114 @@
                 class="imagecarousel-imagecarousel imagecarousel-root-class-name"
               >
                 <div class="imagecarousel-container">
-                  <img
-                    alt="image"
-                    src="public/vv/mixin/frame%204283-200w.png"
-                    class="imagecarousel-image"
-                  />
-                  <img
-                    alt="image"
-                    src="public/vv/mixin/frame%204284-200w.png"
-                    class="imagecarousel-image1"
-                  />
-                  <img
-                    alt="image"
-                    src="public/vv/mixin/frame%204285-200w.png"
-                    class="imagecarousel-image2"
-                  />
-                  <img
-                    alt="image"
-                    src="public/vv/mixin/frame%204286-200w.png"
-                    class="imagecarousel-image3"
-                  />
+                  <div class="imagecarousel-container01">
+                    <div class="imagecarousel-container02">
+                      <script>
+                        var photo_n = 0;
+                                 var slides = 4;
+                                 const big='imb';
+                                 const small='ims'
+                                 $(function() {
+
+                                   $('#right').on('click', function ()
+                                   {
+                                     photo_n++;
+                                     update_slide();
+                                   });
+                                   $('#left').on('click', function ()
+                                   {
+                                     if(photo_n>0){photo_n--;  }
+                                     else {photo_n=slides-1;}
+                                     update_slide();
+                                   });
+
+                                   for(var i=0;i<slides;i++){
+                                     $('#'+small+i).on('click',{ value: i }, function (event)
+                                     {
+                                       photo_n=event.data.value;
+                                       update_slide();
+                                     });
+                                   }
+
+
+                                 });
+                                 function update_slide(){
+                                   var left=(photo_n-1)%slides;
+                                   var current=photo_n%slides;
+                                   var right=(photo_n+1)%slides;
+
+                                   $('#'+big+left).hide();
+                                   $('#'+big+right).hide();
+
+                                   $('#'+big+current).show();
+                                 }
+                      </script>
+                    </div>
+                  </div>
+                  <div class="imagecarousel-container03">
+                    <span id="left" class="imagecarousel-text">&lt;&lt;</span>
+                    <div class="imagecarousel-container04">
+                      <img
+                        id="imb0"
+                        src="public/vv/mixin/frame%204283-200w.png"
+                        alt="image"
+                        class="imagecarousel-image"
+                      />
+                      <img
+                        id="imb1"
+                        src="public/vv/mixin/frame%204284-200w.png"
+                        alt="image"
+                        class="imagecarousel-image1"
+                      />
+                      <img
+                        id="imb2"
+                        src="public/vv/mixin/frame%204285-200w.png"
+                        alt="image"
+                        class="imagecarousel-image2"
+                      />
+                      <img
+                        id="imb2"
+                        src="public/vv/mixin/frame%204286-200w.png"
+                        alt="image"
+                        class="imagecarousel-image3"
+                      />
+                    </div>
+                    <span id="right" class="imagecarousel-text1">&gt;&gt;</span>
+                  </div>
+                  <div class="imagecarousel-container05">
+                    <div class="imagecarousel-container06">
+                      <img
+                        src="public/vv/mixin/frame%204283-200w.png"
+                        id="ims0"
+                        alt="image"
+                        class="imagecarousel-image4"
+                      />
+                    </div>
+                    <div class="imagecarousel-container07">
+                      <img
+                        id="ims1"
+                        src="public/vv/mixin/frame%204284-200w.png"
+                        alt="image"
+                        class="imagecarousel-image5"
+                      />
+                    </div>
+                    <div class="imagecarousel-container08">
+                      <img
+                        id="ims2"
+                        src="public/vv/mixin/frame%204285-200w.png"
+                        alt="image"
+                        class="imagecarousel-image6"
+                      />
+                    </div>
+                    <div class="imagecarousel-container09">
+                      <img
+                        id="ims2"
+                        src="public/vv/mixin/frame%204286-200w.png"
+                        alt="image"
+                        class="imagecarousel-image7"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="h3-property1h3 h3-root-class-name6">
@@ -657,26 +745,114 @@
                 class="imagecarousel-imagecarousel imagecarousel-root-class-name1"
               >
                 <div class="imagecarousel-container">
-                  <img
-                    alt="image"
-                    src="public/vv/standout/frame-1-200h.png"
-                    class="imagecarousel-image"
-                  />
-                  <img
-                    alt="image"
-                    src="public/vv/standout/frame-2-200h.png"
-                    class="imagecarousel-image1"
-                  />
-                  <img
-                    alt="image"
-                    src="public/vv/standout/frame-3-200h.png"
-                    class="imagecarousel-image2"
-                  />
-                  <img
-                    alt="image"
-                    src="public/vv/standout/frame-200h.png"
-                    class="imagecarousel-image3"
-                  />
+                  <div class="imagecarousel-container01">
+                    <div class="imagecarousel-container02">
+                      <script>
+                        var photo_n = 0;
+                                 var slides = 4;
+                                 const big='imb';
+                                 const small='ims'
+                                 $(function() {
+
+                                   $('#right').on('click', function ()
+                                   {
+                                     photo_n++;
+                                     update_slide();
+                                   });
+                                   $('#left').on('click', function ()
+                                   {
+                                     if(photo_n>0){photo_n--;  }
+                                     else {photo_n=slides-1;}
+                                     update_slide();
+                                   });
+
+                                   for(var i=0;i<slides;i++){
+                                     $('#'+small+i).on('click',{ value: i }, function (event)
+                                     {
+                                       photo_n=event.data.value;
+                                       update_slide();
+                                     });
+                                   }
+
+
+                                 });
+                                 function update_slide(){
+                                   var left=(photo_n-1)%slides;
+                                   var current=photo_n%slides;
+                                   var right=(photo_n+1)%slides;
+
+                                   $('#'+big+left).hide();
+                                   $('#'+big+right).hide();
+
+                                   $('#'+big+current).show();
+                                 }
+                      </script>
+                    </div>
+                  </div>
+                  <div class="imagecarousel-container03">
+                    <span id="left" class="imagecarousel-text">&lt;&lt;</span>
+                    <div class="imagecarousel-container04">
+                      <img
+                        id="imb0"
+                        src="public/vv/standout/frame-1-200h.png"
+                        alt="image"
+                        class="imagecarousel-image"
+                      />
+                      <img
+                        id="imb1"
+                        src="public/vv/standout/frame-2-200h.png"
+                        alt="image"
+                        class="imagecarousel-image1"
+                      />
+                      <img
+                        id="imb2"
+                        src="public/vv/standout/frame-3-200h.png"
+                        alt="image"
+                        class="imagecarousel-image2"
+                      />
+                      <img
+                        id="imb2"
+                        src="public/vv/standout/frame-200h.png"
+                        alt="image"
+                        class="imagecarousel-image3"
+                      />
+                    </div>
+                    <span id="right" class="imagecarousel-text1">&gt;&gt;</span>
+                  </div>
+                  <div class="imagecarousel-container05">
+                    <div class="imagecarousel-container06">
+                      <img
+                        src="public/vv/standout/frame-1-200h.png"
+                        id="ims0"
+                        alt="image"
+                        class="imagecarousel-image4"
+                      />
+                    </div>
+                    <div class="imagecarousel-container07">
+                      <img
+                        id="ims1"
+                        src="public/vv/standout/frame-2-200h.png"
+                        alt="image"
+                        class="imagecarousel-image5"
+                      />
+                    </div>
+                    <div class="imagecarousel-container08">
+                      <img
+                        id="ims2"
+                        src="public/vv/standout/frame-3-200h.png"
+                        alt="image"
+                        class="imagecarousel-image6"
+                      />
+                    </div>
+                    <div class="imagecarousel-container09">
+                      <img
+                        id="ims2"
+                        src="public/vv/standout/frame-200h.png"
+                        alt="image"
+                        class="imagecarousel-image7"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="h3-property1h3 h3-root-class-name11">
@@ -723,26 +899,114 @@
                 class="imagecarousel-imagecarousel imagecarousel-root-class-name2"
               >
                 <div class="imagecarousel-container">
-                  <img
-                    alt="image"
-                    src="public/vv/cards/frame%204151-200h.png"
-                    class="imagecarousel-image"
-                  />
-                  <img
-                    alt="image"
-                    src="public/vv/cards/frame%204152-200h.png"
-                    class="imagecarousel-image1"
-                  />
-                  <img
-                    alt="image"
-                    src="public/vv/cards/frame%204153-200h.png"
-                    class="imagecarousel-image2"
-                  />
-                  <img
-                    alt="image"
-                    src="public/vv/cards/frame%204154-200h.png"
-                    class="imagecarousel-image3"
-                  />
+                  <div class="imagecarousel-container01">
+                    <div class="imagecarousel-container02">
+                      <script>
+                        var photo_n = 0;
+                                 var slides = 4;
+                                 const big='imb';
+                                 const small='ims'
+                                 $(function() {
+
+                                   $('#right').on('click', function ()
+                                   {
+                                     photo_n++;
+                                     update_slide();
+                                   });
+                                   $('#left').on('click', function ()
+                                   {
+                                     if(photo_n>0){photo_n--;  }
+                                     else {photo_n=slides-1;}
+                                     update_slide();
+                                   });
+
+                                   for(var i=0;i<slides;i++){
+                                     $('#'+small+i).on('click',{ value: i }, function (event)
+                                     {
+                                       photo_n=event.data.value;
+                                       update_slide();
+                                     });
+                                   }
+
+
+                                 });
+                                 function update_slide(){
+                                   var left=(photo_n-1)%slides;
+                                   var current=photo_n%slides;
+                                   var right=(photo_n+1)%slides;
+
+                                   $('#'+big+left).hide();
+                                   $('#'+big+right).hide();
+
+                                   $('#'+big+current).show();
+                                 }
+                      </script>
+                    </div>
+                  </div>
+                  <div class="imagecarousel-container03">
+                    <span id="left" class="imagecarousel-text">&lt;&lt;</span>
+                    <div class="imagecarousel-container04">
+                      <img
+                        id="imb0"
+                        src="public/vv/cards/frame%204151-200h.png"
+                        alt="image"
+                        class="imagecarousel-image"
+                      />
+                      <img
+                        id="imb1"
+                        src="public/vv/cards/frame%204152-200h.png"
+                        alt="image"
+                        class="imagecarousel-image1"
+                      />
+                      <img
+                        id="imb2"
+                        src="public/vv/cards/frame%204153-200h.png"
+                        alt="image"
+                        class="imagecarousel-image2"
+                      />
+                      <img
+                        id="imb2"
+                        src="public/vv/cards/frame%204154-200h.png"
+                        alt="image"
+                        class="imagecarousel-image3"
+                      />
+                    </div>
+                    <span id="right" class="imagecarousel-text1">&gt;&gt;</span>
+                  </div>
+                  <div class="imagecarousel-container05">
+                    <div class="imagecarousel-container06">
+                      <img
+                        src="public/vv/cards/frame%204151-200h.png"
+                        id="ims0"
+                        alt="image"
+                        class="imagecarousel-image4"
+                      />
+                    </div>
+                    <div class="imagecarousel-container07">
+                      <img
+                        id="ims1"
+                        src="public/vv/cards/frame%204152-200h.png"
+                        alt="image"
+                        class="imagecarousel-image5"
+                      />
+                    </div>
+                    <div class="imagecarousel-container08">
+                      <img
+                        id="ims2"
+                        src="public/vv/cards/frame%204153-200h.png"
+                        alt="image"
+                        class="imagecarousel-image6"
+                      />
+                    </div>
+                    <div class="imagecarousel-container09">
+                      <img
+                        id="ims2"
+                        src="public/vv/cards/frame%204154-200h.png"
+                        alt="image"
+                        class="imagecarousel-image7"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="list-container list-root-class-name">

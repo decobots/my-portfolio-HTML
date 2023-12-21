@@ -1,13 +1,13 @@
 :root {
-  --dl-size-size-large: 144px;
-  --dl-size-size-small: 48px;
-  --dl-size-size-medium: 96px;
-  --dl-size-size-xlarge: 192px;
-  --dl-size-size-xsmall: 16px;
+  --dl-size-size-large: 10;
+  --dl-size-size-small: 4;
+  --dl-size-size-medium: 8rem;
+  --dl-size-size-xlarge: 12rem;
+  --dl-size-size-xsmall: 1rem;
   --dl-space-space-unit: 1rem;
-  --dl-size-size-xxlarge: 288px;
+  --dl-size-size-xxlarge: 18rem;
   --dl-color-palette-dark: #173b2fff;
-  --dl-size-size-maxwidth: 1400px;
+  --dl-size-size-maxwidth: 90rem;
   --dl-color-palette-light: #f7efebff;
   --dl-color-palette-accent: #eca755ff;
   --dl-radius-radius-corner: 16px;
