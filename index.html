@@ -156,7 +156,7 @@
                     function update_slide(bigs, n) {
                       var current = n % bigs.length;
                       for (var j = 0; j < bigs.length; j++) {
-                        if (j == current) bigs[j].show();
+                        if (j == current) $(bigs[j]).show();
                         else $(bigs[j]).hide();
                       }
                     }
@@ -734,6 +734,7 @@
                       <img
                         src="public/vv/mixin/frame%204286-200w.png"
                         alt="image"
+                        name="ims3"
                         class="imagecarousel-image7"
                       />
                     </div>
@@ -816,6 +817,7 @@
                       <img
                         src="public/vv/standout/frame-200h.png"
                         alt="image"
+                        name="ims3"
                         class="imagecarousel-image7"
                       />
                     </div>
@@ -928,14 +930,15 @@
                       <img
                         src="public/vv/cards/frame%204154-200h.png"
                         alt="image"
+                        name="ims3"
                         class="imagecarousel-image7"
                       />
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="list-container list-root-class-name">
-                <div class="h3-property1h3 h3-root-class-name3">
+              <div class="section-container27">
+                <div class="h3-property1h3 h3-root-class-name12">
                   <h3 class="h3-text headerH3">
                     <span>Testing findings</span>
                   </h3>
@@ -945,34 +948,22 @@
                 <ul class="list">
                   <li class="list-item">
                     <span>
-                      <span>
-                        Users don't understand what “supermarket” is. Even if
-                        they know that VV is started to sell products from other
-                        brands.
-                      </span>
-                      <span></span>
+                      Users don't understand the concept of the “Supermarket”
+                      category. Even if they know that VV has started to sell
+                      products from other brands.
                     </span>
                   </li>
                   <li class="list-item">
                     <span>
-                      <span>
-                        After explaining the concept of a supermarket again, the
-                        difficulties disappear.
-                      </span>
-                      <span></span>
+                      After a brief explanation of the concept of a
+                      "Supermarket", the difficulties disappear.
                     </span>
                   </li>
                   <li class="list-item">
-                    <span>
-                      <span>Respondents don't care who produced the item.</span>
-                      <span></span>
-                    </span>
+                    <span>Respondents don't care who produced the item.</span>
                   </li>
                   <li class="list-item">
-                    <span>
-                      <span>The banner seems too busy.</span>
-                      <span></span>
-                    </span>
+                    <span>The banner seems too busy.</span>
                   </li>
                 </ul>
               </div>
@@ -987,36 +978,43 @@
                 <p class="h2-text1 paragraphp2"><span></span></p>
                 <p class="h2-text2 paragraphp2"><span></span></p>
               </div>
-              <div class="section-container27">
-                <div class="section-container28">
+              <div class="section-container28">
+                <div class="section-container29">
                   <div class="h3-property1h3 h3-root-class-name7">
                     <h3 class="h3-text headerH3">
                       <span>Clarify "supermarket"</span>
                     </h3>
                     <p class="h3-text1 paragraphp2">
                       <span>
-                        Since user's don't have problem understanding feature
+                        Since users don't have problem understanding feature
                         after explanation I add short onboarding animation and a
                         note into supermarket category in the catalog.
                       </span>
                     </p>
                     <p class="h3-text2 paragraphp2"><span></span></p>
                   </div>
-                  <img
-                    alt="image"
-                    src="public/vv/image%20193-200w.png"
-                    class="section-image"
-                  />
+                  <div class="section-container30">
+                    <img
+                      src="public/%C3%B0%C2%92%C3%B0%C2%BD%C3%B1%C2%83%C3%B1%C2%82%C3%B1%C2%80%C3%B0%C2%B8%20%C3%B1%C2%81%C3%B1%C2%83%C3%B0%C2%BF%C3%B0%C2%B5%C3%B1%C2%80%C3%B0%C2%BC%C3%B0%C2%B0%C3%B1%C2%80%C3%B0%C2%BA%C3%B0%C2%B5%C3%B1%C2%82%C3%B0%C2%B0-200w.png"
+                      alt="image"
+                      class="section-image"
+                    />
+                    <img
+                      alt="image"
+                      src="public/vv/image%20193-200w.png"
+                      class="section-image1"
+                    />
+                  </div>
                 </div>
-                <div class="section-container29">
+                <div class="section-container31">
                   <div class="h3-property1h3 h3-root-class-name8">
                     <h3 class="h3-text headerH3">
                       <span>"Busy" graphics</span>
                     </h3>
                     <p class="h3-text1 paragraphp2">
                       <span>
-                        By toning down the gradient the new category looks more
-                        consistent with the rest of the app.
+                        The new category looks more consistent with the rest of
+                        the app After toning down the gradient.
                       </span>
                     </p>
                     <p class="h3-text2 paragraphp2"><span></span></p>
@@ -1024,7 +1022,7 @@
                   <img
                     alt="image"
                     src="public/vv/image%20223-200w.png"
-                    class="section-image1"
+                    class="section-image2"
                   />
                 </div>
               </div>
@@ -1039,12 +1037,12 @@
                 <p class="h2-text1 paragraphp2">
                   <span>
                     Second round of testing showed great improvement in user's
-                    understanding of the "supermarket" and better impression of
+                    understanding of the "Supermarket" and better impression of
                     UI.
                   </span>
                 </p>
                 <p class="h2-text2 paragraphp2">
-                  <span>But I found a new problem.</span>
+                  <span>But I found a new problem:</span>
                 </p>
               </div>
               <div class="card-section card-root-class-name2">
@@ -1077,7 +1075,7 @@
                 <h3 class="h3-text headerH3"><span>Before</span></h3>
                 <p class="h3-text1 paragraphp2">
                   <span>
-                    With current flow users prefer to skip the onboarding
+                    With current user-flow users prefer to skip the onboarding
                     because it's not why they came to the app at the moment.
                     It’s not only defiese the purpose but angers users by
                     distracting them from their original intention.
@@ -1086,8 +1084,8 @@
                 <p class="h3-text2 paragraphp2"><span></span></p>
               </div>
               <div class="section-before">
-                <div class="section-container30">
-                  <div class="section-container31">
+                <div class="section-container32">
+                  <div class="section-container33">
                     <script>
                       // Wait for HTML document to get ready
                       window.addEventListener('load', function () {
@@ -1116,7 +1114,7 @@
                     </script>
                   </div>
                 </div>
-                <div class="section-container32">
+                <div class="section-container34">
                   <div id="fch1">
                     <div
                       class="chart-card-flowchartblock chart-card-root-class-name9"
@@ -1125,7 +1123,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="section-container34">
+                <div class="section-container36">
                   <div id="fch2">
                     <div
                       class="chart-card-flowchartblock chart-card-root-class-name10"
@@ -1134,7 +1132,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="section-container36">
+                <div class="section-container38">
                   <div id="fch3">
                     <div
                       class="chart-card-flowchartblock chart-card-root-class-name11"
@@ -1155,8 +1153,8 @@
                 <p class="h3-text2 paragraphp2"><span></span></p>
               </div>
               <div class="section-after">
-                <div class="section-container38">
-                  <div class="section-container39">
+                <div class="section-container40">
+                  <div class="section-container41">
                     <script>
                       // Wait for HTML document to get ready
                       window.addEventListener('load', function () {
@@ -1201,7 +1199,7 @@
                     </script>
                   </div>
                 </div>
-                <div class="section-container40">
+                <div class="section-container42">
                   <div id="f2ch1">
                     <div
                       class="chart-card-flowchartblock chart-card-root-class-name12"
@@ -1224,7 +1222,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="section-container44">
+                <div class="section-container46">
                   <div id="f2ch4">
                     <div
                       class="chart-card-flowchartblock chart-card-root-class-name15"
@@ -1233,7 +1231,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="section-container46">
+                <div class="section-container48">
                   <div id="f2ch5">
                     <div
                       class="chart-card-flowchartblock chart-card-root-class-name16"
@@ -1276,7 +1274,10 @@
               <div class="h2-property1h2 h2-root-class-name15">
                 <h2 class="h2-text headerH2"><span>Final thoughts</span></h2>
                 <p class="h2-text1 paragraphp2">
-                  <span>write what I have learned</span>
+                  <span>
+                    At this project I was able to practice my research and
+                    visual skills.
+                  </span>
                 </p>
                 <p class="h2-text2 paragraphp2"><span></span></p>
               </div>
@@ -1294,7 +1295,7 @@
               <img
                 alt="image"
                 src="https://play.teleporthq.io/static/svg/default-img.svg"
-                class="section-image2"
+                class="section-image3"
               />
             </slot>
           </section>

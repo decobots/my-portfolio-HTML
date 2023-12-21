@@ -116,94 +116,201 @@
       <link href="./page.css" rel="stylesheet" />
 
       <div class="page-container">
-        <div class="page-container1">
-          <div class="page-container2">
-            <div class="page-container3">
+        <section class="section-container section-root-class-name14">
+          <slot class="section-custom-slot">
+            <div
+              name="gallery"
+              class="imagecarousel-imagecarousel imagecarousel-root-class-name3"
+            >
+              <div class="imagecarousel-container">
+                <div class="imagecarousel-container1">
+                  <span name="left" class="imagecarousel-text">&lt;&lt;</span>
+                  <div class="imagecarousel-container2">
+                    <img
+                      src="fb6381ac-5747-4dd6-ba9b-a3be7deac007"
+                      alt="image"
+                      name="imb0"
+                      class="imagecarousel-image"
+                    />
+                    <img
+                      src="94012c80-8240-42d5-af6a-45a554bd8bef"
+                      alt="image"
+                      name="imb1"
+                      class="imagecarousel-image1"
+                    />
+                    <img
+                      src="735a5e7d-9239-4cd6-b31d-03d890098379"
+                      alt="image"
+                      name="imb2"
+                      class="imagecarousel-image2"
+                    />
+                    <img
+                      src="91378eb6-4574-44d3-b43d-c84a333e4f96"
+                      alt="image"
+                      name="imb3"
+                      class="imagecarousel-image3"
+                    />
+                  </div>
+                  <span name="right" class="imagecarousel-text1">&gt;&gt;</span>
+                </div>
+                <div class="imagecarousel-container3">
+                  <div class="imagecarousel-container4">
+                    <img
+                      src="fb6381ac-5747-4dd6-ba9b-a3be7deac007"
+                      alt="image"
+                      name="ims0"
+                      class="imagecarousel-image4"
+                    />
+                  </div>
+                  <div class="imagecarousel-container5">
+                    <img
+                      src="94012c80-8240-42d5-af6a-45a554bd8bef"
+                      alt="image"
+                      name="ims1"
+                      class="imagecarousel-image5"
+                    />
+                  </div>
+                  <div class="imagecarousel-container6">
+                    <img
+                      src="735a5e7d-9239-4cd6-b31d-03d890098379"
+                      alt="image"
+                      name="ims2"
+                      class="imagecarousel-image6"
+                    />
+                  </div>
+                  <div class="imagecarousel-container7">
+                    <img
+                      src="91378eb6-4574-44d3-b43d-c84a333e4f96"
+                      alt="image"
+                      name="ims3"
+                      class="imagecarousel-image7"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              name="gallery"
+              class="imagecarousel-imagecarousel imagecarousel-root-class-name4"
+            >
+              <div class="imagecarousel-container">
+                <div class="imagecarousel-container1">
+                  <span name="left" class="imagecarousel-text">&lt;&lt;</span>
+                  <div class="imagecarousel-container2">
+                    <img
+                      src="10c1a64e-74ca-4bc4-b4b5-050ddf056408"
+                      alt="image"
+                      name="imb0"
+                      class="imagecarousel-image"
+                    />
+                    <img
+                      src="1b908f3c-d01c-4b22-bdb6-e58cdb651169"
+                      alt="image"
+                      name="imb1"
+                      class="imagecarousel-image1"
+                    />
+                    <img
+                      src="36d708bc-d947-4d21-abb9-be7b29fc7d1e"
+                      alt="image"
+                      name="imb2"
+                      class="imagecarousel-image2"
+                    />
+                    <img
+                      src="ac072c92-0f55-4fd2-8800-c8744145d990"
+                      alt="image"
+                      name="imb3"
+                      class="imagecarousel-image3"
+                    />
+                  </div>
+                  <span name="right" class="imagecarousel-text1">&gt;&gt;</span>
+                </div>
+                <div class="imagecarousel-container3">
+                  <div class="imagecarousel-container4">
+                    <img
+                      src="10c1a64e-74ca-4bc4-b4b5-050ddf056408"
+                      alt="image"
+                      name="ims0"
+                      class="imagecarousel-image4"
+                    />
+                  </div>
+                  <div class="imagecarousel-container5">
+                    <img
+                      src="1b908f3c-d01c-4b22-bdb6-e58cdb651169"
+                      alt="image"
+                      name="ims1"
+                      class="imagecarousel-image5"
+                    />
+                  </div>
+                  <div class="imagecarousel-container6">
+                    <img
+                      src="36d708bc-d947-4d21-abb9-be7b29fc7d1e"
+                      alt="image"
+                      name="ims2"
+                      class="imagecarousel-image6"
+                    />
+                  </div>
+                  <div class="imagecarousel-container7">
+                    <img
+                      src="ac072c92-0f55-4fd2-8800-c8744145d990"
+                      alt="image"
+                      name="ims3"
+                      class="imagecarousel-image7"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </slot>
+        </section>
+        <div
+          class="imagecarousel-js-container imagecarousel-js-root-class-name1"
+        >
+          <div>
+            <div class="imagecarousel-js-container2">
               <script>
-                var photo_n = 0;
-                         var slides = 3;
-                         const big='imb';
-                         const small='ims'
-                         $(function() {
+                $(function () {
+                  var galleries = $('[name=\'gallery\']');
 
-                           $('#right').on('click', function ()
-                           {
-                             photo_n++;
-                             update_slide();
-                           });
-                           $('#left').on('click', function ()
-                           {
-                             if(photo_n>0){photo_n--;  }
-                             else {photo_n=slides-1;}
-                             update_slide();
-                           });
+                  $(galleries).each(function (g) {
+                    var bigs = $(this).find('[name^=\'imb\'');
+                    var smalls = $(this).find('[name^=\'ims\'');
+                    var left = $(this).find('[name=\'left\'')[0];
+                    var right = $(this).find('[name=\'right\'')[0];
 
-                           for(var i=0;i<slides;i++){
-                             $('#'+small+i).on('click',{ value: i }, function (event)
-                             {
-                               photo_n=event.data.value;
-                               update_slide();
-                             });
-                           }
+                    var n = 0;
 
+                    $(left).on('click', function () {
+                      //console.log(n , 'left', );
+                      n++;
+                      update_slide(bigs, n);
+                    });
 
-                         });
-                         function update_slide(){
-                           var left=(photo_n-1)%slides;
-                           var current=photo_n%slides;
-                           var right=(photo_n+1)%slides;
-
-                           $('#'+big+left).hide();
-                           $('#'+big+right).hide();
-
-                           $('#'+big+current).show();
-                         }
+                    $(right).on('click', function () {
+                      //console.log(n, 'right');
+                      if (n > 0) {
+                        n--;
+                      } else {
+                        n = bigs.length - 1;
+                      }
+                      update_slide(bigs, n);
+                    });
+                    $(smalls).each(function (i) {
+                      $(this).on('click', { value: i }, function (event) {
+                        console.log(i, 'small');
+                        update_slide(bigs, event.data.value);
+                      });
+                    });
+                    function update_slide(bigs, n) {
+                      var current = n % bigs.length;
+                      for (var j = 0; j < bigs.length; j++) {
+                        if (j == current) $(bigs[j]).show();
+                        else $(bigs[j]).hide();
+                      }
+                    }
+                  });
+                });
               </script>
             </div>
-          </div>
-          <div class="page-container4">
-            <span id="left" class="page-text">&lt;&lt;</span>
-            <div class="page-container5">
-              <img
-                src="https://play.teleporthq.io/static/svg/default-img.svg"
-                alt="image"
-                id="imb0"
-                class="page-image"
-              />
-              <img
-                src="https://play.teleporthq.io/static/svg/default-img.svg"
-                alt="image"
-                id="imb1"
-                class="page-image1"
-              />
-              <img
-                src="https://play.teleporthq.io/static/svg/default-img.svg"
-                alt="image"
-                id="imb2"
-                class="page-image2"
-              />
-            </div>
-            <span id="right" class="page-text1">&gt;&gt;</span>
-          </div>
-          <div class="page-container6">
-            <img
-              src="https://play.teleporthq.io/static/svg/default-img.svg"
-              alt="image"
-              id="ims0"
-              class="page-image3"
-            />
-            <img
-              src="https://play.teleporthq.io/static/svg/default-img.svg"
-              alt="image"
-              id="ims1"
-              class="page-image4"
-            />
-            <img
-              src="https://play.teleporthq.io/static/svg/default-img.svg"
-              alt="image"
-              id="ims2"
-              class="page-image5"
-            />
           </div>
         </div>
       </div>

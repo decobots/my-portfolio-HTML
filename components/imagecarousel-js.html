@@ -152,7 +152,7 @@
                   function update_slide(bigs, n) {
                     var current = n % bigs.length;
                     for (var j = 0; j < bigs.length; j++) {
-                      if (j == current) bigs[j].show();
+                      if (j == current) $(bigs[j]).show();
                       else $(bigs[j]).hide();
                     }
                   }

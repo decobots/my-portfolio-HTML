@@ -25,7 +25,7 @@
 }
 .imagecarousel-text {
   width: auto;
-  padding: var(--dl-space-space-twounits);
+  padding: var(--dl-space-space-unit);
   font-size: 3rem;
   margin-top: 0px;
   font-family: Kalnia;
@@ -66,7 +66,7 @@
 }
 .imagecarousel-text1 {
   width: auto;
-  padding: var(--dl-space-space-twounits);
+  padding: var(--dl-space-space-unit);
   font-size: 3rem;
   margin-top: 0px;
   font-family: Kalnia;
@@ -89,9 +89,13 @@
 .imagecarousel-container4 {
   flex: 1;
   display: flex;
+  padding: var(--dl-space-space-oneandhalfunits);
   min-width: var(--dl-size-size-small);
-  align-items: flex-start;
+  align-self: stretch;
+  align-items: center;
+  border-radius: var(--dl-radius-radius-corner);
   justify-content: center;
+  background-color: var(--dl-color-palette-lightest);
 }
 .imagecarousel-image4 {
   width: 100%;
@@ -100,9 +104,13 @@
 .imagecarousel-container5 {
   flex: 1;
   display: flex;
+  padding: var(--dl-space-space-oneandhalfunits);
   min-width: var(--dl-size-size-small);
-  align-items: flex-start;
+  align-self: stretch;
+  align-items: center;
+  border-radius: var(--dl-radius-radius-corner);
   justify-content: center;
+  background-color: var(--dl-color-palette-lightest);
 }
 .imagecarousel-image5 {
   width: 100%;
@@ -111,9 +119,13 @@
 .imagecarousel-container6 {
   flex: 1;
   display: flex;
+  padding: var(--dl-space-space-oneandhalfunits);
   min-width: var(--dl-size-size-small);
-  align-items: flex-start;
+  align-self: stretch;
+  align-items: center;
+  border-radius: var(--dl-radius-radius-corner);
   justify-content: center;
+  background-color: var(--dl-color-palette-lightest);
 }
 .imagecarousel-image6 {
   width: 100%;
@@ -122,9 +134,13 @@
 .imagecarousel-container7 {
   flex: 1;
   display: flex;
+  padding: var(--dl-space-space-oneandhalfunits);
   min-width: var(--dl-size-size-small);
-  align-items: flex-start;
+  align-self: stretch;
+  align-items: center;
+  border-radius: var(--dl-radius-radius-corner);
   justify-content: center;
+  background-color: var(--dl-color-palette-lightest);
 }
 .imagecarousel-image7 {
   width: 100%;
@@ -139,13 +155,17 @@
 .imagecarousel-root-class-name2 {
   width: 100%;
 }
+.imagecarousel-root-class-name3 {
+  width: 100%;
+}
+.imagecarousel-root-class-name4 {
+  width: 100%;
+}
 @media(max-width: 991px) {
   .imagecarousel-text {
-    padding: var(--dl-space-space-oneandhalfunits);
     font-size: 2rem;
   }
   .imagecarousel-text1 {
-    padding: var(--dl-space-space-oneandhalfunits);
     font-size: 2rem;
   }
 }

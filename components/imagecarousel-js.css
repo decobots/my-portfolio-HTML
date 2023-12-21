@@ -11,6 +11,7 @@
   display: contents;
 }
 
+
 @media(max-width: 767px) {
   .imagecarousel-js-container {
     width: auto;
