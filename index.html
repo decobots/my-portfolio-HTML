@@ -115,6 +115,57 @@
       <link href="./index.css" rel="stylesheet" />
 
       <div class="vvcase-container">
+        <div
+          class="imagecarousel-js-container imagecarousel-js-root-class-name"
+        >
+          <div>
+            <div class="imagecarousel-js-container2">
+              <script>
+                $(function () {
+                  var galleries = $('[name=\'gallery\']');
+
+                  $(galleries).each(function (g) {
+                    var bigs = $(this).find('[name^=\'imb\'');
+                    var smalls = $(this).find('[name^=\'ims\'');
+                    var left = $(this).find('[name=\'left\'')[0];
+                    var right = $(this).find('[name=\'right\'')[0];
+
+                    var n = 0;
+
+                    $(left).on('click', function () {
+                      //console.log(n , 'left', );
+                      n++;
+                      update_slide(bigs, n);
+                    });
+
+                    $(right).on('click', function () {
+                      //console.log(n, 'right');
+                      if (n > 0) {
+                        n--;
+                      } else {
+                        n = bigs.length - 1;
+                      }
+                      update_slide(bigs, n);
+                    });
+                    $(smalls).each(function (i) {
+                      $(this).on('click', { value: i }, function (event) {
+                        console.log(i, 'small');
+                        update_slide(bigs, event.data.value);
+                      });
+                    });
+                    function update_slide(bigs, n) {
+                      var current = n % bigs.length;
+                      for (var j = 0; j < bigs.length; j++) {
+                        if (j == current) bigs[j].show();
+                        else $(bigs[j]).hide();
+                      }
+                    }
+                  });
+                });
+              </script>
+            </div>
+          </div>
+        </div>
         <header class="header-header header-root-class-name">
           <span class="header-text paragraphp2">
             <span>MIA PRITCHINA UX/UI DESIGNER</span>
@@ -618,111 +669,69 @@
                 <p class="h3-text2 paragraphp2"><span></span></p>
               </div>
               <div
+                name="gallery"
                 class="imagecarousel-imagecarousel imagecarousel-root-class-name"
               >
                 <div class="imagecarousel-container">
-                  <div class="imagecarousel-container01">
-                    <div class="imagecarousel-container02">
-                      <script>
-                        var photo_n = 0;
-                                 var slides = 4;
-                                 const big='imb';
-                                 const small='ims'
-                                 $(function() {
-
-                                   $('#right').on('click', function ()
-                                   {
-                                     photo_n++;
-                                     update_slide();
-                                   });
-                                   $('#left').on('click', function ()
-                                   {
-                                     if(photo_n>0){photo_n--;  }
-                                     else {photo_n=slides-1;}
-                                     update_slide();
-                                   });
-
-                                   for(var i=0;i<slides;i++){
-                                     $('#'+small+i).on('click',{ value: i }, function (event)
-                                     {
-                                       photo_n=event.data.value;
-                                       update_slide();
-                                     });
-                                   }
-
-
-                                 });
-                                 function update_slide(){
-                                   var left=(photo_n-1)%slides;
-                                   var current=photo_n%slides;
-                                   var right=(photo_n+1)%slides;
-
-                                   $('#'+big+left).hide();
-                                   $('#'+big+right).hide();
-
-                                   $('#'+big+current).show();
-                                 }
-                      </script>
-                    </div>
-                  </div>
-                  <div class="imagecarousel-container03">
-                    <span id="left" class="imagecarousel-text">&lt;&lt;</span>
-                    <div class="imagecarousel-container04">
+                  <div class="imagecarousel-container1">
+                    <span name="left" class="imagecarousel-text">&lt;&lt;</span>
+                    <div class="imagecarousel-container2">
                       <img
-                        id="imb0"
                         src="public/vv/mixin/frame%204283-200w.png"
                         alt="image"
+                        name="imb0"
                         class="imagecarousel-image"
                       />
                       <img
-                        id="imb1"
                         src="public/vv/mixin/frame%204284-200w.png"
                         alt="image"
+                        name="imb1"
                         class="imagecarousel-image1"
                       />
                       <img
-                        id="imb2"
                         src="public/vv/mixin/frame%204285-200w.png"
                         alt="image"
+                        name="imb2"
                         class="imagecarousel-image2"
                       />
                       <img
-                        id="imb2"
                         src="public/vv/mixin/frame%204286-200w.png"
                         alt="image"
+                        name="imb3"
                         class="imagecarousel-image3"
                       />
                     </div>
-                    <span id="right" class="imagecarousel-text1">&gt;&gt;</span>
+                    <span name="right" class="imagecarousel-text1">
+                      &gt;&gt;
+                    </span>
                   </div>
-                  <div class="imagecarousel-container05">
-                    <div class="imagecarousel-container06">
+                  <div class="imagecarousel-container3">
+                    <div class="imagecarousel-container4">
                       <img
                         src="public/vv/mixin/frame%204283-200w.png"
-                        id="ims0"
                         alt="image"
+                        name="ims0"
                         class="imagecarousel-image4"
                       />
                     </div>
-                    <div class="imagecarousel-container07">
+                    <div class="imagecarousel-container5">
                       <img
-                        id="ims1"
                         src="public/vv/mixin/frame%204284-200w.png"
                         alt="image"
+                        name="ims1"
                         class="imagecarousel-image5"
                       />
                     </div>
-                    <div class="imagecarousel-container08">
+                    <div class="imagecarousel-container6">
                       <img
-                        id="ims2"
                         src="public/vv/mixin/frame%204285-200w.png"
                         alt="image"
+                        name="ims2"
                         class="imagecarousel-image6"
                       />
                     </div>
-                    <div class="imagecarousel-container09">
+                    <div class="imagecarousel-container7">
                       <img
-                        id="ims2"
                         src="public/vv/mixin/frame%204286-200w.png"
                         alt="image"
                         class="imagecarousel-image7"
@@ -742,111 +751,69 @@
                 <p class="h3-text2 paragraphp2"><span></span></p>
               </div>
               <div
+                name="gallery"
                 class="imagecarousel-imagecarousel imagecarousel-root-class-name1"
               >
                 <div class="imagecarousel-container">
-                  <div class="imagecarousel-container01">
-                    <div class="imagecarousel-container02">
-                      <script>
-                        var photo_n = 0;
-                                 var slides = 4;
-                                 const big='imb';
-                                 const small='ims'
-                                 $(function() {
-
-                                   $('#right').on('click', function ()
-                                   {
-                                     photo_n++;
-                                     update_slide();
-                                   });
-                                   $('#left').on('click', function ()
-                                   {
-                                     if(photo_n>0){photo_n--;  }
-                                     else {photo_n=slides-1;}
-                                     update_slide();
-                                   });
-
-                                   for(var i=0;i<slides;i++){
-                                     $('#'+small+i).on('click',{ value: i }, function (event)
-                                     {
-                                       photo_n=event.data.value;
-                                       update_slide();
-                                     });
-                                   }
-
-
-                                 });
-                                 function update_slide(){
-                                   var left=(photo_n-1)%slides;
-                                   var current=photo_n%slides;
-                                   var right=(photo_n+1)%slides;
-
-                                   $('#'+big+left).hide();
-                                   $('#'+big+right).hide();
-
-                                   $('#'+big+current).show();
-                                 }
-                      </script>
-                    </div>
-                  </div>
-                  <div class="imagecarousel-container03">
-                    <span id="left" class="imagecarousel-text">&lt;&lt;</span>
-                    <div class="imagecarousel-container04">
+                  <div class="imagecarousel-container1">
+                    <span name="left" class="imagecarousel-text">&lt;&lt;</span>
+                    <div class="imagecarousel-container2">
                       <img
-                        id="imb0"
                         src="public/vv/standout/frame-1-200h.png"
                         alt="image"
+                        name="imb0"
                         class="imagecarousel-image"
                       />
                       <img
-                        id="imb1"
                         src="public/vv/standout/frame-2-200h.png"
                         alt="image"
+                        name="imb1"
                         class="imagecarousel-image1"
                       />
                       <img
-                        id="imb2"
                         src="public/vv/standout/frame-3-200h.png"
                         alt="image"
+                        name="imb2"
                         class="imagecarousel-image2"
                       />
                       <img
-                        id="imb2"
                         src="public/vv/standout/frame-200h.png"
                         alt="image"
+                        name="imb3"
                         class="imagecarousel-image3"
                       />
                     </div>
-                    <span id="right" class="imagecarousel-text1">&gt;&gt;</span>
+                    <span name="right" class="imagecarousel-text1">
+                      &gt;&gt;
+                    </span>
                   </div>
-                  <div class="imagecarousel-container05">
-                    <div class="imagecarousel-container06">
+                  <div class="imagecarousel-container3">
+                    <div class="imagecarousel-container4">
                       <img
                         src="public/vv/standout/frame-1-200h.png"
-                        id="ims0"
                         alt="image"
+                        name="ims0"
                         class="imagecarousel-image4"
                       />
                     </div>
-                    <div class="imagecarousel-container07">
+                    <div class="imagecarousel-container5">
                       <img
-                        id="ims1"
                         src="public/vv/standout/frame-2-200h.png"
                         alt="image"
+                        name="ims1"
                         class="imagecarousel-image5"
                       />
                     </div>
-                    <div class="imagecarousel-container08">
+                    <div class="imagecarousel-container6">
                       <img
-                        id="ims2"
                         src="public/vv/standout/frame-3-200h.png"
                         alt="image"
+                        name="ims2"
                         class="imagecarousel-image6"
                       />
                     </div>
-                    <div class="imagecarousel-container09">
+                    <div class="imagecarousel-container7">
                       <img
-                        id="ims2"
                         src="public/vv/standout/frame-200h.png"
                         alt="image"
                         class="imagecarousel-image7"
@@ -896,111 +863,69 @@
                 </p>
               </div>
               <div
+                name="gallery"
                 class="imagecarousel-imagecarousel imagecarousel-root-class-name2"
               >
                 <div class="imagecarousel-container">
-                  <div class="imagecarousel-container01">
-                    <div class="imagecarousel-container02">
-                      <script>
-                        var photo_n = 0;
-                                 var slides = 4;
-                                 const big='imb';
-                                 const small='ims'
-                                 $(function() {
-
-                                   $('#right').on('click', function ()
-                                   {
-                                     photo_n++;
-                                     update_slide();
-                                   });
-                                   $('#left').on('click', function ()
-                                   {
-                                     if(photo_n>0){photo_n--;  }
-                                     else {photo_n=slides-1;}
-                                     update_slide();
-                                   });
-
-                                   for(var i=0;i<slides;i++){
-                                     $('#'+small+i).on('click',{ value: i }, function (event)
-                                     {
-                                       photo_n=event.data.value;
-                                       update_slide();
-                                     });
-                                   }
-
-
-                                 });
-                                 function update_slide(){
-                                   var left=(photo_n-1)%slides;
-                                   var current=photo_n%slides;
-                                   var right=(photo_n+1)%slides;
-
-                                   $('#'+big+left).hide();
-                                   $('#'+big+right).hide();
-
-                                   $('#'+big+current).show();
-                                 }
-                      </script>
-                    </div>
-                  </div>
-                  <div class="imagecarousel-container03">
-                    <span id="left" class="imagecarousel-text">&lt;&lt;</span>
-                    <div class="imagecarousel-container04">
+                  <div class="imagecarousel-container1">
+                    <span name="left" class="imagecarousel-text">&lt;&lt;</span>
+                    <div class="imagecarousel-container2">
                       <img
-                        id="imb0"
                         src="public/vv/cards/frame%204151-200h.png"
                         alt="image"
+                        name="imb0"
                         class="imagecarousel-image"
                       />
                       <img
-                        id="imb1"
                         src="public/vv/cards/frame%204152-200h.png"
                         alt="image"
+                        name="imb1"
                         class="imagecarousel-image1"
                       />
                       <img
-                        id="imb2"
                         src="public/vv/cards/frame%204153-200h.png"
                         alt="image"
+                        name="imb2"
                         class="imagecarousel-image2"
                       />
                       <img
-                        id="imb2"
                         src="public/vv/cards/frame%204154-200h.png"
                         alt="image"
+                        name="imb3"
                         class="imagecarousel-image3"
                       />
                     </div>
-                    <span id="right" class="imagecarousel-text1">&gt;&gt;</span>
+                    <span name="right" class="imagecarousel-text1">
+                      &gt;&gt;
+                    </span>
                   </div>
-                  <div class="imagecarousel-container05">
-                    <div class="imagecarousel-container06">
+                  <div class="imagecarousel-container3">
+                    <div class="imagecarousel-container4">
                       <img
                         src="public/vv/cards/frame%204151-200h.png"
-                        id="ims0"
                         alt="image"
+                        name="ims0"
                         class="imagecarousel-image4"
                       />
                     </div>
-                    <div class="imagecarousel-container07">
+                    <div class="imagecarousel-container5">
                       <img
-                        id="ims1"
                         src="public/vv/cards/frame%204152-200h.png"
                         alt="image"
+                        name="ims1"
                         class="imagecarousel-image5"
                       />
                     </div>
-                    <div class="imagecarousel-container08">
+                    <div class="imagecarousel-container6">
                       <img
-                        id="ims2"
                         src="public/vv/cards/frame%204153-200h.png"
                         alt="image"
+                        name="ims2"
                         class="imagecarousel-image6"
                       />
                     </div>
-                    <div class="imagecarousel-container09">
+                    <div class="imagecarousel-container7">
                       <img
-                        id="ims2"
                         src="public/vv/cards/frame%204154-200h.png"
                         alt="image"
                         class="imagecarousel-image7"
