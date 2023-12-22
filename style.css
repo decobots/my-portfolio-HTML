@@ -1,6 +1,6 @@
 :root {
-  --dl-size-size-large: 10;
-  --dl-size-size-small: 4;
+  --dl-size-size-large: 10rem;
+  --dl-size-size-small: 4rem;
   --dl-size-size-medium: 8rem;
   --dl-size-size-xlarge: 12rem;
   --dl-size-size-xsmall: 1rem;
@@ -10,7 +10,7 @@
   --dl-size-size-maxwidth: 90rem;
   --dl-color-palette-light: #f7efebff;
   --dl-color-palette-accent: #eca755ff;
-  --dl-radius-radius-corner: 16px;
+  --dl-radius-radius-corner: 0.5rem;
   --dl-space-space-halfunit: 0.5rem;
   --dl-space-space-sixunits: 6rem;
   --dl-space-space-tenunits: 10rem;
@@ -67,6 +67,13 @@
 .dark {
   border: 5px solid;
   border-color: dark (palette);
+}
+.accent {
+  border: 5px solid;
+  border-color: var(--dl-color-palette-accent);
+}
+.colored_detail_bg {
+  background-color: var(--dl-color-palette-accent);
 }
 .typographyheaderH3 {
   font-size: 24px;

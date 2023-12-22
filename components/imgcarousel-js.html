@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
-    <title>404 - Not Found</title>
+    <title>exported project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -165,19 +165,56 @@
     </script>
   </head>
   <body>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../style.css" />
     <div>
-      <link href="./404.css" rel="stylesheet" />
+      <link href="./imgcarousel-js.css" rel="stylesheet" />
+      <div class="imgcarousel-js-container">
+        <div>
+          <div class="imgcarousel-js-container2">
+            <script>
+              $(function () {
+                var galleries = $('[name=\'gallery\']');
 
-      <div class="not-found-container">
-        <h3>OOPS! PAGE NOT FOUND</h3>
-        <div class="not-found-container1">
-          <h1 class="not-found-text1">404</h1>
-        </div>
-        <div class="not-found-container2">
-          <h2 class="not-found-text2">
-            WE ARE SORRY, BUT THE PAGE YOU REQUESTED WAS NOT FOUND
-          </h2>
+                $(galleries).each(function (g) {
+                  var bigs = $(this).find('[name^=\'imb\'');
+                  var smalls = $(this).find('[name^=\'ims\'');
+                  var left = $(this).find('[name=\'left\'')[0];
+                  var right = $(this).find('[name=\'right\'')[0];
+
+                  var n = 0;
+
+                  $(left).on('click', function () {
+                    //console.log(n , 'left', );
+                    n++;
+                    update_slide(bigs, n);
+                  });
+
+                  $(right).on('click', function () {
+                    //console.log(n, 'right');
+                    if (n > 0) {
+                      n--;
+                    } else {
+                      n = bigs.length - 1;
+                    }
+                    update_slide(bigs, n);
+                  });
+                  $(smalls).each(function (i) {
+                    $(this).on('click', { value: i }, function (event) {
+                      console.log(i, 'small');
+                      update_slide(bigs, event.data.value);
+                    });
+                  });
+                  function update_slide(bigs, n) {
+                    var current = n % bigs.length;
+                    for (var j = 0; j < bigs.length; j++) {
+                      if (j == current) $(bigs[j]).show();
+                      else $(bigs[j]).hide();
+                    }
+                  }
+                });
+              });
+            </script>
+          </div>
         </div>
       </div>
     </div>

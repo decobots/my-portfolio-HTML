@@ -1,0 +1,118 @@
+.bgs-card-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  text-align: center;
+  align-items: center;
+  padding-top: var(--dl-space-space-oneandhalfunits);
+  padding-left: var(--dl-space-space-twounits);
+  border-radius: var(--dl-radius-radius-corner);
+  padding-right: var(--dl-space-space-twounits);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-twounits);
+  justify-content: center;
+  background-color: var(--dl-color-palette-light);
+}
+.bgs-card-root-class-name {
+  flex: 4;
+  width: 100%;
+}
+.bgs-card-root-class-name1 {
+  flex: 4;
+  width: 100%;
+}
+
+.bgs-card-root-class-name3 {
+  flex: 4;
+  width: 100%;
+}
+.bgs-card-root-class-name4 {
+  flex: 4;
+  width: 100%;
+}
+
+
+.bgs-card-root-class-name7 {
+  flex: 4;
+  width: auto;
+}
+
+.bgs-card-root-class-name9 {
+  flex: 4;
+  width: auto;
+}
+.bgs-card-root-class-name10 {
+  flex: 4;
+  width: 100%;
+}
+.bgs-card-root-class-name11 {
+  flex: 4;
+  width: 100%;
+}
+
+
+
+
+.bgs-card-root-class-name16 {
+  flex: 4;
+  width: 100%;
+}
+.bgs-card-root-class-name17 {
+  flex: 4;
+  width: 100%;
+}
+.bgs-card-root-class-name18 {
+  flex: 4;
+  width: auto;
+}
+.bgs-card-root-class-name19 {
+  flex: 4;
+  width: 100%;
+}
+
+
+
+
+@media(max-width: 767px) {
+  .bgs-card-root-class-name {
+    flex: 0 0 auto;
+  }
+  .bgs-card-root-class-name1 {
+    flex: 0 0 auto;
+  }
+  .bgs-card-root-class-name3 {
+    flex: 0 0 auto;
+  }
+  .bgs-card-root-class-name4 {
+    flex: 0 0 auto;
+  }
+  .bgs-card-root-class-name7 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .bgs-card-root-class-name9 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .bgs-card-root-class-name10 {
+    flex: 0 0 auto;
+  }
+  .bgs-card-root-class-name11 {
+    flex: 0 0 auto;
+  }
+  .bgs-card-root-class-name16 {
+    flex: 0 0 auto;
+  }
+  .bgs-card-root-class-name17 {
+    flex: 0 0 auto;
+  }
+  .bgs-card-root-class-name18 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .bgs-card-root-class-name19 {
+    flex: 0 0 auto;
+  }
+}

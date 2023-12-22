@@ -78,12 +78,24 @@
     />
     <!--This is the head section-->
     <style>
+      p{
+        max-width: 60ch;
+        word-wrap: break-word;
+      }
+      p:empty {
+        display: none;
+      }
+
+
+      .dark {
+      background-color: var(--dl-color-palette-dark);
+      border: 0px !important;
+      }
       .dark p {
       color: var(--dl-color-palette-light);
       }
-      .dark {
-      background-color: var(--dl-color-palette-dark);
-      border: 0px;
+      .dark .colored_detail_bg{
+        background-color: var(--dl-color-palette-light);
       }
       .dark .card-section p{
       color: var(--dl-color-palette-darkest);
@@ -92,13 +104,45 @@
       color: var(--dl-color-palette-darkest);
       }
 
-      p:empty {
-        display: none;
+
+      .accent {
+            background-color: var(--dl-color-palette-accent);
+            border: 0px !important;
+            }
+      .accent h1,
+      .accent h2,
+      .accent h3,
+      .accent h4,
+      .accent h5,
+      .accent h6  {
+      color: var(--dl-color-palette-dark);
+      }
+      .accent p {
+      color: var(--dl-color-palette-lightest);
       }
 
-      p{
-        max-width: 60ch;
-        word-wrap: break-word;
+      .accent .colored_detail_bg{
+        background-color: var(--dl-color-palette-light);
+      }
+      .accent .card-section {
+      background-color: var(--dl-color-palette-dark);
+      }
+      .accent .card-section p{
+        color:var(--dl-color-palette-accent);
+      }
+      .accent .card-section h1,
+      .accent  .card-section h2,
+      .accent .card-section h3,
+      .accent  .card-section h4,
+      .accent .card-section h5,
+      .accent .card-section h6  {
+      color: var(--dl-color-palette-lightest);
+      }
+      .accent .chart-card-flowchartblock{
+        background-color: var(--dl-color-palette-light);
+      }
+      .accent .chart-card-flowchartblock p{
+        color: var(--dl-color-palette-accent);
       }
     </style>
 
@@ -108,6 +152,17 @@
       integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(function () {
+        $('span').each(function() {
+          var $this = $(this);
+          // Check if the span is empty and doesn't have any inline styles
+          if ($this.is(':empty') && $.trim($this.attr('style')) === '') {
+            $this.remove(); // Remove the empty span without styles
+          }
+        });
+      });
+    </script>
   </head>
   <body>
     <link rel="stylesheet" href="./style.css" />
@@ -115,11 +170,9 @@
       <link href="./index.css" rel="stylesheet" />
 
       <div class="vvcase-container">
-        <div
-          class="imagecarousel-js-container imagecarousel-js-root-class-name"
-        >
+        <div class="imgcarousel-js-container imgcarousel-js-root-class-name">
           <div>
-            <div class="imagecarousel-js-container2">
+            <div class="imgcarousel-js-container2">
               <script>
                 $(function () {
                   var galleries = $('[name=\'gallery\']');
@@ -166,21 +219,32 @@
             </div>
           </div>
         </div>
-        <header class="header-header header-root-class-name">
-          <span class="header-text paragraphp2">
+        <header class="pg-header-header pg-header-root-class-name">
+          <p class="pg-header-text paragraphp2">
             <span>MIA PRITCHINA UX/UI DESIGNER</span>
-          </span>
-          <div class="header-frame6">
-            <span class="header-text2 paragraphp2">LINKEDIN</span>
-            <span class="header-text3 paragraphp2"><span>BEHANCE</span></span>
-            <span class="header-text5 paragraphp2"><span>EMAIL</span></span>
+          </p>
+          <div class="pg-header-frame6">
+            <p class="pg-header-text2 paragraphp2">LINKEDIN</p>
+            <p class="pg-header-text3 paragraphp2"><span>BEHANCE</span></p>
+            <p class="pg-header-text5 paragraphp2"><span>EMAIL</span></p>
           </div>
         </header>
+        <div class="dark">
+          <section class="pg-section-container pg-section-root-class-name41">
+            <slot class="pg-section-custom-slot">
+              <img
+                alt="image"
+                src="public/vv/frame%204287.svg"
+                class="pg-section-image"
+              />
+            </slot>
+          </section>
+        </div>
         <div class="dark vvcase-hero">
-          <section class="section-container section-root-class-name11">
-            <slot class="section-custom-slot">
-              <div class="h1-property1h1 h1-root-class-name">
-                <h1 class="h1-text headerH1"><span>About VV</span></h1>
+          <section class="pg-section-container pg-section-root-class-name11">
+            <slot class="pg-section-custom-slot">
+              <div class="txt-h1-property1h1 txt-h1-root-class-name">
+                <h1 class="txt-h1-text headerH1"><span>About VV</span></h1>
                 <p class="paragraphp1">
                   <span>
                     VV is a well-known chain of eco-friendly goods in the
@@ -195,11 +259,11 @@
           </section>
         </div>
         <div>
-          <section class="section-container section-root-class-name12">
-            <slot class="section-custom-slot">
-              <div class="h2-property1h2 h2-root-class-name">
-                <h2 class="h2-text headerH2"><span>Problem</span></h2>
-                <p class="h2-text1 paragraphp2">
+          <section class="pg-section-container pg-section-root-class-name12">
+            <slot class="pg-section-custom-slot">
+              <div class="txt-h21-property1h2 txt-h21-root-class-name">
+                <h2 class="txt-h21-text headerH2"><span>Problem</span></h2>
+                <p class="txt-h21-text1 paragraphp2">
                   <span>
                     Unfortunately, it takes a lot of time and research to launch
                     each new product, which limits VV’s catalog. And with
@@ -207,65 +271,65 @@
                     stores.
                   </span>
                 </p>
-                <p class="h2-text2 paragraphp2"><span></span></p>
+                <p class="txt-h21-text2 paragraphp2"><span></span></p>
               </div>
-              <div class="h2-property1h2 h2-root-class-name18">
-                <h2 class="h2-text headerH2"><span>Solution</span></h2>
-                <p class="h2-text1 paragraphp2">
+              <div class="txt-h21-property1h2 txt-h21-root-class-name18">
+                <h2 class="txt-h21-text headerH2"><span>Solution</span></h2>
+                <p class="txt-h21-text1 paragraphp2">
                   <span>
                     VV wants to add products from third-party brands in their
                     online catalog. Having bigger variety to choose from might
                     help to attract online customers.
                   </span>
                 </p>
-                <p class="h2-text2 paragraphp2"><span></span></p>
+                <p class="txt-h21-text2 paragraphp2"><span></span></p>
               </div>
-              <div class="h2-property1h2 h2-root-class-name19">
-                <h2 class="h2-text headerH2">
+              <div class="txt-h21-property1h2 txt-h21-root-class-name19">
+                <h2 class="txt-h21-text headerH2">
                   <span>State of UX and UI</span>
                 </h2>
-                <p class="h2-text1 paragraphp2">
+                <p class="txt-h21-text1 paragraphp2">
                   <span>
                     VV already decided to present third-party items in new
                     section of online catalog as a “Supermarket” based on
                     marketing research.
                   </span>
                 </p>
-                <p class="h2-text2 paragraphp2">
+                <p class="txt-h21-text2 paragraphp2">
                   <span>
                     They would like to have minimum additions to the existing
                     Design System.
                   </span>
                 </p>
               </div>
-              <div class="section-container01">
-                <div class="h2-property1h2 h2-root-class-name1">
-                  <h2 class="h2-text headerH2"><span>My task</span></h2>
-                  <p class="h2-text1 paragraphp2">
+              <div class="pg-section-container02">
+                <div class="txt-h21-property1h2 txt-h21-root-class-name1">
+                  <h2 class="txt-h21-text headerH2"><span>My task</span></h2>
+                  <p class="txt-h21-text1 paragraphp2">
                     <span>
                       To find a way to present new category and product cards in
                       an easy to understand way.
                     </span>
                   </p>
-                  <p class="h2-text2 paragraphp2"><span></span></p>
+                  <p class="txt-h21-text2 paragraphp2"><span></span></p>
                 </div>
-                <div class="h2-property1h2 h2-root-class-name2">
-                  <h2 class="h2-text headerH2"><span>My role</span></h2>
-                  <p class="h2-text1 paragraphp2">
+                <div class="txt-h21-property1h2 txt-h21-root-class-name2">
+                  <h2 class="txt-h21-text headerH2"><span>My role</span></h2>
+                  <p class="txt-h21-text1 paragraphp2">
                     <span>UX and UI design, with reviews from my mentor.</span>
                   </p>
-                  <p class="h2-text2 paragraphp2"><span></span></p>
+                  <p class="txt-h21-text2 paragraphp2"><span></span></p>
                 </div>
               </div>
             </slot>
           </section>
         </div>
-        <div class="dark">
-          <section class="section-container section-root-class-name">
-            <slot class="section-custom-slot">
-              <div class="h2-property1h2 h2-root-class-name6">
-                <h2 class="h2-text headerH2"><span>Approach</span></h2>
-                <p class="h2-text1 paragraphp2">
+        <div class="accent">
+          <section class="pg-section-container pg-section-root-class-name">
+            <slot class="pg-section-custom-slot">
+              <div class="txt-h21-property1h2 txt-h21-root-class-name6">
+                <h2 class="txt-h21-text headerH2"><span>Approach</span></h2>
+                <p class="txt-h21-text1 paragraphp2">
                   <span>
                     As an active customer of VV myself, I already had an idea of
                     current user experience, so I focused on understanding why
@@ -273,13 +337,13 @@
                     improve user experience.
                   </span>
                 </p>
-                <p class="h2-text2 paragraphp2"><span></span></p>
+                <p class="txt-h21-text2 paragraphp2"><span></span></p>
               </div>
-              <div class="h3-property1h3 h3-root-class-name">
-                <h3 class="h3-text headerH3">
+              <div class="txt-h3-property1h3 txt-h3-root-class-name">
+                <h3 class="txt-h3-text headerH3">
                   <span>Understand business goals</span>
                 </h3>
-                <p class="h3-text1 paragraphp2">
+                <p class="txt-h3-text1 paragraphp2">
                   <span>
                     I know what VV tries to do, but I’m not sure why they do it
                     this exact way. So I start from series of interviews with
@@ -288,89 +352,89 @@
                     statements which easy to remember and quote:
                   </span>
                 </p>
-                <p class="h3-text2 paragraphp2"><span></span></p>
+                <p class="txt-h3-text2 paragraphp2"><span></span></p>
               </div>
-              <div class="section-container02">
-                <div class="card-section card-root-class-name1">
-                  <slot class="card-custom-slot">
-                    <div class="h3-property1h3 h3-root-class-name1">
-                      <h3 class="h3-text headerH3">
+              <div class="pg-section-container03">
+                <div class="bgs-card-section bgs-card-root-class-name1">
+                  <slot class="bgs-card-custom-slot">
+                    <div class="txt-h3-property1h3 txt-h3-root-class-name1">
+                      <h3 class="txt-h3-text headerH3">
                         <span>
                           I want to sell third-party products, so that customers
                           can order everything in one place, because then they
                           will choose VV more often
                         </span>
                       </h3>
-                      <p class="h3-text1 paragraphp2">
+                      <p class="txt-h3-text1 paragraphp2">
                         <span>
                           With a bigger variety of items there is a better
                           chance that customers will be able to order all they
                           need in VV
                         </span>
                       </p>
-                      <p class="h3-text2 paragraphp2"><span></span></p>
+                      <p class="txt-h3-text2 paragraphp2"><span></span></p>
                     </div>
                   </slot>
                 </div>
-                <div class="card-section card-root-class-name">
-                  <slot class="card-custom-slot">
-                    <div class="h3-property1h3 h3-root-class-name2">
-                      <h3 class="h3-text headerH3">
+                <div class="bgs-card-section bgs-card-root-class-name">
+                  <slot class="bgs-card-custom-slot">
+                    <div class="txt-h3-property1h3 txt-h3-root-class-name2">
+                      <h3 class="txt-h3-text headerH3">
                         <span>
                           I want to sell more in each order, so customers will
                           be eligible for free delivery and will choose VV more
                           often
                         </span>
                       </h3>
-                      <p class="h3-text1 paragraphp2">
+                      <p class="txt-h3-text1 paragraphp2">
                         <span>
                           A bigger catalog leads to a bigger average check which
                           allows free delivery to more customers
                         </span>
                       </p>
-                      <p class="h3-text2 paragraphp2"><span></span></p>
+                      <p class="txt-h3-text2 paragraphp2"><span></span></p>
                     </div>
                   </slot>
                 </div>
               </div>
-              <div class="section-container03">
-                <div class="card-section card-root-class-name9">
-                  <slot class="card-custom-slot">
-                    <div class="h3-property1h3 h3-root-class-name13">
-                      <h3 class="h3-text headerH3">
+              <div class="pg-section-container04">
+                <div class="bgs-card-section bgs-card-root-class-name9">
+                  <slot class="bgs-card-custom-slot">
+                    <div class="txt-h3-property1h3 txt-h3-root-class-name13">
+                      <h3 class="txt-h3-text headerH3">
                         <span>
                           I want to sell third-party products, to attract new
                           customers, so my revenue is bigger
                         </span>
                       </h3>
-                      <p class="h3-text1 paragraphp2">
+                      <p class="txt-h3-text1 paragraphp2">
                         <span>
                           With well known items in catalog VV might attract new
                           categories of customers who weren’t interested in VV
                           before
                         </span>
                       </p>
-                      <p class="h3-text2 paragraphp2"><span></span></p>
+                      <p class="txt-h3-text2 paragraphp2"><span></span></p>
                     </div>
                   </slot>
                 </div>
-                <div class="card-section card-root-class-name10">
-                  <slot class="card-custom-slot">
-                    <div class="h3-property1h3 h3-root-class-name14">
-                      <h3 class="h3-text headerH3">
+                <div class="bgs-card-section bgs-card-root-class-name10">
+                  <slot class="bgs-card-custom-slot">
+                    <div class="txt-h3-property1h3 txt-h3-root-class-name14">
+                      <h3 class="txt-h3-text headerH3">
                         <span>
                           I want to find out which products are popular, so that
                           I can release similar products under my own brand,
                           because it brings-in more profit
                         </span>
                       </h3>
-                      <p class="h3-text1 paragraphp2">
+                      <p class="txt-h3-text1 paragraphp2">
                         <span>
                           Having sales data about outside products VV can make
                           better decisions on launching their own brand’s items
                         </span>
                       </p>
-                      <p class="h3-text2 paragraphp2"><span></span></p>
+                      <p class="txt-h3-text2 paragraphp2"><span></span></p>
                     </div>
                   </slot>
                 </div>
@@ -379,93 +443,93 @@
           </section>
         </div>
         <div>
-          <section class="section-container section-root-class-name5">
-            <slot class="section-custom-slot">
-              <div class="h2-property1h2 h2-root-class-name7">
-                <h2 class="h2-text headerH2">
+          <section class="pg-section-container pg-section-root-class-name5">
+            <slot class="pg-section-custom-slot">
+              <div class="txt-h21-property1h2 txt-h21-root-class-name7">
+                <h2 class="txt-h21-text headerH2">
                   <span>Empathize with user</span>
                 </h2>
-                <p class="h2-text1 paragraphp2">
+                <p class="txt-h21-text1 paragraphp2">
                   <span>
                     I conduct a series of 15-minute interviews with users to
                     understand what they treasure about VV and what needs to be
                     improved.
                   </span>
                 </p>
-                <p class="h2-text2 paragraphp2"><span></span></p>
+                <p class="txt-h21-text2 paragraphp2"><span></span></p>
               </div>
-              <div class="card-section card-root-class-name8">
-                <slot class="card-custom-slot">
-                  <span class="card-text">
+              <div class="bgs-card-section bgs-card-root-class-name8">
+                <slot class="bgs-card-custom-slot">
+                  <p class="bgs-card-text">
                     Customers trust VV and used to buy from VV without checking
                     the contents of the product and best-before dates. This
                     saves time and lowers the mental load.
-                  </span>
+                  </p>
                 </slot>
               </div>
-              <div class="quote-quote quote-root-class-name">
-                <h2 class="quote-text headerH2">
+              <div class="txt-quote-quote txt-quote-root-class-name">
+                <h2 class="txt-quote-text headerH2">
                   <span>
                     I don't need to read the ingredients list because I trust VV
                     reputation
                   </span>
                 </h2>
-                <span class="quote-text1">“</span>
+                <p class="txt-quote-text1">“</p>
               </div>
-              <div class="card-section card-root-class-name5">
-                <slot class="card-custom-slot">
-                  <span>
-                    Ordering in multiple places leads to an additional mental
-                    load – you need to remember what and where to order, adapt
-                    to different navigation and product cards in apps, and wait
-                    for multiple deliveries*.
-                  </span>
-                  <p class="card-text02">
+              <div class="bgs-card-section bgs-card-root-class-name5">
+                <slot class="bgs-card-custom-slot">
+                  <p class="bgs-card-text01">
                     *There is no “leave it somewhere” delivery option in Moscow.
                     All items are handled personally to the buyer; if the buyer
                     is not home, the order will be returned to the store. How
                     many Saturdays I spent at home waiting for deliveries…
                   </p>
-                </slot>
-              </div>
-              <div class="card-section card-root-class-name6">
-                <slot class="card-custom-slot">
-                  <span>
+                  <p>
                     Ordering in multiple places leads to an additional mental
                     load – you need to remember what and where to order, adapt
                     to different navigation and product cards in apps, and wait
                     for multiple deliveries*.
-                  </span>
+                  </p>
                 </slot>
               </div>
-              <div class="quote-quote quote-root-class-name1">
-                <h2 class="quote-text headerH2">
+              <div class="bgs-card-section bgs-card-root-class-name6">
+                <slot class="bgs-card-custom-slot">
+                  <p>
+                    Ordering in multiple places leads to an additional mental
+                    load – you need to remember what and where to order, adapt
+                    to different navigation and product cards in apps, and wait
+                    for multiple deliveries*.
+                  </p>
+                </slot>
+              </div>
+              <div class="txt-quote-quote txt-quote-root-class-name1">
+                <h2 class="txt-quote-text headerH2">
                   <span>
                     I want to order everything in one place to avoid overpaying
                     for delivery and save time
                   </span>
                 </h2>
-                <span class="quote-text1">“</span>
+                <p class="txt-quote-text1">“</p>
               </div>
             </slot>
           </section>
         </div>
         <div class="dark">
-          <section class="section-container section-root-class-name4">
-            <slot class="section-custom-slot">
-              <div class="h2-property1h2 h2-root-class-name8">
-                <h2 class="h2-text headerH2"><span>Visualize</span></h2>
-                <p class="h2-text1 paragraphp2">
+          <section class="pg-section-container pg-section-root-class-name4">
+            <slot class="pg-section-custom-slot">
+              <div class="txt-h21-property1h2 txt-h21-root-class-name8">
+                <h2 class="txt-h21-text headerH2"><span>Visualize</span></h2>
+                <p class="txt-h21-text1 paragraphp2">
                   <span>
                     To keep on track our goal I create a customer journey map. I
                     refer to it when we go too far away from our course
                   </span>
                 </p>
-                <p class="h2-text2 paragraphp2"><span></span></p>
+                <p class="txt-h21-text2 paragraphp2"><span></span></p>
               </div>
-              <div class="section-cjm">
+              <div class="pg-section-cjm">
                 <div>
-                  <div class="section-container05">
+                  <div class="pg-section-container06">
                     <script>
                       // Wait for HTML document to get ready
                       window.addEventListener('load', function () {
@@ -504,134 +568,134 @@
                     </script>
                   </div>
                 </div>
-                <div class="section-row1">
-                  <div class="section-container06">
+                <div class="pg-section-row1">
+                  <div class="pg-section-container07">
                     <span class="typographyheaderH3">Step</span>
                   </div>
-                  <div class="section-container07">
+                  <div class="pg-section-container08">
                     <span class="typographyheaderH3">I want soup</span>
                   </div>
-                  <div class="section-container08">
+                  <div class="pg-section-container09">
                     <span class="typographyheaderH3">
                       I also wanna Ruffles, Oreo, Garlic, oh and dish soap!
                     </span>
                   </div>
-                  <div class="section-container09">
+                  <div class="pg-section-container10">
                     <span class="typographyheaderH3">It’s time to shop</span>
                   </div>
                 </div>
-                <div class="section-row2">
-                  <div class="section-container10">
+                <div class="pg-section-row2">
+                  <div class="pg-section-container11">
                     <span class="typographyheaderH3">Action</span>
                   </div>
-                  <div class="section-container11">
+                  <div class="pg-section-container12">
                     <span class="typographyparagraphp2">
                       Goes to the ready-to-eat food section
                     </span>
                   </div>
-                  <div class="section-container12">
+                  <div class="pg-section-container13">
                     <span class="typographyparagraphp2">
                       Searches for Ruffles, Oreo, Garlic, and dish soap
                     </span>
                   </div>
-                  <div class="section-container13">
+                  <div class="pg-section-container14">
                     <span class="typographyparagraphp2">Goes to Wallmart</span>
                   </div>
                 </div>
-                <div class="section-row3">
-                  <div class="section-container14">
+                <div class="pg-section-row3">
+                  <div class="pg-section-container15">
                     <span class="typographyheaderH3">Expected Outcome</span>
                   </div>
-                  <div class="section-container15">
+                  <div class="pg-section-container16">
                     <span class="typographyparagraphp2">
                       Soup is easy to find
                     </span>
                   </div>
-                  <div class="section-container16">
+                  <div class="pg-section-container17">
                     <span class="typographyparagraphp2">Items are found</span>
                   </div>
-                  <div class="section-container17">
+                  <div class="pg-section-container18">
                     <span class="typographyparagraphp2">
                       Orders everything in one place
                     </span>
                   </div>
                 </div>
-                <div class="section-row4">
-                  <div class="section-container18">
+                <div class="pg-section-row4 colored_detail_bg">
+                  <div class="pg-section-container19">
                     <span class="typographyheaderH3">Stopper</span>
                   </div>
-                  <div class="section-container19">
+                  <div class="pg-section-container20">
                     <span class="typographyparagraphp2">—</span>
                   </div>
-                  <div class="section-container20">
+                  <div class="pg-section-container21">
                     <span class="typographyparagraphp2">
                       There are no such items
                     </span>
                   </div>
-                  <div class="section-container21">
+                  <div class="pg-section-container22">
                     <span class="typographyparagraphp2">
                       Doesn’t want to make an order at all
                     </span>
                   </div>
                 </div>
-                <div class="section-emotions">
-                  <div class="section-container22">
-                    <span class="typographyheaderH3 section-text20">
+                <div class="pg-section-emotions">
+                  <div class="pg-section-container23">
+                    <span class="typographyheaderH3 pg-section-text20">
                       Emotions
                     </span>
                   </div>
-                  <div class="section-frame4227">
+                  <div class="pg-section-frame4227">
                     <img
                       id="em1"
                       alt="ApathyI585"
                       src="public/vv/apathyi585-76n-200h.png"
-                      class="section-apathy"
+                      class="pg-section-apathy"
                     />
                   </div>
-                  <div class="section-frame4232">
+                  <div class="pg-section-frame4232">
                     <img
                       id="em2n"
                       alt="UnhappyI585"
                       src="public/vv/unhappyi585-99p-200h.png"
-                      class="section-unhappy"
+                      class="pg-section-unhappy"
                     />
                     <img
                       id="em2p"
                       alt="IrreverentI585"
                       src="public/vv/irreverenti585-nlm7-200h.png"
-                      class="section-irreverent"
+                      class="pg-section-irreverent"
                     />
                   </div>
-                  <div class="section-frame4233">
+                  <div class="pg-section-frame4233">
                     <img
                       id="em3n"
                       alt="UnhappyI585"
                       src="public/vv/unhappyi585-dff-200h.png"
-                      class="section-unhappy1"
+                      class="pg-section-unhappy1"
                     />
                     <img
                       id="em3p"
                       alt="IMAGE2xI585"
                       src="public/vv/image2xi585-5zwr-200h.png"
-                      class="section-image2x"
+                      class="pg-section-image2x"
                     />
                   </div>
                 </div>
-                <div class="section-row5">
-                  <div class="section-container23">
+                <div class="pg-section-row5 colored_detail_bg">
+                  <div class="pg-section-container24">
                     <span class="typographyheaderH3">Fix</span>
                   </div>
-                  <div class="section-container24">
+                  <div class="pg-section-container25">
                     <span class="typographyparagraphp2">
                       There's also soup from Tim Hortons
                     </span>
                   </div>
-                  <div class="section-container25">
+                  <div class="pg-section-container26">
                     <span class="typographyparagraphp2">
                       Ruffles, Oreo, Garlic, and dish soap are found
                     </span>
                   </div>
-                  <div class="section-container26">
+                  <div class="pg-section-container27">
                     <span class="typographyparagraphp2">Makes an order</span>
                   </div>
                 </div>
@@ -640,13 +704,13 @@
           </section>
         </div>
         <div>
-          <section class="section-container section-root-class-name6">
-            <slot class="section-custom-slot">
-              <div class="h2-property1h2 h2-root-class-name9">
-                <h2 class="h2-text headerH2">
+          <section class="pg-section-container pg-section-root-class-name6">
+            <slot class="pg-section-custom-slot">
+              <div class="txt-h21-property1h2 txt-h21-root-class-name9">
+                <h2 class="txt-h21-text headerH2">
                   <span>How do others do it?</span>
                 </h2>
-                <p class="h2-text1 paragraphp2">
+                <p class="txt-h21-text1 paragraphp2">
                   <span>
                     I am analyzing the strategies of businesses that sell
                     products from various brands as well as products under their
@@ -655,184 +719,180 @@
                     product.
                   </span>
                 </p>
-                <p class="h2-text2 paragraphp2"><span></span></p>
+                <p class="txt-h21-text2 paragraphp2"><span></span></p>
               </div>
-              <div class="h3-property1h3 h3-root-class-name5">
-                <h3 class="h3-text headerH3"><span>Mix-in</span></h3>
-                <p class="h3-text1 paragraphp2">
+              <div class="txt-h3-property1h3 txt-h3-root-class-name5">
+                <h3 class="txt-h3-text headerH3"><span>Mix-in</span></h3>
+                <p class="txt-h3-text1 paragraphp2">
                   <span>
                     Stores do not differentiate between their own and
                     third-party items in catalog and cards. You can only guess
                     based on the appearance and the name.
                   </span>
                 </p>
-                <p class="h3-text2 paragraphp2"><span></span></p>
+                <p class="txt-h3-text2 paragraphp2"><span></span></p>
               </div>
               <div
                 name="gallery"
-                class="imagecarousel-imagecarousel imagecarousel-root-class-name"
+                class="imgcarousel-imagecarousel imgcarousel-root-class-name"
               >
-                <div class="imagecarousel-container">
-                  <div class="imagecarousel-container1">
-                    <span name="left" class="imagecarousel-text">&lt;&lt;</span>
-                    <div class="imagecarousel-container2">
+                <div class="imgcarousel-container">
+                  <div class="imgcarousel-container1">
+                    <span name="left" class="imgcarousel-text">&lt;&lt;</span>
+                    <div class="imgcarousel-container2">
                       <img
                         alt="image"
                         src="public/vv/mixin/frame%204283-200w.png"
                         name="imb0"
-                        class="imagecarousel-image"
+                        class="imgcarousel-image"
                       />
                       <img
                         alt="image"
                         src="public/vv/mixin/frame%204284-200w.png"
                         name="imb1"
-                        class="imagecarousel-image1"
+                        class="imgcarousel-image1"
                       />
                       <img
                         alt="image"
                         src="public/vv/mixin/frame%204285-200w.png"
                         name="imb2"
-                        class="imagecarousel-image2"
+                        class="imgcarousel-image2"
                       />
                       <img
                         alt="image"
                         src="public/vv/mixin/frame%204286-200w.png"
                         name="imb3"
-                        class="imagecarousel-image3"
+                        class="imgcarousel-image3"
                       />
                     </div>
-                    <span name="right" class="imagecarousel-text1">
-                      &gt;&gt;
-                    </span>
+                    <span name="right" class="imgcarousel-text1">&gt;&gt;</span>
                   </div>
-                  <div class="imagecarousel-container3">
-                    <div class="imagecarousel-container4">
+                  <div class="imgcarousel-container3">
+                    <div class="imgcarousel-container4">
                       <img
                         alt="image"
                         src="public/vv/mixin/frame%204283-200w.png"
                         name="ims0"
-                        class="imagecarousel-image4"
+                        class="imgcarousel-image4"
                       />
                     </div>
-                    <div class="imagecarousel-container5">
+                    <div class="imgcarousel-container5">
                       <img
                         alt="image"
                         src="public/vv/mixin/frame%204284-200w.png"
                         name="ims1"
-                        class="imagecarousel-image5"
+                        class="imgcarousel-image5"
                       />
                     </div>
-                    <div class="imagecarousel-container6">
+                    <div class="imgcarousel-container6">
                       <img
                         alt="image"
                         src="public/vv/mixin/frame%204285-200w.png"
                         name="ims2"
-                        class="imagecarousel-image6"
+                        class="imgcarousel-image6"
                       />
                     </div>
-                    <div class="imagecarousel-container7">
+                    <div class="imgcarousel-container7">
                       <img
                         alt="image"
                         src="public/vv/mixin/frame%204286-200w.png"
                         name="ims3"
-                        class="imagecarousel-image7"
+                        class="imgcarousel-image7"
                       />
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="h3-property1h3 h3-root-class-name6">
-                <h3 class="h3-text headerH3"><span>Stand out</span></h3>
-                <p class="h3-text1 paragraphp2">
+              <div class="txt-h3-property1h3 txt-h3-root-class-name6">
+                <h3 class="txt-h3-text headerH3"><span>Stand out</span></h3>
+                <p class="txt-h3-text1 paragraphp2">
                   <span>
                     Stores actively label products by their own brand,
                     distinguishing them from third-party brands.
                   </span>
                 </p>
-                <p class="h3-text2 paragraphp2"><span></span></p>
+                <p class="txt-h3-text2 paragraphp2"><span></span></p>
               </div>
               <div
                 name="gallery"
-                class="imagecarousel-imagecarousel imagecarousel-root-class-name1"
+                class="imgcarousel-imagecarousel imgcarousel-root-class-name1"
               >
-                <div class="imagecarousel-container">
-                  <div class="imagecarousel-container1">
-                    <span name="left" class="imagecarousel-text">&lt;&lt;</span>
-                    <div class="imagecarousel-container2">
+                <div class="imgcarousel-container">
+                  <div class="imgcarousel-container1">
+                    <span name="left" class="imgcarousel-text">&lt;&lt;</span>
+                    <div class="imgcarousel-container2">
                       <img
                         alt="image"
                         src="public/vv/standout/frame-1-200h.png"
                         name="imb0"
-                        class="imagecarousel-image"
+                        class="imgcarousel-image"
                       />
                       <img
                         alt="image"
                         src="public/vv/standout/frame-2-200h.png"
                         name="imb1"
-                        class="imagecarousel-image1"
+                        class="imgcarousel-image1"
                       />
                       <img
                         alt="image"
                         src="public/vv/standout/frame-3-200h.png"
                         name="imb2"
-                        class="imagecarousel-image2"
+                        class="imgcarousel-image2"
                       />
                       <img
                         alt="image"
                         src="public/vv/standout/frame-200h.png"
                         name="imb3"
-                        class="imagecarousel-image3"
+                        class="imgcarousel-image3"
                       />
                     </div>
-                    <span name="right" class="imagecarousel-text1">
-                      &gt;&gt;
-                    </span>
+                    <span name="right" class="imgcarousel-text1">&gt;&gt;</span>
                   </div>
-                  <div class="imagecarousel-container3">
-                    <div class="imagecarousel-container4">
+                  <div class="imgcarousel-container3">
+                    <div class="imgcarousel-container4">
                       <img
                         alt="image"
                         src="public/vv/standout/frame-1-200h.png"
                         name="ims0"
-                        class="imagecarousel-image4"
+                        class="imgcarousel-image4"
                       />
                     </div>
-                    <div class="imagecarousel-container5">
+                    <div class="imgcarousel-container5">
                       <img
                         alt="image"
                         src="public/vv/standout/frame-2-200h.png"
                         name="ims1"
-                        class="imagecarousel-image5"
+                        class="imgcarousel-image5"
                       />
                     </div>
-                    <div class="imagecarousel-container6">
+                    <div class="imgcarousel-container6">
                       <img
                         alt="image"
                         src="public/vv/standout/frame-3-200h.png"
                         name="ims2"
-                        class="imagecarousel-image6"
+                        class="imgcarousel-image6"
                       />
                     </div>
-                    <div class="imagecarousel-container7">
+                    <div class="imgcarousel-container7">
                       <img
                         alt="image"
                         src="public/vv/standout/frame-200h.png"
                         name="ims3"
-                        class="imagecarousel-image7"
+                        class="imgcarousel-image7"
                       />
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="h3-property1h3 h3-root-class-name11">
-                <h3 class="h3-text headerH3"><span>Insight</span></h3>
-                <p class="h3-text1 paragraphp2">
+              <div class="txt-h3-property1h3 txt-h3-root-class-name11">
+                <h3 class="txt-h3-text headerH3"><span>Insight</span></h3>
+                <p class="txt-h3-text1 paragraphp2">
                   <span>
                     Companies that actively develop their brand image highlight
                     their own products more frequently.
                   </span>
                 </p>
-                <p class="h3-text2 paragraphp2">
+                <p class="txt-h3-text2 paragraphp2">
                   <span>
                     VV was initially focused on selling brand products, so it
                     makes sense to give them more prominence.
@@ -842,19 +902,19 @@
             </slot>
           </section>
         </div>
-        <div>
-          <section class="section-container section-root-class-name2">
-            <slot class="section-custom-slot">
-              <div class="h2-property1h2 h2-root-class-name11">
-                <h2 class="h2-text headerH2">
+        <div class="accent">
+          <section class="pg-section-container pg-section-root-class-name2">
+            <slot class="pg-section-custom-slot">
+              <div class="txt-h21-property1h2 txt-h21-root-class-name11">
+                <h2 class="txt-h21-text headerH2">
                   <span>How to show the difference?</span>
                 </h2>
-                <p class="h2-text1 paragraphp2">
+                <p class="txt-h21-text1 paragraphp2">
                   <span>
                     I’m starting from preparing new elements for testing.
                   </span>
                 </p>
-                <p class="h2-text2 paragraphp2">
+                <p class="txt-h21-text2 paragraphp2">
                   <span>
                     The task is complicated by the fact that the brand's colour
                     is green, and any attempt to mark VkusVill's cards with the
@@ -866,84 +926,82 @@
               </div>
               <div
                 name="gallery"
-                class="imagecarousel-imagecarousel imagecarousel-root-class-name2"
+                class="imgcarousel-imagecarousel imgcarousel-root-class-name2"
               >
-                <div class="imagecarousel-container">
-                  <div class="imagecarousel-container1">
-                    <span name="left" class="imagecarousel-text">&lt;&lt;</span>
-                    <div class="imagecarousel-container2">
+                <div class="imgcarousel-container">
+                  <div class="imgcarousel-container1">
+                    <span name="left" class="imgcarousel-text">&lt;&lt;</span>
+                    <div class="imgcarousel-container2">
                       <img
                         alt="image"
                         src="public/vv/cards/frame%204151-200h.png"
                         name="imb0"
-                        class="imagecarousel-image"
+                        class="imgcarousel-image"
                       />
                       <img
                         alt="image"
                         src="public/vv/cards/frame%204152-200h.png"
                         name="imb1"
-                        class="imagecarousel-image1"
+                        class="imgcarousel-image1"
                       />
                       <img
                         alt="image"
                         src="public/vv/cards/frame%204153-200h.png"
                         name="imb2"
-                        class="imagecarousel-image2"
+                        class="imgcarousel-image2"
                       />
                       <img
                         alt="image"
                         src="public/vv/cards/frame%204154-200h.png"
                         name="imb3"
-                        class="imagecarousel-image3"
+                        class="imgcarousel-image3"
                       />
                     </div>
-                    <span name="right" class="imagecarousel-text1">
-                      &gt;&gt;
-                    </span>
+                    <span name="right" class="imgcarousel-text1">&gt;&gt;</span>
                   </div>
-                  <div class="imagecarousel-container3">
-                    <div class="imagecarousel-container4">
+                  <div class="imgcarousel-container3">
+                    <div class="imgcarousel-container4">
                       <img
                         alt="image"
                         src="public/vv/cards/frame%204151-200h.png"
                         name="ims0"
-                        class="imagecarousel-image4"
+                        class="imgcarousel-image4"
                       />
                     </div>
-                    <div class="imagecarousel-container5">
+                    <div class="imgcarousel-container5">
                       <img
                         alt="image"
                         src="public/vv/cards/frame%204152-200h.png"
                         name="ims1"
-                        class="imagecarousel-image5"
+                        class="imgcarousel-image5"
                       />
                     </div>
-                    <div class="imagecarousel-container6">
+                    <div class="imgcarousel-container6">
                       <img
                         alt="image"
                         src="public/vv/cards/frame%204153-200h.png"
                         name="ims2"
-                        class="imagecarousel-image6"
+                        class="imgcarousel-image6"
                       />
                     </div>
-                    <div class="imagecarousel-container7">
+                    <div class="imgcarousel-container7">
                       <img
                         alt="image"
                         src="public/vv/cards/frame%204154-200h.png"
                         name="ims3"
-                        class="imagecarousel-image7"
+                        class="imgcarousel-image7"
                       />
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="section-container27">
-                <div class="h3-property1h3 h3-root-class-name12">
-                  <h3 class="h3-text headerH3">
+              <div class="pg-section-container28">
+                <div class="txt-h3-property1h3 txt-h3-root-class-name12">
+                  <h3 class="txt-h3-text headerH3">
                     <span>Testing findings</span>
                   </h3>
-                  <p class="h3-text1 paragraphp2"><span></span></p>
-                  <p class="h3-text2 paragraphp2"><span></span></p>
+                  <p class="txt-h3-text1 paragraphp2"><span></span></p>
+                  <p class="txt-h3-text2 paragraphp2"><span></span></p>
                 </div>
                 <ul class="list">
                   <li class="list-item">
@@ -971,58 +1029,58 @@
           </section>
         </div>
         <div class="dark">
-          <section class="section-container section-root-class-name1">
-            <slot class="section-custom-slot">
-              <div class="h2-property1h2 h2-root-class-name13">
-                <h2 class="h2-text headerH2"><span>Fix it</span></h2>
-                <p class="h2-text1 paragraphp2"><span></span></p>
-                <p class="h2-text2 paragraphp2"><span></span></p>
+          <section class="pg-section-container pg-section-root-class-name1">
+            <slot class="pg-section-custom-slot">
+              <div class="txt-h21-property1h2 txt-h21-root-class-name13">
+                <h2 class="txt-h21-text headerH2"><span>Fix it</span></h2>
+                <p class="txt-h21-text1 paragraphp2"><span></span></p>
+                <p class="txt-h21-text2 paragraphp2"><span></span></p>
               </div>
-              <div class="section-container28">
-                <div class="section-container29">
-                  <div class="h3-property1h3 h3-root-class-name7">
-                    <h3 class="h3-text headerH3">
+              <div class="pg-section-container29">
+                <div class="pg-section-container30">
+                  <div class="txt-h3-property1h3 txt-h3-root-class-name7">
+                    <h3 class="txt-h3-text headerH3">
                       <span>Clarify "supermarket"</span>
                     </h3>
-                    <p class="h3-text1 paragraphp2">
+                    <p class="txt-h3-text1 paragraphp2">
                       <span>
                         Since users don't have problem understanding feature
                         after explanation I add short onboarding animation and a
                         note into supermarket category in the catalog.
                       </span>
                     </p>
-                    <p class="h3-text2 paragraphp2"><span></span></p>
+                    <p class="txt-h3-text2 paragraphp2"><span></span></p>
                   </div>
-                  <div class="section-container30">
+                  <div class="pg-section-container31">
                     <img
                       alt="image"
-                      src="public/%C3%B0%C2%92%C3%B0%C2%BD%C3%B1%C2%83%C3%B1%C2%82%C3%B1%C2%80%C3%B0%C2%B8%20%C3%B1%C2%81%C3%B1%C2%83%C3%B0%C2%BF%C3%B0%C2%B5%C3%B1%C2%80%C3%B0%C2%BC%C3%B0%C2%B0%C3%B1%C2%80%C3%B0%C2%BA%C3%B0%C2%B5%C3%B1%C2%82%C3%B0%C2%B0-200w.png"
-                      class="section-image"
+                      src="public/vv/%C3%B0%C2%92%C3%B0%C2%BD%C3%B1%C2%83%C3%B1%C2%82%C3%B1%C2%80%C3%B0%C2%B8%20%C3%B1%C2%81%C3%B1%C2%83%C3%B0%C2%BF%C3%B0%C2%B5%C3%B1%C2%80%C3%B0%C2%BC%C3%B0%C2%B0%C3%B1%C2%80%C3%B0%C2%BA%C3%B0%C2%B5%C3%B1%C2%82%C3%B0%C2%B0-200w.png"
+                      class="pg-section-image1"
                     />
                     <img
                       alt="image"
                       src="public/vv/image%20193-200w.png"
-                      class="section-image1"
+                      class="pg-section-image2"
                     />
                   </div>
                 </div>
-                <div class="section-container31">
-                  <div class="h3-property1h3 h3-root-class-name8">
-                    <h3 class="h3-text headerH3">
+                <div class="pg-section-container32">
+                  <div class="txt-h3-property1h3 txt-h3-root-class-name8">
+                    <h3 class="txt-h3-text headerH3">
                       <span>"Busy" graphics</span>
                     </h3>
-                    <p class="h3-text1 paragraphp2">
+                    <p class="txt-h3-text1 paragraphp2">
                       <span>
                         The new category looks more consistent with the rest of
                         the app After toning down the gradient.
                       </span>
                     </p>
-                    <p class="h3-text2 paragraphp2"><span></span></p>
+                    <p class="txt-h3-text2 paragraphp2"><span></span></p>
                   </div>
                   <img
                     alt="image"
                     src="public/vv/image%20223-200w.png"
-                    class="section-image2"
+                    class="pg-section-image3"
                   />
                 </div>
               </div>
@@ -1030,33 +1088,35 @@
           </section>
         </div>
         <div>
-          <section class="section-container section-root-class-name7">
-            <slot class="section-custom-slot">
-              <div class="h2-property1h2 h2-root-class-name12">
-                <h2 class="h2-text headerH2"><span>Is it better?</span></h2>
-                <p class="h2-text1 paragraphp2">
+          <section class="pg-section-container pg-section-root-class-name7">
+            <slot class="pg-section-custom-slot">
+              <div class="txt-h21-property1h2 txt-h21-root-class-name12">
+                <h2 class="txt-h21-text headerH2">
+                  <span>Is it better?</span>
+                </h2>
+                <p class="txt-h21-text1 paragraphp2">
                   <span>
                     Second round of testing showed great improvement in user's
                     understanding of the "Supermarket" and better impression of
                     UI.
                   </span>
                 </p>
-                <p class="h2-text2 paragraphp2">
+                <p class="txt-h21-text2 paragraphp2">
                   <span>But I found a new problem:</span>
                 </p>
               </div>
-              <div class="card-section card-root-class-name2">
-                <slot class="card-custom-slot">
-                  <div class="h3-property1h3 h3-root-class-name4">
-                    <h3 class="h3-text headerH3">
+              <div class="bgs-card-section bgs-card-root-class-name2">
+                <slot class="bgs-card-custom-slot">
+                  <div class="txt-h3-property1h3 txt-h3-root-class-name4">
+                    <h3 class="txt-h3-text headerH3">
                       <span>
                         Users open the app not only for ordering products but
                         also for scanning their loyalty cards in-store and
                         checking deliveries.
                       </span>
                     </h3>
-                    <p class="h3-text1 paragraphp2"><span></span></p>
-                    <p class="h3-text2 paragraphp2"><span></span></p>
+                    <p class="txt-h3-text1 paragraphp2"><span></span></p>
+                    <p class="txt-h3-text2 paragraphp2"><span></span></p>
                   </div>
                 </slot>
               </div>
@@ -1064,16 +1124,16 @@
           </section>
         </div>
         <div class="dark">
-          <section class="section-container section-root-class-name13">
-            <slot class="section-custom-slot">
-              <div class="h2-property1h2 h2-root-class-name16">
-                <h2 class="h2-text headerH2"><span>Let's fix it</span></h2>
-                <p class="h2-text1 paragraphp2"><span></span></p>
-                <p class="h2-text2 paragraphp2"><span></span></p>
+          <section class="pg-section-container pg-section-root-class-name13">
+            <slot class="pg-section-custom-slot">
+              <div class="txt-h21-property1h2 txt-h21-root-class-name16">
+                <h2 class="txt-h21-text headerH2"><span>Let's fix it</span></h2>
+                <p class="txt-h21-text1 paragraphp2"><span></span></p>
+                <p class="txt-h21-text2 paragraphp2"><span></span></p>
               </div>
-              <div class="h3-property1h3 h3-root-class-name9">
-                <h3 class="h3-text headerH3"><span>Before</span></h3>
-                <p class="h3-text1 paragraphp2">
+              <div class="txt-h3-property1h3 txt-h3-root-class-name9">
+                <h3 class="txt-h3-text headerH3"><span>Before</span></h3>
+                <p class="txt-h3-text1 paragraphp2">
                   <span>
                     With current user-flow users prefer to skip the onboarding
                     because it's not why they came to the app at the moment.
@@ -1081,11 +1141,11 @@
                     distracting them from their original intention.
                   </span>
                 </p>
-                <p class="h3-text2 paragraphp2"><span></span></p>
+                <p class="txt-h3-text2 paragraphp2"><span></span></p>
               </div>
-              <div class="section-before">
-                <div class="section-container32">
-                  <div class="section-container33">
+              <div class="pg-section-before">
+                <div class="pg-section-container33">
+                  <div class="pg-section-container34">
                     <script>
                       // Wait for HTML document to get ready
                       window.addEventListener('load', function () {
@@ -1114,47 +1174,47 @@
                     </script>
                   </div>
                 </div>
-                <div class="section-container34">
+                <div class="pg-section-container35">
                   <div id="fch1">
                     <div
-                      class="chart-card-flowchartblock chart-card-root-class-name9"
+                      class="bgs-chart-card-flowchartblock bgs-chart-card-root-class-name9"
                     >
                       <p class="paragraphp2"><span>Onboarding</span></p>
                     </div>
                   </div>
                 </div>
-                <div class="section-container36">
+                <div class="pg-section-container37">
                   <div id="fch2">
                     <div
-                      class="chart-card-flowchartblock chart-card-root-class-name10"
+                      class="bgs-chart-card-flowchartblock bgs-chart-card-root-class-name10"
                     >
                       <p class="paragraphp2"><span>Main</span></p>
                     </div>
                   </div>
                 </div>
-                <div class="section-container38">
+                <div class="pg-section-container39">
                   <div id="fch3">
                     <div
-                      class="chart-card-flowchartblock chart-card-root-class-name11"
+                      class="bgs-chart-card-flowchartblock bgs-chart-card-root-class-name11"
                     >
                       <p class="paragraphp2"><span>Catalog</span></p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="h3-property1h3 h3-root-class-name10">
-                <h3 class="h3-text headerH3"><span>After</span></h3>
-                <p class="h3-text1 paragraphp2">
+              <div class="txt-h3-property1h3 txt-h3-root-class-name10">
+                <h3 class="txt-h3-text headerH3"><span>After</span></h3>
+                <p class="txt-h3-text1 paragraphp2">
                   <span>
                     I decided to move the onboarding to the moment of the first
                     interaction with the catalogue or search.
                   </span>
                 </p>
-                <p class="h3-text2 paragraphp2"><span></span></p>
+                <p class="txt-h3-text2 paragraphp2"><span></span></p>
               </div>
-              <div class="section-after">
-                <div class="section-container40">
-                  <div class="section-container41">
+              <div class="pg-section-after">
+                <div class="pg-section-container41">
+                  <div class="pg-section-container42">
                     <script>
                       // Wait for HTML document to get ready
                       window.addEventListener('load', function () {
@@ -1199,49 +1259,49 @@
                     </script>
                   </div>
                 </div>
-                <div class="section-container42">
+                <div class="pg-section-container43">
                   <div id="f2ch1">
                     <div
-                      class="chart-card-flowchartblock chart-card-root-class-name12"
+                      class="bgs-chart-card-flowchartblock bgs-chart-card-root-class-name12"
                     >
                       <p class="paragraphp2"><span>Main</span></p>
                     </div>
                   </div>
                   <div id="f2ch2">
                     <div
-                      class="chart-card-flowchartblock chart-card-root-class-name13"
+                      class="bgs-chart-card-flowchartblock bgs-chart-card-root-class-name13"
                     >
                       <p class="paragraphp2"><span>Catalog</span></p>
                     </div>
                   </div>
                   <div id="f2ch3">
                     <div
-                      class="chart-card-flowchartblock chart-card-root-class-name14"
+                      class="bgs-chart-card-flowchartblock bgs-chart-card-root-class-name14"
                     >
                       <p class="paragraphp2"><span>Search</span></p>
                     </div>
                   </div>
                 </div>
-                <div class="section-container46">
+                <div class="pg-section-container47">
                   <div id="f2ch4">
                     <div
-                      class="chart-card-flowchartblock chart-card-root-class-name15"
+                      class="bgs-chart-card-flowchartblock bgs-chart-card-root-class-name15"
                     >
                       <p class="paragraphp2"><span>Onboarding</span></p>
                     </div>
                   </div>
                 </div>
-                <div class="section-container48">
+                <div class="pg-section-container49">
                   <div id="f2ch5">
                     <div
-                      class="chart-card-flowchartblock chart-card-root-class-name16"
+                      class="bgs-chart-card-flowchartblock bgs-chart-card-root-class-name16"
                     >
                       <p class="paragraphp2"><span>Catalog</span></p>
                     </div>
                   </div>
                   <div id="f2ch6">
                     <div
-                      class="chart-card-flowchartblock chart-card-root-class-name17"
+                      class="bgs-chart-card-flowchartblock bgs-chart-card-root-class-name17"
                     >
                       <p class="paragraphp2"><span>Search result</span></p>
                     </div>
@@ -1252,58 +1312,60 @@
           </section>
         </div>
         <div>
-          <section class="section-container section-root-class-name10">
-            <slot class="section-custom-slot">
-              <div class="h2-property1h2 h2-root-class-name14">
-                <h2 class="h2-text headerH2"><span>The result</span></h2>
-                <p class="h2-text1 paragraphp2">
+          <section class="pg-section-container pg-section-root-class-name10">
+            <slot class="pg-section-custom-slot">
+              <div class="txt-h21-property1h2 txt-h21-root-class-name14">
+                <h2 class="txt-h21-text headerH2"><span>The result</span></h2>
+                <p class="txt-h21-text1 paragraphp2">
                   <span>
                     Now, the new section has received the necessary attention
                     from users, without hindering interaction with the rest of
                     the app.
                   </span>
                 </p>
-                <p class="h2-text2 paragraphp2"><span></span></p>
+                <p class="txt-h21-text2 paragraphp2"><span></span></p>
               </div>
             </slot>
           </section>
         </div>
         <div class="vvcase-thoughts dark">
-          <section class="section-container section-root-class-name9">
-            <slot class="section-custom-slot">
-              <div class="h2-property1h2 h2-root-class-name15">
-                <h2 class="h2-text headerH2"><span>Final thoughts</span></h2>
-                <p class="h2-text1 paragraphp2">
+          <section class="pg-section-container pg-section-root-class-name9">
+            <slot class="pg-section-custom-slot">
+              <div class="txt-h21-property1h2 txt-h21-root-class-name15">
+                <h2 class="txt-h21-text headerH2">
+                  <span>Final thoughts</span>
+                </h2>
+                <p class="txt-h21-text1 paragraphp2">
                   <span>
                     At this project I was able to practice my research and
                     visual skills.
                   </span>
                 </p>
-                <p class="h2-text2 paragraphp2"><span></span></p>
+                <p class="txt-h21-text2 paragraphp2"><span></span></p>
               </div>
             </slot>
           </section>
         </div>
         <div class="vvcase-mockup">
-          <section class="section-container section-root-class-name8">
-            <slot class="section-custom-slot">
-              <div class="h2-property1h2 h2-root-class-name17">
-                <h2 class="h2-text headerH2"><span>Final mockup</span></h2>
-                <p class="h2-text1 paragraphp2"><span></span></p>
-                <p class="h2-text2 paragraphp2"><span></span></p>
+          <section class="pg-section-container pg-section-root-class-name8">
+            <slot class="pg-section-custom-slot">
+              <div class="txt-h21-property1h2 txt-h21-root-class-name17">
+                <h2 class="txt-h21-text headerH2"><span>Final mockup</span></h2>
+                <p class="txt-h21-text1 paragraphp2"><span></span></p>
+                <p class="txt-h21-text2 paragraphp2"><span></span></p>
               </div>
               <img
                 alt="image"
                 src="https://play.teleporthq.io/static/svg/default-img.svg"
-                class="section-image3"
+                class="pg-section-image4"
               />
             </slot>
           </section>
         </div>
-        <footer class="footer-footer footer-root-class-name">
-          <span class="paragraphp2"><span>LINKEDIN</span></span>
-          <span class="paragraphp2"><span>BEHANCE</span></span>
-          <span class="paragraphp2"><span>EMAIL</span></span>
+        <footer class="pg-footer-footer pg-footer-root-class-name">
+          <p class="paragraphp2"><span>LINKEDIN</span></p>
+          <p class="paragraphp2"><span>BEHANCE</span></p>
+          <p class="paragraphp2"><span>EMAIL</span></p>
         </footer>
       </div>
     </div>
