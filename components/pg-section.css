@@ -1,7 +1,5 @@
 .pg-section-container {
   gap: var(--dl-space-space-threeunits);
-  width: 100%;
-  height: auto;
   display: flex;
   position: relative;
   align-items: flex-start;
@@ -11,6 +9,10 @@
   flex-direction: column;
   padding-bottom: var(--dl-space-space-fourunits);
 }
+
+
+
+
 
 
 

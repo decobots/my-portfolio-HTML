@@ -1,7 +1,5 @@
 .txt-h2-property1h2 {
   gap: var(--dl-space-space-oneandhalfunits);
-  width: 100%;
-  height: auto;
   display: flex;
   position: relative;
   align-self: stretch;
@@ -9,18 +7,12 @@
 }
 .txt-h2-text {
   color: var(--dl-color-palette-accent);
-  width: auto;
-  height: auto;
   align-self: stretch;
 }
 .txt-h2-text1 {
-  width: auto;
-  height: auto;
   align-self: stretch;
 }
 .txt-h2-text2 {
-  width: auto;
-  height: auto;
   align-self: stretch;
 }
 
@@ -92,3 +84,26 @@
 
 
 
+
+
+
+@media(max-width: 479px) {
+  .txt-h2-root-class-name1 {
+    flex: 0 0 auto;
+  }
+  .txt-h2-root-class-name2 {
+    flex: 0 0 auto;
+  }
+  .txt-h2-root-class-name22 {
+    flex: 0 0 auto;
+  }
+  .txt-h2-root-class-name23 {
+    flex: 0 0 auto;
+  }
+  .txt-h2-root-class-name38 {
+    flex: 0 0 auto;
+  }
+  .txt-h2-root-class-name39 {
+    flex: 0 0 auto;
+  }
+}

@@ -40,11 +40,6 @@
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100;200;300;400;500;600;700&amp;display=swap"
       data-tag="font"
     />
@@ -55,22 +50,12 @@
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap"
       data-tag="font"
     />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
       data-tag="font"
     />
     <link
@@ -79,27 +64,71 @@
     />
     <!--This is the head section-->
     <style>
-      .dark p {
-      color: var(--dl-color-palette-light);
+      p{
+        max-width: 60ch;
+        word-wrap: break-word;
       }
-      .dark {
-      background-color: var(--dl-color-palette-dark);
-      border: 0px;
-      }
-      .dark .card-section p{
-      color: var(--dl-color-palette-darkest);
-      }
-      .dark .chart-card-flowchartblock p{
-      color: var(--dl-color-palette-darkest);
-      }
-
       p:empty {
         display: none;
       }
 
-      p{
-        max-width: 60ch;
-        word-wrap: break-word;
+
+      ._dark {
+      background-color: var(--dl-color-palette-dark);
+      border: 0px !important;
+      }
+      ._dark p {
+      color: var(--dl-color-palette-light);
+      }
+      ._dark .colored_detail_bg{
+        background-color: var(--dl-color-palette-light);
+      }
+      ._dark .card-section p{
+      color: var(--dl-color-palette-darkest);
+      }
+      ._dark .chart-card-flowchartblock p{
+      color: var(--dl-color-palette-darkest);
+      }
+
+
+      ._accent {
+            background-color: var(--dl-color-palette-accent);
+            border: 0px !important;
+            }
+      ._accent h1,
+      ._accent h2,
+      ._accent h3,
+      ._accent h4,
+      ._accent h5,
+      .a_ccent h6  {
+      color: var(--dl-color-palette-dark);
+      }
+      ._accent p {
+      color: var(--dl-color-palette-lightest);
+      }
+
+      ._accent .colored_detail_bg{
+        background-color: var(--dl-color-palette-light);
+      }
+      ._accent .card-section {
+      background-color: var(--dl-color-palette-dark);
+      }
+      ._accent .card-section p{
+        color:var(--dl-color-palette-accent);
+      }
+      ._accent .card-section h1,
+      ._accent  .card-section h2,
+      ._accent .card-section h3,
+      ._accent  .card-section h4,
+      ._accent .card-section h5,
+      ._accent .card-section h6  {
+      color: var(--dl-color-palette-lightest);
+      }
+      ._accent .chart-card-flowchartblock{
+        background-color: var(--dl-color-palette-light);
+      }
+      ._accent .chart-card-flowchartblock p{
+        color: var(--dl-color-palette-accent);
       }
     </style>
 
@@ -109,6 +138,17 @@
       integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(function () {
+        $('span').each(function() {
+          var $this = $(this);
+          // Check if the span is empty and doesn't have any inline styles
+          if ($this.is(':empty') && $.trim($this.attr('style')) === '') {
+            $this.remove(); // Remove the empty span without styles
+          }
+        });
+      });
+    </script>
   </head>
   <body>
     <link rel="stylesheet" href="./style.css" />
@@ -116,202 +156,227 @@
       <link href="./page.css" rel="stylesheet" />
 
       <div class="page-container">
-        <section class="section-container section-root-class-name14">
-          <slot class="section-custom-slot">
+        <section
+          class="pg-section-container _fullwidth100 pg-section-root-class-name42"
+        >
+          <slot class="pg-section-custom-slot">
             <div
-              name="gallery"
-              class="imagecarousel-imagecarousel imagecarousel-root-class-name3"
+              class="txt-h2-property1h2 _fullwidth100 txt-h2-root-class-name51"
             >
-              <div class="imagecarousel-container">
-                <div class="imagecarousel-container1">
-                  <span name="left" class="imagecarousel-text">&lt;&lt;</span>
-                  <div class="imagecarousel-container2">
-                    <img
-                      alt="image"
-                      src="fb6381ac-5747-4dd6-ba9b-a3be7deac007"
-                      name="imb0"
-                      class="imagecarousel-image"
-                    />
-                    <img
-                      alt="image"
-                      src="94012c80-8240-42d5-af6a-45a554bd8bef"
-                      name="imb1"
-                      class="imagecarousel-image1"
-                    />
-                    <img
-                      alt="image"
-                      src="735a5e7d-9239-4cd6-b31d-03d890098379"
-                      name="imb2"
-                      class="imagecarousel-image2"
-                    />
-                    <img
-                      alt="image"
-                      src="91378eb6-4574-44d3-b43d-c84a333e4f96"
-                      name="imb3"
-                      class="imagecarousel-image3"
-                    />
-                  </div>
-                  <span name="right" class="imagecarousel-text1">&gt;&gt;</span>
-                </div>
-                <div class="imagecarousel-container3">
-                  <div class="imagecarousel-container4">
-                    <img
-                      alt="image"
-                      src="fb6381ac-5747-4dd6-ba9b-a3be7deac007"
-                      name="ims0"
-                      class="imagecarousel-image4"
-                    />
-                  </div>
-                  <div class="imagecarousel-container5">
-                    <img
-                      alt="image"
-                      src="94012c80-8240-42d5-af6a-45a554bd8bef"
-                      name="ims1"
-                      class="imagecarousel-image5"
-                    />
-                  </div>
-                  <div class="imagecarousel-container6">
-                    <img
-                      alt="image"
-                      src="735a5e7d-9239-4cd6-b31d-03d890098379"
-                      name="ims2"
-                      class="imagecarousel-image6"
-                    />
-                  </div>
-                  <div class="imagecarousel-container7">
-                    <img
-                      alt="image"
-                      src="91378eb6-4574-44d3-b43d-c84a333e4f96"
-                      name="ims3"
-                      class="imagecarousel-image7"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              name="gallery"
-              class="imagecarousel-imagecarousel imagecarousel-root-class-name4"
-            >
-              <div class="imagecarousel-container">
-                <div class="imagecarousel-container1">
-                  <span name="left" class="imagecarousel-text">&lt;&lt;</span>
-                  <div class="imagecarousel-container2">
-                    <img
-                      alt="image"
-                      src="10c1a64e-74ca-4bc4-b4b5-050ddf056408"
-                      name="imb0"
-                      class="imagecarousel-image"
-                    />
-                    <img
-                      alt="image"
-                      src="1b908f3c-d01c-4b22-bdb6-e58cdb651169"
-                      name="imb1"
-                      class="imagecarousel-image1"
-                    />
-                    <img
-                      alt="image"
-                      src="36d708bc-d947-4d21-abb9-be7b29fc7d1e"
-                      name="imb2"
-                      class="imagecarousel-image2"
-                    />
-                    <img
-                      alt="image"
-                      src="ac072c92-0f55-4fd2-8800-c8744145d990"
-                      name="imb3"
-                      class="imagecarousel-image3"
-                    />
-                  </div>
-                  <span name="right" class="imagecarousel-text1">&gt;&gt;</span>
-                </div>
-                <div class="imagecarousel-container3">
-                  <div class="imagecarousel-container4">
-                    <img
-                      alt="image"
-                      src="10c1a64e-74ca-4bc4-b4b5-050ddf056408"
-                      name="ims0"
-                      class="imagecarousel-image4"
-                    />
-                  </div>
-                  <div class="imagecarousel-container5">
-                    <img
-                      alt="image"
-                      src="1b908f3c-d01c-4b22-bdb6-e58cdb651169"
-                      name="ims1"
-                      class="imagecarousel-image5"
-                    />
-                  </div>
-                  <div class="imagecarousel-container6">
-                    <img
-                      alt="image"
-                      src="36d708bc-d947-4d21-abb9-be7b29fc7d1e"
-                      name="ims2"
-                      class="imagecarousel-image6"
-                    />
-                  </div>
-                  <div class="imagecarousel-container7">
-                    <img
-                      alt="image"
-                      src="ac072c92-0f55-4fd2-8800-c8744145d990"
-                      name="ims3"
-                      class="imagecarousel-image7"
-                    />
-                  </div>
-                </div>
-              </div>
+              <h2 class="txt-h2-text headerH2"><span>Header in H</span></h2>
+              <p class="txt-h2-text1 paragraphp2"><span></span></p>
+              <p class="txt-h2-text2 paragraphp2"><span></span></p>
             </div>
           </slot>
         </section>
-        <div
-          class="imagecarousel-js-container imagecarousel-js-root-class-name1"
+        <section
+          class="pg-section-container _fullwidth100 pg-section-root-class-name43"
         >
-          <div>
-            <div class="imagecarousel-js-container2">
-              <script>
-                $(function () {
-                  var galleries = $('[name=\'gallery\']');
-
-                  $(galleries).each(function (g) {
-                    var bigs = $(this).find('[name^=\'imb\'');
-                    var smalls = $(this).find('[name^=\'ims\'');
-                    var left = $(this).find('[name=\'left\'')[0];
-                    var right = $(this).find('[name=\'right\'')[0];
-
-                    var n = 0;
-
-                    $(left).on('click', function () {
-                      //console.log(n , 'left', );
-                      n++;
-                      update_slide(bigs, n);
-                    });
-
-                    $(right).on('click', function () {
-                      //console.log(n, 'right');
-                      if (n > 0) {
-                        n--;
-                      } else {
-                        n = bigs.length - 1;
-                      }
-                      update_slide(bigs, n);
-                    });
-                    $(smalls).each(function (i) {
-                      $(this).on('click', { value: i }, function (event) {
-                        console.log(i, 'small');
-                        update_slide(bigs, event.data.value);
-                      });
-                    });
-                    function update_slide(bigs, n) {
-                      var current = n % bigs.length;
-                      for (var j = 0; j < bigs.length; j++) {
-                        if (j == current) $(bigs[j]).show();
-                        else $(bigs[j]).hide();
-                      }
-                    }
-                  });
-                });
-              </script>
+          <slot class="pg-section-custom-slot">
+            <div
+              class="txt-h2-property1h2 _fullwidth100 txt-h2-root-class-name52"
+            >
+              <h2 class="txt-h2-text headerH2"><span>Header in H</span></h2>
+              <p class="txt-h2-text1 paragraphp2"><span></span></p>
+              <p class="txt-h2-text2 paragraphp2"><span></span></p>
             </div>
-          </div>
+          </slot>
+        </section>
+        <div>
+          <section
+            class="pg-section-container _fullwidth100 pg-section-root-class-name44"
+          >
+            <slot class="pg-section-custom-slot">
+              <div
+                class="txt-h2-property1h2 _fullwidth100 txt-h2-root-class-name53"
+              >
+                <h2 class="txt-h2-text headerH2"><span>Let's fix it</span></h2>
+                <p class="txt-h2-text1 paragraphp2"><span></span></p>
+                <p class="txt-h2-text2 paragraphp2"><span></span></p>
+              </div>
+              <div
+                class="txt-h3-property1h3 _fullwidth100 txt-h3-root-class-name43"
+              >
+                <h3 class="txt-h3-text headerH3"><span>Before</span></h3>
+                <p class="txt-h3-text1 paragraphp2">
+                  <span>
+                    With current user-flow users prefer to skip the onboarding
+                    because it's not why they came to the app at the moment.
+                    It’s not only defiese the purpose but angers users by
+                    distracting them from their original intention.
+                  </span>
+                </p>
+                <p class="txt-h3-text2 paragraphp2"><span></span></p>
+              </div>
+              <div class="pg-section-before">
+                <div class="pg-section-container01">
+                  <div class="pg-section-container02">
+                    <script>
+                      // Wait for HTML document to get ready
+                      window.addEventListener('load', function () {
+                        // NOT `DOMContentLoaded`
+                        var accent = getComputedStyle(document.documentElement).getPropertyValue(
+                          '--dl-color-palette-accent'
+                        );
+                        var dark = getComputedStyle(document.documentElement).getPropertyValue(
+                          '--dl-color-palette-dark'
+                        );
+
+                        new LeaderLine($('#fch1')[0], $('#fch2')[0], {
+                          color: accent,
+                          startPlug: 'disc',
+                          endPlug: 'arrow3',
+                        });
+
+                        new LeaderLine($('#fch2')[0], $('#fch3')[0], {
+                          color: accent,
+                          startPlug: 'disc',
+                          endPlug: 'arrow3',
+                        });
+
+
+                      });
+                    </script>
+                  </div>
+                </div>
+                <div class="pg-section-container03">
+                  <div id="fch1">
+                    <div
+                      class="bgs-chart-card-flowchartblock bgs-chart-card-root-class-name36"
+                    >
+                      <p class="paragraphp2"><span>Onboarding</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="pg-section-container05">
+                  <div id="fch2">
+                    <div
+                      class="bgs-chart-card-flowchartblock bgs-chart-card-root-class-name37"
+                    >
+                      <p class="paragraphp2"><span>Main</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="pg-section-container07">
+                  <div id="fch3">
+                    <div
+                      class="bgs-chart-card-flowchartblock bgs-chart-card-root-class-name38"
+                    >
+                      <p class="paragraphp2"><span>Catalog</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="txt-h3-property1h3 _fullwidth100 txt-h3-root-class-name44"
+              >
+                <h3 class="txt-h3-text headerH3"><span>After</span></h3>
+                <p class="txt-h3-text1 paragraphp2">
+                  <span>
+                    I decided to move the onboarding to the moment of the first
+                    interaction with the catalogue or search.
+                  </span>
+                </p>
+                <p class="txt-h3-text2 paragraphp2"><span></span></p>
+              </div>
+              <div class="pg-section-after">
+                <div class="pg-section-container09">
+                  <div class="pg-section-container10">
+                    <script>
+                      // Wait for HTML document to get ready
+                      window.addEventListener('load', function () {
+                        // NOT `DOMContentLoaded`
+                        var accent = getComputedStyle(document.documentElement).getPropertyValue(
+                          '--dl-color-palette-accent'
+                        );
+                        var dark = getComputedStyle(document.documentElement).getPropertyValue(
+                          '--dl-color-palette-dark'
+                        );
+
+                        new LeaderLine($('#f2ch1')[0], $('#f2ch4')[0], {
+                          color: accent,
+                          startPlug: 'disc',
+                          endPlug: 'arrow3',
+                        });
+
+                        new LeaderLine($('#f2ch2')[0], $('#f2ch4')[0], {
+                          color: accent,
+                          startPlug: 'disc',
+                          endPlug: 'arrow3',
+                        });
+
+                        new LeaderLine($('#f2ch3')[0], $('#f2ch4')[0], {
+                          color: accent,
+                          startPlug: 'disc',
+                          endPlug: 'arrow3',
+                        });
+
+                        new LeaderLine($('#f2ch4')[0], $('#f2ch5')[0], {
+                          color: accent,
+                          startPlug: 'disc',
+                          endPlug: 'arrow3',
+                        });
+
+                        new LeaderLine($('#f2ch4')[0], $('#f2ch6')[0], {
+                          color: accent,
+                          startPlug: 'disc',
+                          endPlug: 'arrow3',
+                        });
+                      });
+                    </script>
+                  </div>
+                </div>
+                <div class="pg-section-container11">
+                  <div id="f2ch1">
+                    <div
+                      class="bgs-chart-card-flowchartblock bgs-chart-card-root-class-name39"
+                    >
+                      <p class="paragraphp2"><span>Main</span></p>
+                    </div>
+                  </div>
+                  <div id="f2ch2">
+                    <div
+                      class="bgs-chart-card-flowchartblock bgs-chart-card-root-class-name40"
+                    >
+                      <p class="paragraphp2"><span>Catalog</span></p>
+                    </div>
+                  </div>
+                  <div id="f2ch3">
+                    <div
+                      class="bgs-chart-card-flowchartblock bgs-chart-card-root-class-name41"
+                    >
+                      <p class="paragraphp2"><span>Search</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="pg-section-container15">
+                  <div id="f2ch4">
+                    <div
+                      class="bgs-chart-card-flowchartblock bgs-chart-card-root-class-name42"
+                    >
+                      <p class="paragraphp2"><span>Onboarding</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="pg-section-container17">
+                  <div id="f2ch5">
+                    <div
+                      class="bgs-chart-card-flowchartblock bgs-chart-card-root-class-name43"
+                    >
+                      <p class="paragraphp2"><span>Catalog</span></p>
+                    </div>
+                  </div>
+                  <div id="f2ch6">
+                    <div
+                      class="bgs-chart-card-flowchartblock bgs-chart-card-root-class-name44"
+                    >
+                      <p class="paragraphp2"><span>Search result</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </slot>
+          </section>
         </div>
       </div>
     </div>

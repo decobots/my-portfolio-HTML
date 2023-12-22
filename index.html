@@ -39,11 +39,6 @@
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100;200;300;400;500;600;700&amp;display=swap"
       data-tag="font"
     />
@@ -54,22 +49,12 @@
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap"
       data-tag="font"
     />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
       data-tag="font"
     />
     <link
@@ -87,61 +72,61 @@
       }
 
 
-      .dark {
+      ._dark {
       background-color: var(--dl-color-palette-dark);
       border: 0px !important;
       }
-      .dark p {
+      ._dark p {
       color: var(--dl-color-palette-light);
       }
-      .dark .colored_detail_bg{
+      ._dark .colored_detail_bg{
         background-color: var(--dl-color-palette-light);
       }
-      .dark .card-section p{
+      ._dark .card-section p{
       color: var(--dl-color-palette-darkest);
       }
-      .dark .chart-card-flowchartblock p{
+      ._dark .chart-card-flowchartblock p{
       color: var(--dl-color-palette-darkest);
       }
 
 
-      .accent {
+      ._accent {
             background-color: var(--dl-color-palette-accent);
             border: 0px !important;
             }
-      .accent h1,
-      .accent h2,
-      .accent h3,
-      .accent h4,
-      .accent h5,
-      .accent h6  {
+      ._accent h1,
+      ._accent h2,
+      ._accent h3,
+      ._accent h4,
+      ._accent h5,
+      .a_ccent h6  {
       color: var(--dl-color-palette-dark);
       }
-      .accent p {
+      ._accent p {
       color: var(--dl-color-palette-lightest);
       }
 
-      .accent .colored_detail_bg{
+      ._accent .colored_detail_bg{
         background-color: var(--dl-color-palette-light);
       }
-      .accent .card-section {
+      ._accent .card-section {
       background-color: var(--dl-color-palette-dark);
       }
-      .accent .card-section p{
+      ._accent .card-section p{
         color:var(--dl-color-palette-accent);
       }
-      .accent .card-section h1,
-      .accent  .card-section h2,
-      .accent .card-section h3,
-      .accent  .card-section h4,
-      .accent .card-section h5,
-      .accent .card-section h6  {
+      ._accent .card-section h1,
+      ._accent  .card-section h2,
+      ._accent .card-section h3,
+      ._accent  .card-section h4,
+      ._accent .card-section h5,
+      ._accent .card-section h6  {
       color: var(--dl-color-palette-lightest);
       }
-      .accent .chart-card-flowchartblock{
+      ._accent .chart-card-flowchartblock{
         background-color: var(--dl-color-palette-light);
       }
-      .accent .chart-card-flowchartblock p{
+      ._accent .chart-card-flowchartblock p{
         color: var(--dl-color-palette-accent);
       }
     </style>
@@ -170,7 +155,7 @@
       <link href="./index.css" rel="stylesheet" />
 
       <div class="vvcase-container">
-        <div class="imgcarousel-js-container imgcarousel-js-root-class-name">
+        <div class="imgcarousel-js-root-class-name">
           <div>
             <div class="imgcarousel-js-container2">
               <script>
@@ -219,31 +204,37 @@
             </div>
           </div>
         </div>
-        <header class="pg-header-header pg-header-root-class-name">
-          <p class="pg-header-text paragraphp2">
-            <span>MIA PRITCHINA UX/UI DESIGNER</span>
-          </p>
+        <header
+          class="pg-header-header _fullwidth100 pg-header-root-class-name"
+        >
+          <p class="paragraphp2">MIA PRITCHINA UX/UI DESIGNER</p>
           <div class="pg-header-frame6">
-            <p class="pg-header-text2 paragraphp2">LINKEDIN</p>
-            <p class="pg-header-text3 paragraphp2"><span>BEHANCE</span></p>
-            <p class="pg-header-text5 paragraphp2"><span>EMAIL</span></p>
+            <p class="paragraphp2">LINKEDIN</p>
+            <p class="paragraphp2">BEHANCE</p>
+            <p class="paragraphp2">EMAIL</p>
           </div>
         </header>
-        <div class="dark">
-          <section class="pg-section-container pg-section-root-class-name41">
+        <div class="_fullwidth100 _dark">
+          <section
+            class="pg-section-container _fullwidth100 pg-section-root-class-name41"
+          >
             <slot class="pg-section-custom-slot">
               <img
                 alt="image"
                 src="public/vv/frame%204287.svg"
-                class="pg-section-image"
+                class="pg-section-image _fullwidth100"
               />
             </slot>
           </section>
         </div>
-        <div class="dark vvcase-hero">
-          <section class="pg-section-container pg-section-root-class-name11">
+        <div class="_fullwidth100 _dark vvcase-hero">
+          <section
+            class="pg-section-container _fullwidth100 pg-section-root-class-name11"
+          >
             <slot class="pg-section-custom-slot">
-              <div class="txt-h1-property1h1 txt-h1-root-class-name">
+              <div
+                class="txt-h1-property1h1 _fullwidth100 txt-h1-root-class-name"
+              >
                 <h1 class="txt-h1-text headerH1"><span>About VV</span></h1>
                 <p class="paragraphp1">
                   <span>
@@ -258,12 +249,16 @@
             </slot>
           </section>
         </div>
-        <div>
-          <section class="pg-section-container pg-section-root-class-name12">
+        <div class="_fullwidth100">
+          <section
+            class="pg-section-container _fullwidth100 pg-section-root-class-name12"
+          >
             <slot class="pg-section-custom-slot">
-              <div class="txt-h21-property1h2 txt-h21-root-class-name">
-                <h2 class="txt-h21-text headerH2"><span>Problem</span></h2>
-                <p class="txt-h21-text1 paragraphp2">
+              <div
+                class="txt-h2-property1h2 _fullwidth100 txt-h2-root-class-name"
+              >
+                <h2 class="txt-h2-text headerH2"><span>Problem</span></h2>
+                <p class="txt-h2-text1 paragraphp2">
                   <span>
                     Unfortunately, it takes a lot of time and research to launch
                     each new product, which limits VV’s catalog. And with
@@ -271,31 +266,35 @@
                     stores.
                   </span>
                 </p>
-                <p class="txt-h21-text2 paragraphp2"><span></span></p>
+                <p class="txt-h2-text2 paragraphp2"><span></span></p>
               </div>
-              <div class="txt-h21-property1h2 txt-h21-root-class-name18">
-                <h2 class="txt-h21-text headerH2"><span>Solution</span></h2>
-                <p class="txt-h21-text1 paragraphp2">
+              <div
+                class="txt-h2-property1h2 _fullwidth100 txt-h2-root-class-name18"
+              >
+                <h2 class="txt-h2-text headerH2"><span>Solution</span></h2>
+                <p class="txt-h2-text1 paragraphp2">
                   <span>
                     VV wants to add products from third-party brands in their
                     online catalog. Having bigger variety to choose from might
                     help to attract online customers.
                   </span>
                 </p>
-                <p class="txt-h21-text2 paragraphp2"><span></span></p>
+                <p class="txt-h2-text2 paragraphp2"><span></span></p>
               </div>
-              <div class="txt-h21-property1h2 txt-h21-root-class-name19">
-                <h2 class="txt-h21-text headerH2">
+              <div
+                class="txt-h2-property1h2 _fullwidth100 txt-h2-root-class-name19"
+              >
+                <h2 class="txt-h2-text headerH2">
                   <span>State of UX and UI</span>
                 </h2>
-                <p class="txt-h21-text1 paragraphp2">
+                <p class="txt-h2-text1 paragraphp2">
                   <span>
                     VV already decided to present third-party items in new
                     section of online catalog as a “Supermarket” based on
                     marketing research.
                   </span>
                 </p>
-                <p class="txt-h21-text2 paragraphp2">
+                <p class="txt-h2-text2 paragraphp2">
                   <span>
                     They would like to have minimum additions to the existing
                     Design System.
@@ -303,33 +302,41 @@
                 </p>
               </div>
               <div class="pg-section-container02">
-                <div class="txt-h21-property1h2 txt-h21-root-class-name1">
-                  <h2 class="txt-h21-text headerH2"><span>My task</span></h2>
-                  <p class="txt-h21-text1 paragraphp2">
+                <div
+                  class="txt-h2-property1h2 _fullwidth100 txt-h2-root-class-name1"
+                >
+                  <h2 class="txt-h2-text headerH2"><span>My task</span></h2>
+                  <p class="txt-h2-text1 paragraphp2">
                     <span>
                       To find a way to present new category and product cards in
                       an easy to understand way.
                     </span>
                   </p>
-                  <p class="txt-h21-text2 paragraphp2"><span></span></p>
+                  <p class="txt-h2-text2 paragraphp2"><span></span></p>
                 </div>
-                <div class="txt-h21-property1h2 txt-h21-root-class-name2">
-                  <h2 class="txt-h21-text headerH2"><span>My role</span></h2>
-                  <p class="txt-h21-text1 paragraphp2">
+                <div
+                  class="txt-h2-property1h2 _fullwidth100 txt-h2-root-class-name2"
+                >
+                  <h2 class="txt-h2-text headerH2"><span>My role</span></h2>
+                  <p class="txt-h2-text1 paragraphp2">
                     <span>UX and UI design, with reviews from my mentor.</span>
                   </p>
-                  <p class="txt-h21-text2 paragraphp2"><span></span></p>
+                  <p class="txt-h2-text2 paragraphp2"><span></span></p>
                 </div>
               </div>
             </slot>
           </section>
         </div>
-        <div class="accent">
-          <section class="pg-section-container pg-section-root-class-name">
+        <div class="_accent _fullwidth100">
+          <section
+            class="pg-section-container _fullwidth100 pg-section-root-class-name"
+          >
             <slot class="pg-section-custom-slot">
-              <div class="txt-h21-property1h2 txt-h21-root-class-name6">
-                <h2 class="txt-h21-text headerH2"><span>Approach</span></h2>
-                <p class="txt-h21-text1 paragraphp2">
+              <div
+                class="txt-h2-property1h2 _fullwidth100 txt-h2-root-class-name6"
+              >
+                <h2 class="txt-h2-text headerH2"><span>Approach</span></h2>
+                <p class="txt-h2-text1 paragraphp2">
                   <span>
                     As an active customer of VV myself, I already had an idea of
                     current user experience, so I focused on understanding why
@@ -337,9 +344,11 @@
                     improve user experience.
                   </span>
                 </p>
-                <p class="txt-h21-text2 paragraphp2"><span></span></p>
+                <p class="txt-h2-text2 paragraphp2"><span></span></p>
               </div>
-              <div class="txt-h3-property1h3 txt-h3-root-class-name">
+              <div
+                class="txt-h3-property1h3 _fullwidth100 txt-h3-root-class-name"
+              >
                 <h3 class="txt-h3-text headerH3">
                   <span>Understand business goals</span>
                 </h3>
@@ -355,9 +364,13 @@
                 <p class="txt-h3-text2 paragraphp2"><span></span></p>
               </div>
               <div class="pg-section-container03">
-                <div class="bgs-card-section bgs-card-root-class-name1">
+                <div
+                  class="bgs-card-section _fullwidth100 bgs-card-root-class-name1"
+                >
                   <slot class="bgs-card-custom-slot">
-                    <div class="txt-h3-property1h3 txt-h3-root-class-name1">
+                    <div
+                      class="txt-h3-property1h3 _fullwidth100 txt-h3-root-class-name1"
+                    >
                       <h3 class="txt-h3-text headerH3">
                         <span>
                           I want to sell third-party products, so that customers
@@ -376,9 +389,13 @@
                     </div>
                   </slot>
                 </div>
-                <div class="bgs-card-section bgs-card-root-class-name">
+                <div
+                  class="bgs-card-section _fullwidth100 bgs-card-root-class-name"
+                >
                   <slot class="bgs-card-custom-slot">
-                    <div class="txt-h3-property1h3 txt-h3-root-class-name2">
+                    <div
+                      class="txt-h3-property1h3 _fullwidth100 txt-h3-root-class-name2"
+                    >
                       <h3 class="txt-h3-text headerH3">
                         <span>
                           I want to sell more in each order, so customers will
@@ -398,9 +415,13 @@
                 </div>
               </div>
               <div class="pg-section-container04">
-                <div class="bgs-card-section bgs-card-root-class-name9">
+                <div
+                  class="bgs-card-section _fullwidth100 bgs-card-root-class-name9"
+                >
                   <slot class="bgs-card-custom-slot">
-                    <div class="txt-h3-property1h3 txt-h3-root-class-name13">
+                    <div
+                      class="txt-h3-property1h3 _fullwidth100 txt-h3-root-class-name13"
+                    >
                       <h3 class="txt-h3-text headerH3">
                         <span>
                           I want to sell third-party products, to attract new
@@ -418,9 +439,13 @@
                     </div>
                   </slot>
                 </div>
-                <div class="bgs-card-section bgs-card-root-class-name10">
+                <div
+                  class="bgs-card-section _fullwidth100 bgs-card-root-class-name10"
+                >
                   <slot class="bgs-card-custom-slot">
-                    <div class="txt-h3-property1h3 txt-h3-root-class-name14">
+                    <div
+                      class="txt-h3-property1h3 _fullwidth100 txt-h3-root-class-name14"
+                    >
                       <h3 class="txt-h3-text headerH3">
                         <span>
                           I want to find out which products are popular, so that
@@ -442,23 +467,29 @@
             </slot>
           </section>
         </div>
-        <div>
-          <section class="pg-section-container pg-section-root-class-name5">
+        <div class="_fullwidth100">
+          <section
+            class="pg-section-container _fullwidth100 pg-section-root-class-name5"
+          >
             <slot class="pg-section-custom-slot">
-              <div class="txt-h21-property1h2 txt-h21-root-class-name7">
-                <h2 class="txt-h21-text headerH2">
+              <div
+                class="txt-h2-property1h2 _fullwidth100 txt-h2-root-class-name7"
+              >
+                <h2 class="txt-h2-text headerH2">
                   <span>Empathize with user</span>
                 </h2>
-                <p class="txt-h21-text1 paragraphp2">
+                <p class="txt-h2-text1 paragraphp2">
                   <span>
                     I conduct a series of 15-minute interviews with users to
                     understand what they treasure about VV and what needs to be
                     improved.
                   </span>
                 </p>
-                <p class="txt-h21-text2 paragraphp2"><span></span></p>
+                <p class="txt-h2-text2 paragraphp2"><span></span></p>
               </div>
-              <div class="bgs-card-section bgs-card-root-class-name8">
+              <div
+                class="bgs-card-section _fullwidth100 bgs-card-root-class-name8"
+              >
                 <slot class="bgs-card-custom-slot">
                   <p class="bgs-card-text">
                     Customers trust VV and used to buy from VV without checking
@@ -476,7 +507,9 @@
                 </h2>
                 <p class="txt-quote-text1">“</p>
               </div>
-              <div class="bgs-card-section bgs-card-root-class-name5">
+              <div
+                class="bgs-card-section _fullwidth100 bgs-card-root-class-name5"
+              >
                 <slot class="bgs-card-custom-slot">
                   <p class="bgs-card-text01">
                     *There is no “leave it somewhere” delivery option in Moscow.
@@ -492,7 +525,9 @@
                   </p>
                 </slot>
               </div>
-              <div class="bgs-card-section bgs-card-root-class-name6">
+              <div
+                class="bgs-card-section _fullwidth100 bgs-card-root-class-name6"
+              >
                 <slot class="bgs-card-custom-slot">
                   <p>
                     Ordering in multiple places leads to an additional mental
@@ -514,18 +549,22 @@
             </slot>
           </section>
         </div>
-        <div class="dark">
-          <section class="pg-section-container pg-section-root-class-name4">
+        <div class="_fullwidth100 _dark">
+          <section
+            class="pg-section-container _fullwidth100 pg-section-root-class-name4"
+          >
             <slot class="pg-section-custom-slot">
-              <div class="txt-h21-property1h2 txt-h21-root-class-name8">
-                <h2 class="txt-h21-text headerH2"><span>Visualize</span></h2>
-                <p class="txt-h21-text1 paragraphp2">
+              <div
+                class="txt-h2-property1h2 _fullwidth100 txt-h2-root-class-name8"
+              >
+                <h2 class="txt-h2-text headerH2"><span>Visualize</span></h2>
+                <p class="txt-h2-text1 paragraphp2">
                   <span>
                     To keep on track our goal I create a customer journey map. I
                     refer to it when we go too far away from our course
                   </span>
                 </p>
-                <p class="txt-h21-text2 paragraphp2"><span></span></p>
+                <p class="txt-h2-text2 paragraphp2"><span></span></p>
               </div>
               <div class="pg-section-cjm">
                 <div>
@@ -620,7 +659,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="pg-section-row4 colored_detail_bg">
+                <div class="pg-section-row4 _colored_detail_bg">
                   <div class="pg-section-container19">
                     <span class="typographyheaderH3">Stopper</span>
                   </div>
@@ -681,7 +720,7 @@
                     />
                   </div>
                 </div>
-                <div class="pg-section-row5 colored_detail_bg">
+                <div class="pg-section-row5 _colored_detail_bg">
                   <div class="pg-section-container24">
                     <span class="typographyheaderH3">Fix</span>
                   </div>
@@ -703,14 +742,18 @@
             </slot>
           </section>
         </div>
-        <div>
-          <section class="pg-section-container pg-section-root-class-name6">
+        <div class="_fullwidth100">
+          <section
+            class="pg-section-container _fullwidth100 pg-section-root-class-name6"
+          >
             <slot class="pg-section-custom-slot">
-              <div class="txt-h21-property1h2 txt-h21-root-class-name9">
-                <h2 class="txt-h21-text headerH2">
+              <div
+                class="txt-h2-property1h2 _fullwidth100 txt-h2-root-class-name9"
+              >
+                <h2 class="txt-h2-text headerH2">
                   <span>How do others do it?</span>
                 </h2>
-                <p class="txt-h21-text1 paragraphp2">
+                <p class="txt-h2-text1 paragraphp2">
                   <span>
                     I am analyzing the strategies of businesses that sell
                     products from various brands as well as products under their
@@ -719,9 +762,11 @@
                     product.
                   </span>
                 </p>
-                <p class="txt-h21-text2 paragraphp2"><span></span></p>
+                <p class="txt-h2-text2 paragraphp2"><span></span></p>
               </div>
-              <div class="txt-h3-property1h3 txt-h3-root-class-name5">
+              <div
+                class="txt-h3-property1h3 _fullwidth100 txt-h3-root-class-name5"
+              >
                 <h3 class="txt-h3-text headerH3"><span>Mix-in</span></h3>
                 <p class="txt-h3-text1 paragraphp2">
                   <span>
@@ -734,76 +779,82 @@
               </div>
               <div
                 name="gallery"
-                class="imgcarousel-imagecarousel imgcarousel-root-class-name"
+                class="imgcarousel-imagecarousel _fullwidth100 imgcarousel-root-class-name"
               >
-                <div class="imgcarousel-container">
-                  <div class="imgcarousel-container1">
-                    <span name="left" class="imgcarousel-text">&lt;&lt;</span>
-                    <div class="imgcarousel-container2">
+                <div class="imgcarousel-container _fullwidth100">
+                  <div class="imgcarousel-container01 _fullwidth100">
+                    <div name="left" class="imgcarousel-container02">
+                      <span class="imgcarousel-text">&lt;&lt;</span>
+                    </div>
+                    <div class="imgcarousel-container03 _fullwidth100">
                       <img
                         alt="image"
                         src="public/vv/mixin/frame%204283-200w.png"
                         name="imb0"
-                        class="imgcarousel-image"
+                        class="imgcarousel-image _fullwidth100"
                       />
                       <img
                         alt="image"
                         src="public/vv/mixin/frame%204284-200w.png"
                         name="imb1"
-                        class="imgcarousel-image1"
+                        class="imgcarousel-image1 _fullwidth100"
                       />
                       <img
                         alt="image"
                         src="public/vv/mixin/frame%204285-200w.png"
                         name="imb2"
-                        class="imgcarousel-image2"
+                        class="imgcarousel-image2 _fullwidth100"
                       />
                       <img
                         alt="image"
                         src="public/vv/mixin/frame%204286-200w.png"
                         name="imb3"
-                        class="imgcarousel-image3"
+                        class="imgcarousel-image3 _fullwidth100"
                       />
                     </div>
-                    <span name="right" class="imgcarousel-text1">&gt;&gt;</span>
+                    <div name="right" class="imgcarousel-container04">
+                      <span class="imgcarousel-text1">&gt;&gt;</span>
+                    </div>
                   </div>
-                  <div class="imgcarousel-container3">
-                    <div class="imgcarousel-container4">
+                  <div class="imgcarousel-container05 _fullwidth100">
+                    <div class="imgcarousel-container06">
                       <img
                         alt="image"
                         src="public/vv/mixin/frame%204283-200w.png"
                         name="ims0"
-                        class="imgcarousel-image4"
+                        class="imgcarousel-image4 _fullwidth100"
                       />
                     </div>
-                    <div class="imgcarousel-container5">
+                    <div class="imgcarousel-container07">
                       <img
                         alt="image"
                         src="public/vv/mixin/frame%204284-200w.png"
                         name="ims1"
-                        class="imgcarousel-image5"
+                        class="imgcarousel-image5 _fullwidth100"
                       />
                     </div>
-                    <div class="imgcarousel-container6">
+                    <div class="imgcarousel-container08">
                       <img
                         alt="image"
                         src="public/vv/mixin/frame%204285-200w.png"
                         name="ims2"
-                        class="imgcarousel-image6"
+                        class="imgcarousel-image6 _fullwidth100"
                       />
                     </div>
-                    <div class="imgcarousel-container7">
+                    <div class="imgcarousel-container09">
                       <img
                         alt="image"
                         src="public/vv/mixin/frame%204286-200w.png"
                         name="ims3"
-                        class="imgcarousel-image7"
+                        class="imgcarousel-image7 _fullwidth100"
                       />
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="txt-h3-property1h3 txt-h3-root-class-name6">
+              <div
+                class="txt-h3-property1h3 _fullwidth100 txt-h3-root-class-name6"
+              >
                 <h3 class="txt-h3-text headerH3"><span>Stand out</span></h3>
                 <p class="txt-h3-text1 paragraphp2">
                   <span>
@@ -815,76 +866,82 @@
               </div>
               <div
                 name="gallery"
-                class="imgcarousel-imagecarousel imgcarousel-root-class-name1"
+                class="imgcarousel-imagecarousel _fullwidth100 imgcarousel-root-class-name1"
               >
-                <div class="imgcarousel-container">
-                  <div class="imgcarousel-container1">
-                    <span name="left" class="imgcarousel-text">&lt;&lt;</span>
-                    <div class="imgcarousel-container2">
+                <div class="imgcarousel-container _fullwidth100">
+                  <div class="imgcarousel-container01 _fullwidth100">
+                    <div name="left" class="imgcarousel-container02">
+                      <span class="imgcarousel-text">&lt;&lt;</span>
+                    </div>
+                    <div class="imgcarousel-container03 _fullwidth100">
                       <img
                         alt="image"
                         src="public/vv/standout/frame-1-200h.png"
                         name="imb0"
-                        class="imgcarousel-image"
+                        class="imgcarousel-image _fullwidth100"
                       />
                       <img
                         alt="image"
                         src="public/vv/standout/frame-2-200h.png"
                         name="imb1"
-                        class="imgcarousel-image1"
+                        class="imgcarousel-image1 _fullwidth100"
                       />
                       <img
                         alt="image"
                         src="public/vv/standout/frame-3-200h.png"
                         name="imb2"
-                        class="imgcarousel-image2"
+                        class="imgcarousel-image2 _fullwidth100"
                       />
                       <img
                         alt="image"
                         src="public/vv/standout/frame-200h.png"
                         name="imb3"
-                        class="imgcarousel-image3"
+                        class="imgcarousel-image3 _fullwidth100"
                       />
                     </div>
-                    <span name="right" class="imgcarousel-text1">&gt;&gt;</span>
+                    <div name="right" class="imgcarousel-container04">
+                      <span class="imgcarousel-text1">&gt;&gt;</span>
+                    </div>
                   </div>
-                  <div class="imgcarousel-container3">
-                    <div class="imgcarousel-container4">
+                  <div class="imgcarousel-container05 _fullwidth100">
+                    <div class="imgcarousel-container06">
                       <img
                         alt="image"
                         src="public/vv/standout/frame-1-200h.png"
                         name="ims0"
-                        class="imgcarousel-image4"
+                        class="imgcarousel-image4 _fullwidth100"
                       />
                     </div>
-                    <div class="imgcarousel-container5">
+                    <div class="imgcarousel-container07">
                       <img
                         alt="image"
                         src="public/vv/standout/frame-2-200h.png"
                         name="ims1"
-                        class="imgcarousel-image5"
+                        class="imgcarousel-image5 _fullwidth100"
                       />
                     </div>
-                    <div class="imgcarousel-container6">
+                    <div class="imgcarousel-container08">
                       <img
                         alt="image"
                         src="public/vv/standout/frame-3-200h.png"
                         name="ims2"
-                        class="imgcarousel-image6"
+                        class="imgcarousel-image6 _fullwidth100"
                       />
                     </div>
-                    <div class="imgcarousel-container7">
+                    <div class="imgcarousel-container09">
                       <img
                         alt="image"
                         src="public/vv/standout/frame-200h.png"
                         name="ims3"
-                        class="imgcarousel-image7"
+                        class="imgcarousel-image7 _fullwidth100"
                       />
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="txt-h3-property1h3 txt-h3-root-class-name11">
+              <div
+                class="txt-h3-property1h3 _fullwidth100 txt-h3-root-class-name11"
+              >
                 <h3 class="txt-h3-text headerH3"><span>Insight</span></h3>
                 <p class="txt-h3-text1 paragraphp2">
                   <span>
@@ -902,19 +959,23 @@
             </slot>
           </section>
         </div>
-        <div class="accent">
-          <section class="pg-section-container pg-section-root-class-name2">
+        <div class="_accent _fullwidth100">
+          <section
+            class="pg-section-container _fullwidth100 pg-section-root-class-name2"
+          >
             <slot class="pg-section-custom-slot">
-              <div class="txt-h21-property1h2 txt-h21-root-class-name11">
-                <h2 class="txt-h21-text headerH2">
+              <div
+                class="txt-h2-property1h2 _fullwidth100 txt-h2-root-class-name11"
+              >
+                <h2 class="txt-h2-text headerH2">
                   <span>How to show the difference?</span>
                 </h2>
-                <p class="txt-h21-text1 paragraphp2">
+                <p class="txt-h2-text1 paragraphp2">
                   <span>
                     I’m starting from preparing new elements for testing.
                   </span>
                 </p>
-                <p class="txt-h21-text2 paragraphp2">
+                <p class="txt-h2-text2 paragraphp2">
                   <span>
                     The task is complicated by the fact that the brand's colour
                     is green, and any attempt to mark VkusVill's cards with the
@@ -926,77 +987,83 @@
               </div>
               <div
                 name="gallery"
-                class="imgcarousel-imagecarousel imgcarousel-root-class-name2"
+                class="imgcarousel-imagecarousel _fullwidth100 imgcarousel-root-class-name2"
               >
-                <div class="imgcarousel-container">
-                  <div class="imgcarousel-container1">
-                    <span name="left" class="imgcarousel-text">&lt;&lt;</span>
-                    <div class="imgcarousel-container2">
+                <div class="imgcarousel-container _fullwidth100">
+                  <div class="imgcarousel-container01 _fullwidth100">
+                    <div name="left" class="imgcarousel-container02">
+                      <span class="imgcarousel-text">&lt;&lt;</span>
+                    </div>
+                    <div class="imgcarousel-container03 _fullwidth100">
                       <img
                         alt="image"
                         src="public/vv/cards/frame%204151-200h.png"
                         name="imb0"
-                        class="imgcarousel-image"
+                        class="imgcarousel-image _fullwidth100"
                       />
                       <img
                         alt="image"
                         src="public/vv/cards/frame%204152-200h.png"
                         name="imb1"
-                        class="imgcarousel-image1"
+                        class="imgcarousel-image1 _fullwidth100"
                       />
                       <img
                         alt="image"
                         src="public/vv/cards/frame%204153-200h.png"
                         name="imb2"
-                        class="imgcarousel-image2"
+                        class="imgcarousel-image2 _fullwidth100"
                       />
                       <img
                         alt="image"
                         src="public/vv/cards/frame%204154-200h.png"
                         name="imb3"
-                        class="imgcarousel-image3"
+                        class="imgcarousel-image3 _fullwidth100"
                       />
                     </div>
-                    <span name="right" class="imgcarousel-text1">&gt;&gt;</span>
+                    <div name="right" class="imgcarousel-container04">
+                      <span class="imgcarousel-text1">&gt;&gt;</span>
+                    </div>
                   </div>
-                  <div class="imgcarousel-container3">
-                    <div class="imgcarousel-container4">
+                  <div class="imgcarousel-container05 _fullwidth100">
+                    <div class="imgcarousel-container06">
                       <img
                         alt="image"
                         src="public/vv/cards/frame%204151-200h.png"
                         name="ims0"
-                        class="imgcarousel-image4"
+                        class="imgcarousel-image4 _fullwidth100"
                       />
                     </div>
-                    <div class="imgcarousel-container5">
+                    <div class="imgcarousel-container07">
                       <img
                         alt="image"
                         src="public/vv/cards/frame%204152-200h.png"
                         name="ims1"
-                        class="imgcarousel-image5"
+                        class="imgcarousel-image5 _fullwidth100"
                       />
                     </div>
-                    <div class="imgcarousel-container6">
+                    <div class="imgcarousel-container08">
                       <img
                         alt="image"
                         src="public/vv/cards/frame%204153-200h.png"
                         name="ims2"
-                        class="imgcarousel-image6"
+                        class="imgcarousel-image6 _fullwidth100"
                       />
                     </div>
-                    <div class="imgcarousel-container7">
+                    <div class="imgcarousel-container09">
                       <img
                         alt="image"
                         src="public/vv/cards/frame%204154-200h.png"
                         name="ims3"
-                        class="imgcarousel-image7"
+                        class="imgcarousel-image7 _fullwidth100"
                       />
                     </div>
                   </div>
                 </div>
               </div>
               <div class="pg-section-container28">
-                <div class="txt-h3-property1h3 txt-h3-root-class-name12">
+                <div
+                  class="txt-h3-property1h3 _fullwidth100 txt-h3-root-class-name12"
+                >
                   <h3 class="txt-h3-text headerH3">
                     <span>Testing findings</span>
                   </h3>
@@ -1028,17 +1095,23 @@
             </slot>
           </section>
         </div>
-        <div class="dark">
-          <section class="pg-section-container pg-section-root-class-name1">
+        <div class="_fullwidth100 _dark">
+          <section
+            class="pg-section-container _fullwidth100 pg-section-root-class-name1"
+          >
             <slot class="pg-section-custom-slot">
-              <div class="txt-h21-property1h2 txt-h21-root-class-name13">
-                <h2 class="txt-h21-text headerH2"><span>Fix it</span></h2>
-                <p class="txt-h21-text1 paragraphp2"><span></span></p>
-                <p class="txt-h21-text2 paragraphp2"><span></span></p>
+              <div
+                class="txt-h2-property1h2 _fullwidth100 txt-h2-root-class-name13"
+              >
+                <h2 class="txt-h2-text headerH2"><span>Fix it</span></h2>
+                <p class="txt-h2-text1 paragraphp2"><span></span></p>
+                <p class="txt-h2-text2 paragraphp2"><span></span></p>
               </div>
               <div class="pg-section-container29">
                 <div class="pg-section-container30">
-                  <div class="txt-h3-property1h3 txt-h3-root-class-name7">
+                  <div
+                    class="txt-h3-property1h3 _fullwidth100 txt-h3-root-class-name7"
+                  >
                     <h3 class="txt-h3-text headerH3">
                       <span>Clarify "supermarket"</span>
                     </h3>
@@ -1065,7 +1138,9 @@
                   </div>
                 </div>
                 <div class="pg-section-container32">
-                  <div class="txt-h3-property1h3 txt-h3-root-class-name8">
+                  <div
+                    class="txt-h3-property1h3 _fullwidth100 txt-h3-root-class-name8"
+                  >
                     <h3 class="txt-h3-text headerH3">
                       <span>"Busy" graphics</span>
                     </h3>
@@ -1087,27 +1162,33 @@
             </slot>
           </section>
         </div>
-        <div>
-          <section class="pg-section-container pg-section-root-class-name7">
+        <div class="_fullwidth100">
+          <section
+            class="pg-section-container _fullwidth100 pg-section-root-class-name7"
+          >
             <slot class="pg-section-custom-slot">
-              <div class="txt-h21-property1h2 txt-h21-root-class-name12">
-                <h2 class="txt-h21-text headerH2">
-                  <span>Is it better?</span>
-                </h2>
-                <p class="txt-h21-text1 paragraphp2">
+              <div
+                class="txt-h2-property1h2 _fullwidth100 txt-h2-root-class-name12"
+              >
+                <h2 class="txt-h2-text headerH2"><span>Is it better?</span></h2>
+                <p class="txt-h2-text1 paragraphp2">
                   <span>
                     Second round of testing showed great improvement in user's
                     understanding of the "Supermarket" and better impression of
                     UI.
                   </span>
                 </p>
-                <p class="txt-h21-text2 paragraphp2">
+                <p class="txt-h2-text2 paragraphp2">
                   <span>But I found a new problem:</span>
                 </p>
               </div>
-              <div class="bgs-card-section bgs-card-root-class-name2">
+              <div
+                class="bgs-card-section _fullwidth100 bgs-card-root-class-name2"
+              >
                 <slot class="bgs-card-custom-slot">
-                  <div class="txt-h3-property1h3 txt-h3-root-class-name4">
+                  <div
+                    class="txt-h3-property1h3 _fullwidth100 txt-h3-root-class-name4"
+                  >
                     <h3 class="txt-h3-text headerH3">
                       <span>
                         Users open the app not only for ordering products but
@@ -1123,15 +1204,21 @@
             </slot>
           </section>
         </div>
-        <div>
-          <section class="pg-section-container pg-section-root-class-name13">
+        <div class="_fullwidth100 _dark">
+          <section
+            class="pg-section-container _fullwidth100 pg-section-root-class-name45"
+          >
             <slot class="pg-section-custom-slot">
-              <div class="txt-h21-property1h2 txt-h21-root-class-name16">
-                <h2 class="txt-h21-text headerH2"><span>Let's fix it</span></h2>
-                <p class="txt-h21-text1 paragraphp2"><span></span></p>
-                <p class="txt-h21-text2 paragraphp2"><span></span></p>
+              <div
+                class="txt-h2-property1h2 _fullwidth100 txt-h2-root-class-name16"
+              >
+                <h2 class="txt-h2-text headerH2"><span>Let's fix it</span></h2>
+                <p class="txt-h2-text1 paragraphp2"><span></span></p>
+                <p class="txt-h2-text2 paragraphp2"><span></span></p>
               </div>
-              <div class="txt-h3-property1h3 txt-h3-root-class-name9">
+              <div
+                class="txt-h3-property1h3 _fullwidth100 txt-h3-root-class-name9"
+              >
                 <h3 class="txt-h3-text headerH3"><span>Before</span></h3>
                 <p class="txt-h3-text1 paragraphp2">
                   <span>
@@ -1202,7 +1289,9 @@
                   </div>
                 </div>
               </div>
-              <div class="txt-h3-property1h3 txt-h3-root-class-name10">
+              <div
+                class="txt-h3-property1h3 _fullwidth100 txt-h3-root-class-name10"
+              >
                 <h3 class="txt-h3-text headerH3"><span>After</span></h3>
                 <p class="txt-h3-text1 paragraphp2">
                   <span>
@@ -1311,61 +1400,75 @@
             </slot>
           </section>
         </div>
-        <div>
-          <section class="pg-section-container pg-section-root-class-name10">
+        <div class="_fullwidth100">
+          <section
+            class="pg-section-container _fullwidth100 pg-section-root-class-name10"
+          >
             <slot class="pg-section-custom-slot">
-              <div class="txt-h21-property1h2 txt-h21-root-class-name14">
-                <h2 class="txt-h21-text headerH2"><span>The result</span></h2>
-                <p class="txt-h21-text1 paragraphp2">
+              <div
+                class="txt-h2-property1h2 _fullwidth100 txt-h2-root-class-name14"
+              >
+                <h2 class="txt-h2-text headerH2"><span>The result</span></h2>
+                <p class="txt-h2-text1 paragraphp2">
                   <span>
                     Now, the new section has received the necessary attention
                     from users, without hindering interaction with the rest of
                     the app.
                   </span>
                 </p>
-                <p class="txt-h21-text2 paragraphp2"><span></span></p>
+                <p class="txt-h2-text2 paragraphp2"><span></span></p>
               </div>
             </slot>
           </section>
         </div>
-        <div class="vvcase-thoughts dark">
-          <section class="pg-section-container pg-section-root-class-name9">
+        <div class="_fullwidth100 _dark">
+          <section
+            class="pg-section-container _fullwidth100 pg-section-root-class-name9"
+          >
             <slot class="pg-section-custom-slot">
-              <div class="txt-h21-property1h2 txt-h21-root-class-name15">
-                <h2 class="txt-h21-text headerH2">
+              <div
+                class="txt-h2-property1h2 _fullwidth100 txt-h2-root-class-name15"
+              >
+                <h2 class="txt-h2-text headerH2">
                   <span>Final thoughts</span>
                 </h2>
-                <p class="txt-h21-text1 paragraphp2">
+                <p class="txt-h2-text1 paragraphp2">
                   <span>
                     At this project I was able to practice my research and
                     visual skills.
                   </span>
                 </p>
-                <p class="txt-h21-text2 paragraphp2"><span></span></p>
+                <p class="txt-h2-text2 paragraphp2"><span></span></p>
               </div>
             </slot>
           </section>
         </div>
-        <div class="vvcase-mockup">
-          <section class="pg-section-container pg-section-root-class-name8">
+        <div class="_fullwidth100">
+          <section
+            class="pg-section-container _fullwidth100 pg-section-root-class-name8"
+          >
             <slot class="pg-section-custom-slot">
-              <div class="txt-h21-property1h2 txt-h21-root-class-name17">
-                <h2 class="txt-h21-text headerH2"><span>Final mockup</span></h2>
-                <p class="txt-h21-text1 paragraphp2"><span></span></p>
-                <p class="txt-h21-text2 paragraphp2"><span></span></p>
+              <div
+                class="txt-h2-property1h2 _fullwidth100 txt-h2-root-class-name17"
+              >
+                <h2 class="txt-h2-text headerH2"><span>Final mockup</span></h2>
+                <p class="txt-h2-text1 paragraphp2"><span></span></p>
+                <p class="txt-h2-text2 paragraphp2"><span></span></p>
               </div>
               <img
                 alt="image"
-                src="https://play.teleporthq.io/static/svg/default-img.svg"
-                class="pg-section-image4"
+                src="public/vv/image%20222-200w.png"
+                class="pg-section-image4 _fullwidth100"
               />
             </slot>
           </section>
         </div>
-        <footer class="pg-footer-footer pg-footer-root-class-name">
-          <p class="paragraphp2"><span>LINKEDIN</span></p>
-          <p class="paragraphp2"><span>BEHANCE</span></p>
-          <p class="paragraphp2"><span>EMAIL</span></p>
+        <footer
+          class="pg-footer-footer _fullwidth100 pg-footer-root-class-name"
+        >
+          <p class="paragraphp2">LINKEDIN</p>
+          <p class="paragraphp2">BEHANCE</p>
+          <p class="paragraphp2">EMAIL</p>
         </footer>
       </div>
     </div>

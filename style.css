@@ -58,22 +58,25 @@
 .list-item {
   display: list-item;
   padding: var(--dl-space-space-halfunit);
-  list-style-type: "◽️";
+  list-style-type: disc;
 }
 .teleport-show {
   display: flex !important;
   transform: none !important;
 }
-.dark {
+._dark {
   border: 5px solid;
   border-color: dark (palette);
 }
-.accent {
+._accent {
   border: 5px solid;
   border-color: var(--dl-color-palette-accent);
 }
-.colored_detail_bg {
+._colored_detail_bg {
   background-color: var(--dl-color-palette-accent);
+}
+._fullwidth100 {
+  width: 100%;
 }
 .typographyheaderH3 {
   font-size: 24px;

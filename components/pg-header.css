@@ -1,6 +1,4 @@
 .pg-header-header {
-  width: 100%;
-  height: auto;
   display: flex;
   position: relative;
   align-self: stretch;
@@ -11,25 +9,9 @@
   padding-bottom: var(--dl-space-space-twounits);
   justify-content: space-between;
 }
-.pg-header-text {
-  height: auto;
-  line-height: 150%;
-}
 .pg-header-frame6 {
   gap: var(--dl-space-space-fiveunits);
   display: flex;
-}
-.pg-header-text2 {
-  height: auto;
-  line-height: 150%;
-}
-.pg-header-text3 {
-  height: auto;
-  line-height: 150%;
-}
-.pg-header-text5 {
-  height: auto;
-  line-height: 150%;
 }
 
 

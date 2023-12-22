@@ -1,7 +1,5 @@
 .pg-footer-footer {
   gap: var(--dl-space-space-fourunits);
-  width: 100%;
-  height: auto;
   display: flex;
   position: relative;
   align-self: stretch;

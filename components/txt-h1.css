@@ -1,7 +1,5 @@
 .txt-h1-property1h1 {
   gap: var(--dl-space-space-oneandhalfunits);
-  width: 100%;
-  height: auto;
   display: flex;
   position: relative;
   align-self: stretch;
