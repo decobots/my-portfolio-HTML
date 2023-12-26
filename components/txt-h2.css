@@ -87,6 +87,28 @@
 
 
 
+
+
+
+.txt-h2-root-class-name57 {
+  flex: 1;
+  width: 100%;
+}
+.txt-h2-root-class-name58 {
+  flex: 1;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
 @media(max-width: 479px) {
   .txt-h2-root-class-name1 {
     flex: 0 0 auto;
@@ -104,6 +126,12 @@
     flex: 0 0 auto;
   }
   .txt-h2-root-class-name39 {
+    flex: 0 0 auto;
+  }
+  .txt-h2-root-class-name57 {
+    flex: 0 0 auto;
+  }
+  .txt-h2-root-class-name58 {
     flex: 0 0 auto;
   }
 }

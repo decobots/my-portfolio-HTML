@@ -73,6 +73,26 @@
 
 
 
+.bgs-card-root-class-name24 {
+  flex: 4;
+  width: 100%;
+}
+.bgs-card-root-class-name25 {
+  flex: 4;
+  width: 100%;
+}
+.bgs-card-root-class-name26 {
+  flex: 4;
+  width: auto;
+}
+.bgs-card-root-class-name27 {
+  flex: 4;
+  width: 100%;
+}
+
+
+
+
 @media(max-width: 767px) {
   .bgs-card-root-class-name {
     flex: 0 0 auto;
@@ -111,6 +131,19 @@
     width: 100%;
   }
   .bgs-card-root-class-name19 {
+    flex: 0 0 auto;
+  }
+  .bgs-card-root-class-name24 {
+    flex: 0 0 auto;
+  }
+  .bgs-card-root-class-name25 {
+    flex: 0 0 auto;
+  }
+  .bgs-card-root-class-name26 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .bgs-card-root-class-name27 {
     flex: 0 0 auto;
   }
 }

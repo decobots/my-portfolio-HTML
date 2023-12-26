@@ -17,6 +17,7 @@
 
 
 
+
 @media(max-width: 991px) {
   .pg-header-frame6 {
     gap: var(--dl-space-space-fourunits);
@@ -228,6 +229,20 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media(max-width: 991px) {
   .pg-section-container {
     padding-left: var(--dl-space-space-fourunits);
@@ -279,6 +294,11 @@
   left: 0px;
   bottom: 0px;
   position: absolute;
+}
+.pg-footer-root-class-name4 {
+  left: 0px;
+  bottom: 0px;
+  position: static;
 }
 
 .main-container {
